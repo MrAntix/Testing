@@ -27,8 +27,10 @@ namespace Testing
 
         static T OneOfNoCheck<T>(IEnumerable<T> items)
         {
-            return items.ElementAt(
-                Random.Next(items.Count()));
+            var itemsArray = items.ToArray();
+
+            return itemsArray.ElementAt(
+                Random.Next(itemsArray.Count()));
         }
 
         public static IEnumerable<T> ManyOf<T>(this IEnumerable<T> items, int count)
