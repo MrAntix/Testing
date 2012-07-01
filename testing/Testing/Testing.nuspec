@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>antix-testing</id>
+    <version>$version$</version>
+    <authors>Anthony Johnston</authors>
+    <owners>Antix Software Limited</owners>
+    <projectUrl>http://mrantix.github.com/Testing</projectUrl>
+    <iconUrl>http://antix.co.uk/content/graphics/a32x32.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Testing</description>
+    <copyright>Copyright 2012</copyright>
+    <tags>Testing Builder</tags>
+  </metadata>
+</package>
