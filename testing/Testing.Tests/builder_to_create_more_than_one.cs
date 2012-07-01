@@ -1,4 +1,3 @@
-using System.Globalization;
 using System.Linq;
 using Moq;
 using Testing.Builders;
@@ -66,9 +65,9 @@ namespace Testing.Tests
                 .Items.ToArray();
 
             Assert.NotNull(items);
-            Assert.Equal(expectedCount * 2, items.Count());
+            Assert.Equal(expectedCount*2, items.Count());
 
-            for (var i = 0; i < expectedCount * 2; i++)
+            for (var i = 0; i < expectedCount*2; i++)
                 Assert.Equal(i, items.ElementAt(i).Count);
         }
 
@@ -83,7 +82,7 @@ namespace Testing.Tests
                 .Items.ToArray();
 
             Assert.NotNull(items);
-            Assert.Equal(expectedCount * 2, items.Count());
+            Assert.Equal(expectedCount*2, items.Count());
 
             Assert.Equal(expectedCount, items.Count(x => x.Name == secondCallName));
         }
