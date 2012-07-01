@@ -22,22 +22,21 @@ namespace Testing
         {
             if (items == null) throw new ArgumentNullException("items");
 
-            return OneOfNoCheck(items);
+            return OneOfNoCheck(items.ToArray());
         }
 
-        static T OneOfNoCheck<T>(IEnumerable<T> items)
+        static T OneOfNoCheck<T>(T[] itemsArray)
         {
-            var itemsArray = items.ToArray();
-
-            return itemsArray.ElementAt(
-                Random.Next(itemsArray.Count()));
+            return itemsArray[
+                Random.Next(itemsArray.Count())];
         }
 
         public static IEnumerable<T> ManyOf<T>(this IEnumerable<T> items, int count)
         {
             if (items == null) throw new ArgumentNullException("items");
 
-            return Enumerable.Range(0, count).Select(i => OneOfNoCheck(items));
+            var itemsArray = items.ToArray();
+            return Enumerable.Range(0, count).Select(i => OneOfNoCheck(itemsArray));
         }
     }
 }
