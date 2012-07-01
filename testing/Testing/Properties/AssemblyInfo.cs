@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("Testing")]
-[assembly: AssemblyDescription("Some code for testing in C#")]
+[assembly: AssemblyDescription("Some code for testing")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Antix Software Limited")]
 [assembly: AssemblyProduct("Testing")]
@@ -36,5 +36,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 
 [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyInformationalVersion("1.0")]
+[assembly: AssemblyInformationalVersion("1.1-dev")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

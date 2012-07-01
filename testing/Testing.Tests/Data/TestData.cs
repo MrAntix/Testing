@@ -6,7 +6,20 @@
 
         public static class Person
         {
-            public static readonly string[] Names = new[] {"Abe", "Bob", "Charlie", "Derric"};
+            public static string[] FirstNames
+            {
+                get { return People.FirstNames.Split('\n'); }
+            }
+
+            public static string[] LastNames
+            {
+                get { return People.LastNames.Split('\n'); }
+            }
+
+            public static string[] Genders
+            {
+                get { return People.Genders.Split('\n'); }
+            }
         }
 
         #endregion

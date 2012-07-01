@@ -44,6 +44,21 @@
   <ItemGroup>
     <Compile Include="builder_to_create_and_assign_using_moq.cs" />
     <Compile Include="builder_to_create_more_than_one.cs" />
+    <Compile Include="Data\Internet.Designer.cs">
+      <DependentUpon>Internet.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\CountryCodes.Designer.cs">
+      <DependentUpon>CountryCodes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\People.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>People.resx</DependentUpon>
+    </Compile>
     <Compile Include="Data\TestData.cs" />
     <Compile Include="extensions_get_random_data.cs" />
     <Compile Include="Pocis\IThingy.cs" />
@@ -61,6 +76,20 @@
       <Project>{52D4ACB5-0093-4B0B-9C41-8556EE12BC10}</Project>
       <Name>Testing</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Internet.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Internet.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\CountryCodes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CountryCodes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\People.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>People.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
