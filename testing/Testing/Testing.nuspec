@@ -8,8 +8,8 @@
     <projectUrl>http://mrantix.github.com/Testing</projectUrl>
     <iconUrl>http://antix.co.uk/content/graphics/a32x32.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Testing</description>
-    <copyright>Copyright 2012</copyright>
-    <tags>Testing Builder</tags>
+    <description>Testing helpers, incl. Generic Builder to delegate instance creation for testing data using Mocks, Pocos or whatever</description>
+    <copyright>Copyright Antix Software Limited 2012</copyright>
+    <tags>Testing, Builder</tags>
   </metadata>
 </package>
