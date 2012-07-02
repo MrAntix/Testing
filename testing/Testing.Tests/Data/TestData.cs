@@ -23,5 +23,13 @@
         }
 
         #endregion
+
+        public static class General
+        {
+            public static bool[] TrueFalse
+            {
+                get { return new[] { true, false }; }
+            }
+        }
     }
 }

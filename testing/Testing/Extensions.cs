@@ -31,12 +31,24 @@ namespace Testing
                 Random.Next(itemsArray.Count())];
         }
 
-        public static IEnumerable<T> ManyOf<T>(this IEnumerable<T> items, int count)
+        public static IEnumerable<T> ManyOf<T>(
+            this IEnumerable<T> items, int exactCount)
         {
             if (items == null) throw new ArgumentNullException("items");
-
             var itemsArray = items.ToArray();
-            return Enumerable.Range(0, count).Select(i => OneOfNoCheck(itemsArray));
+
+            return Enumerable.Range(0, exactCount)
+                .Select(i => OneOfNoCheck(itemsArray));
+        }
+
+        public static IEnumerable<T> ManyOf<T>(
+            this IEnumerable<T> items, int minCount, int maxCount)
+        {
+            if (items == null) throw new ArgumentNullException("items");
+            var itemsArray = items.ToArray();
+
+            return Enumerable.Range(0, Random.Next(minCount, maxCount))
+                .Select(i => OneOfNoCheck(itemsArray));
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Testing.Tests
 {
     public class extensions_get_random_data
     {
-        readonly string[] _names = new[] {"Abe", "Bob", "Charlie", "Derric"};
+        readonly string[] _names = new[] { "Abe", "Bob", "Charlie", "Derric" };
 
         [Fact]
         public void gets_one_of_the_items()
@@ -43,7 +43,7 @@ namespace Testing.Tests
         }
 
         [Fact]
-        public void gets_many_of_the_items()
+        public void gets_many_of_the_items_exact_count()
         {
             const int expectedCount = 3;
             var items = _names
@@ -54,6 +54,26 @@ namespace Testing.Tests
             Assert.Equal(expectedCount, items.Count());
             foreach (var item in items)
                 Assert.Contains(item, _names);
+        }
+
+        [Fact]
+        public void gets_many_of_the_items_min_max_count()
+        {
+            const int expectedMinMaxCount = 3;
+            var tries = 100; // anti-fluke
+            while (tries > 0)
+            {
+                tries--;
+
+                var items = _names
+                   .ManyOf(expectedMinMaxCount, expectedMinMaxCount)
+                    .ToArray();
+
+                Assert.NotNull(items);
+                Assert.Equal(expectedMinMaxCount, items.Count());
+                foreach (var item in items)
+                    Assert.Contains(item, _names);
+            }
         }
     }
 }
