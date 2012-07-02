@@ -11,6 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86EA74
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graphics", "Graphics", "{4359FCE5-DA57-48E3-8926-2C6706DE4863}"
+	ProjectSection(SolutionItems) = preProject
+		Graphics\antix-testing128x128.png = Graphics\antix-testing128x128.png
+		Graphics\antix-testing256x256.png = Graphics\antix-testing256x256.png
+		Graphics\antix-testing32x32.png = Graphics\antix-testing32x32.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
