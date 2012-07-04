@@ -134,4 +134,9 @@ bbc.co.uk
 google.co.uk
 mail.com</value>
   </data>
+  <data name="EmailTypes" xml:space="preserve">
+    <value>Home
+Work
+Other</value>
+  </data>
 </root>

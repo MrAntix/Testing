@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Testing.Tests.Data {
+namespace Testing.Data.Resources {
     using System;
     
     
@@ -22,24 +22,24 @@ namespace Testing.Tests.Data {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class People {
+    internal class PersonResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal People() {
+        internal PersonResources() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    var temp = new global::System.Resources.ResourceManager("Testing.Tests.Data.People", typeof(People).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Testing.Data.Resources.PersonResources", typeof(PersonResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Testing.Tests.Data {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,89 +61,131 @@ namespace Testing.Tests.Data {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Aaron
-        ///Adam
-        ///Alan
-        ///Albert
-        ///Alex
-        ///Alexander
-        ///Alexandra
-        ///Alfred
-        ///Alice
-        ///Alicia
-        ///Alison
-        ///Allan
-        ///Allen
-        ///Allison
-        ///Alvin
-        ///Amanda
-        ///Amy
-        ///Andrea
-        ///Andrew
-        ///Angela
-        ///Anita
-        ///Ann
-        ///Anna
-        ///Anne
-        ///Annette
-        ///Annie
-        ///Anthony
-        ///April
-        ///Arlene
-        ///Arnold
-        ///Arthur
-        ///Ashley
-        ///Audrey
-        ///Barbara
-        ///Barry
-        ///Becky
-        ///Ben
-        ///Benjamin
-        ///Bernard
-        ///Bernice
-        ///Beth
-        ///Betsy
-        ///Betty
-        ///Beverly
-        ///Bill
-        ///Billie
-        ///Billy
-        ///Bob
-        ///Bobby
-        ///Bonnie
-        ///Brad
-        ///Bradley
-        ///Brandon
-        ///Brenda
-        ///Brent
-        ///Brett
-        ///Brian
-        ///Brooke
-        ///Bruce
-        ///Bryan
-        ///Calvin
-        ///Cameron
-        ///Carl
-        ///Carla
-        ///Carlos
-        ///Carmen
-        ///Carol
-        ///Carole
-        ///C [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to A&apos;Isha 
+        ///Aarna 
+        ///Aarushi 
+        ///Aarvi 
+        ///Aarya 
+        ///Aarzoo 
+        ///Aasha 
+        ///Aashi 
+        ///Aashna 
+        ///Aasia 
+        ///Aasiya 
+        ///Aasiyah 
+        ///Aatikah 
+        ///Aatiqah 
+        ///Aava 
+        ///Aaya 
+        ///Aayah 
+        ///Aayat 
+        ///Aaysha 
+        ///Aayushi 
+        ///Aba 
+        ///Abbey 
+        ///Abbeygail 
+        ///Abbi 
+        ///Abbie 
+        ///Abbie-Leigh 
+        ///Abbie-May 
+        ///Abbiegail 
+        ///Abbigail 
+        ///Abby 
+        ///Abbygail 
+        ///Abeeha 
+        ///Abeera 
+        ///Abeerah 
+        ///Abena 
+        ///Abhia 
+        ///Abi 
+        ///Abia 
+        ///Abida 
+        ///Abidemi 
+        ///Abigael 
+        ///Abigail 
+        ///Abigale 
+        ///Abigayle 
+        ///Abiha 
+        ///Abimbola 
+        ///Abinaya 
+        ///Abiona 
+        ///Abisha 
+        ///Abisola 
+        ///Abrar 
+        ///Abygail 
+        ///Acacia 
+        ///Acelya 
+        ///Ada 
+        ///Adaeze 
+        ///Adalia  [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string FirstNames {
+        internal static string FirstNamesFemale {
             get {
-                return ResourceManager.GetString("FirstNames", resourceCulture);
+                return ResourceManager.GetString("FirstNamesFemale", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Male
-        ///Female.
+        ///   Looks up a localized string similar to A 
+        ///A-Jay 
+        ///Aaban 
+        ///Aabid 
+        ///Aadam 
+        ///Aaden 
+        ///Aadi 
+        ///Aadil 
+        ///Aadit 
+        ///Aaditya 
+        ///Aahil 
+        ///Aakash 
+        ///Aamer 
+        ///Aamil 
+        ///Aamir 
+        ///Aaqib 
+        ///Aaran 
+        ///Aarav 
+        ///Aaren 
+        ///Aarian 
+        ///Aarib 
+        ///Aarish 
+        ///Aariyan 
+        ///Aariz 
+        ///Aarnav 
+        ///Aaron 
+        ///Aaron-James 
+        ///Aarron 
+        ///Aarun 
+        ///Aarush 
+        ///Aarya 
+        ///Aaryan 
+        ///Aashir 
+        ///Aashish 
+        ///Aasim 
+        ///Aathavan 
+        ///Aayan 
+        ///Aayush 
+        ///Aban 
+        ///Abass 
+        ///Abbas 
+        ///Abd 
+        ///Abdalla 
+        ///Abdallah 
+        ///Abdalrahman 
+        ///Abdel 
+        ///Abdelkader 
+        ///Abdelrahim 
+        ///Abdelrahman 
+        ///Abdi 
+        ///Abdifatah 
+        ///Abdihafid 
+        ///Abdihakim 
+        ///Abdikarim 
+        ///Abdillahi 
+        ///Abdimalik  [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Genders {
+        internal static string FirstNamesMale {
             get {
-                return ResourceManager.GetString("Genders", resourceCulture);
+                return ResourceManager.GetString("FirstNamesMale", resourceCulture);
             }
         }
         
@@ -213,7 +255,7 @@ namespace Testing.Tests.Data {
         ///Benson
         ///Be [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string LastNames {
+        internal static string LastNames {
             get {
                 return ResourceManager.GetString("LastNames", resourceCulture);
             }

@@ -5,7 +5,7 @@ namespace Testing.Tests
 {
     public class extensions_get_random_data
     {
-        readonly string[] _names = new[] { "Abe", "Bob", "Charlie", "Derric" };
+        readonly string[] _names = new[] {"Abe", "Bob", "Charlie", "Derric"};
 
         [Fact]
         public void gets_one_of_the_items()
@@ -66,7 +66,7 @@ namespace Testing.Tests
                 tries--;
 
                 var items = _names
-                   .ManyOf(expectedMinMaxCount, expectedMinMaxCount)
+                    .ManyOf(expectedMinMaxCount, expectedMinMaxCount)
                     .ToArray();
 
                 Assert.NotNull(items);

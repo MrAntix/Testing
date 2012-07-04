@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Testing.Data;
 
 namespace Testing.Builders
 {
@@ -38,11 +39,18 @@ namespace Testing.Builders
         }
 
         public Builder<T> Build(
-            int count,
+            int minCount, int maxCount,
+            Action<T, int> assign = null)
+        {
+            return Build(TestData.Random.Next(minCount, maxCount));
+        }
+
+        public Builder<T> Build(
+            int exactCount,
             Action<T, int> assign = null)
         {
             var items =
-                Enumerable.Range(0, count)
+                Enumerable.Range(0, exactCount)
                     .Select(index =>
                                 {
                                     var item = _create();
@@ -58,7 +66,7 @@ namespace Testing.Builders
                        {
                            _assign = _assign,
                            _create = _create,
-                           _index = count,
+                           _index = exactCount,
                            Items = items
                        };
         }
