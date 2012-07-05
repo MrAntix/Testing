@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Testing.Data;
+using Random = Testing.Data.Random;
 
 namespace Testing.Builders
 {
@@ -42,7 +42,7 @@ namespace Testing.Builders
             int minCount, int maxCount,
             Action<T, int> assign = null)
         {
-            return Build(TestData.Random.Next(minCount, maxCount));
+            return Build(Random.Integer.Get(minCount, maxCount));
         }
 
         public Builder<T> Build(

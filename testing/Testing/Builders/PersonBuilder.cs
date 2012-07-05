@@ -1,4 +1,6 @@
-﻿using Testing.Data;
+﻿using System;
+using Testing.Data;
+using Random = Testing.Data.Random;
 
 namespace Testing.Builders
 {
@@ -13,6 +15,10 @@ namespace Testing.Builders
                                            ? TestData.Person.FirstNamesFemale.OneOf()
                                            : TestData.Person.FirstNamesMale.OneOf();
                          p.LastName = TestData.Person.LastNames.OneOf();
+
+                         p.DateOfBirth = Random.DateTime.Get(
+                             DateTime.Now.AddYears(-130),
+                             DateTime.Now);
 
                          p.Emails = new EmailBuilder(p).Build(0, 3).Items;
                      });

@@ -38,6 +38,12 @@
     <Compile Include="Builders\Builder.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
+    <Compile Include="Data\RandomByte.cs" />
+    <Compile Include="Data\RandomDateTime.cs" />
+    <Compile Include="Data\RandomInteger.cs" />
+    <Compile Include="Data\Random.cs" />
+    <Compile Include="Data\RandomBase.cs" />
+    <Compile Include="Data\RandomShort.cs" />
     <Compile Include="Data\Resources\EmailResources.Designer.cs">
       <DependentUpon>EmailResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>

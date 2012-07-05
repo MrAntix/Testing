@@ -1,24 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using Testing.Data.Resources;
 
 namespace Testing.Data
 {
     public static class TestData
     {
-        static int _randomSeed = Environment.TickCount;
-
-        // http://csharpindepth.com/Articles/Chapter12/Random.aspx
-        static readonly ThreadLocal<Random> LocalRandom =
-            new ThreadLocal<Random>(() => new Random(Interlocked.Increment(ref _randomSeed)));
-
-        public static Random Random
-        {
-            get { return LocalRandom.Value; }
-        }
-
         public static bool[] TrueFalse
         {
             get { return new[] {true, false}; }
@@ -76,6 +64,7 @@ namespace Testing.Data
             public string FirstName { get; set; }
             public string LastName { get; set; }
             public GenderTypes Gender { get; set; }
+            public DateTime DateOfBirth { get; set; }
 
             public string FullName
             {

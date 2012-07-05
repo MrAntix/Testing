@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Testing.Data;
+using Random = Testing.Data.Random;
 
 namespace Testing
 {
@@ -17,7 +17,7 @@ namespace Testing
         static T OneOfNoCheck<T>(T[] itemsArray)
         {
             return itemsArray[
-                TestData.Random.Next(itemsArray.Count())];
+                Random.Integer.Get(itemsArray.Count())];
         }
 
         public static IEnumerable<T> ManyOf<T>(
@@ -36,7 +36,7 @@ namespace Testing
             if (items == null) throw new ArgumentNullException("items");
             var itemsArray = items.ToArray();
 
-            return Enumerable.Range(0, TestData.Random.Next(minCount, maxCount))
+            return Enumerable.Range(0, Random.Integer.Get(minCount, maxCount))
                 .Select(i => OneOfNoCheck(itemsArray));
         }
     }
