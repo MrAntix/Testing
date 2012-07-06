@@ -1,7 +1,7 @@
-namespace Testing.Data
+namespace Testing.Randoms
 {
     public class RandomShort :
-        RandomBase<short>
+        RandomBase<short, short>
     {
         public RandomShort() :
             base(0, short.MaxValue)
@@ -10,7 +10,7 @@ namespace Testing.Data
 
         public override short Get(short min, short max)
         {
-            return (short) Random.Local.Value.Next(min, max);
+            return (short) Data.Random.Value.Next(min, max);
         }
     }
 }

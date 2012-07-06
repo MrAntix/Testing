@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Random = Testing.Data.Random;
 
-namespace Testing.Builders
+namespace Testing
 {
     public class Builder<T>
     {
@@ -28,8 +27,13 @@ namespace Testing.Builders
             return this;
         }
 
+        public T Build()
+        {
+            return Build(null);
+        }
+
         public T Build(
-            Action<T> assign = null)
+            Action<T> assign)
         {
             var item = _create();
             if (_assign != null) _assign(item);
@@ -39,15 +43,27 @@ namespace Testing.Builders
         }
 
         public Builder<T> Build(
-            int minCount, int maxCount,
-            Action<T, int> assign = null)
+            int minCount, int maxCount)
         {
-            return Build(Random.Integer.Get(minCount, maxCount));
+            return Build(minCount, maxCount, null);
+        }
+
+        public Builder<T> Build(
+            int minCount, int maxCount,
+            Action<T, int> assign)
+        {
+            return Build(Data.RandomInteger.Get(minCount, maxCount), assign);
+        }
+
+        public Builder<T> Build(
+            int exactCount)
+        {
+            return Build(exactCount, null);
         }
 
         public Builder<T> Build(
             int exactCount,
-            Action<T, int> assign = null)
+            Action<T, int> assign)
         {
             var items =
                 Enumerable.Range(0, exactCount)

@@ -1,20 +1,20 @@
-namespace Testing.Data
+namespace Testing.Randoms
 {
-    public abstract class RandomBase<T>
+    public abstract class RandomBase<T, TLimits>
     {
-        T _maxValue;
-        T _minValue;
+        TLimits _maxValue;
+        TLimits _minValue;
 
         protected RandomBase(
-            T minValue, T maxValue)
+            TLimits minValue, TLimits maxValue)
         {
             _minValue = minValue;
             _maxValue = maxValue;
         }
 
-        public abstract T Get(T min, T max);
+        public abstract T Get(TLimits min, TLimits max);
 
-        public T Get(T max)
+        public T Get(TLimits max)
         {
             return Get(_minValue, max);
         }

@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Testing.Data.Resources;
+using Testing.Resources;
 
-namespace Testing.Data
+namespace Testing
 {
-    public static class TestData
+    public class DataResources
     {
-        public static bool[] TrueFalse
+        public DataResources()
         {
-            get { return new[] {true, false}; }
+            TrueFalse = new[] {true, false};
+            Chars = Enumerable.Range(0, 255).Select(c => (char) c).ToArray();
         }
+
+        public bool[] TrueFalse { get; set; }
+        public char[] Chars { get; set; }
 
         #region Nested type: Email
 

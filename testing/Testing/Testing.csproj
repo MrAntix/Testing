@@ -35,53 +35,55 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\Builder.cs" />
+    <Compile Include="Builder.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
-    <Compile Include="Data\RandomByte.cs" />
-    <Compile Include="Data\RandomDateTime.cs" />
-    <Compile Include="Data\RandomInteger.cs" />
-    <Compile Include="Data\Random.cs" />
-    <Compile Include="Data\RandomBase.cs" />
-    <Compile Include="Data\RandomShort.cs" />
-    <Compile Include="Data\Resources\EmailResources.Designer.cs">
+    <Content Include="ReleaseNotes.txt" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Randoms\RandomByte.cs" />
+    <Compile Include="Randoms\RandomDateTime.cs" />
+    <Compile Include="Randoms\RandomInteger.cs" />
+    <Compile Include="Randoms\RandomBase.cs" />
+    <Compile Include="Randoms\RandomShort.cs" />
+    <Compile Include="Randoms\RandomString.cs" />
+    <Compile Include="Resources\EmailResources.Designer.cs">
       <DependentUpon>EmailResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Data\Resources\CountryCodeResources.Designer.cs">
+    <Compile Include="Resources\CountryCodeResources.Designer.cs">
       <DependentUpon>CountryCodeResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Data\Resources\WebResources.Designer.cs">
+    <Compile Include="Resources\WebResources.Designer.cs">
       <DependentUpon>WebResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Data\Resources\PersonResources.Designer.cs">
+    <Compile Include="Resources\PersonResources.Designer.cs">
       <DependentUpon>PersonResources.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Data\TestData.cs" />
+    <Compile Include="DataResources.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\Resources\EmailResources.resx">
+    <EmbeddedResource Include="Resources\EmailResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmailResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Resources\CountryCodeResources.resx">
+    <EmbeddedResource Include="Resources\CountryCodeResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CountryCodeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Resources\WebResources.resx">
+    <EmbeddedResource Include="Resources\WebResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>WebResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Resources\PersonResources.resx">
+    <EmbeddedResource Include="Resources\PersonResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>PersonResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>

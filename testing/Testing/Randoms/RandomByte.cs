@@ -1,7 +1,7 @@
-namespace Testing.Data
+namespace Testing.Randoms
 {
     public class RandomByte :
-        RandomBase<byte>
+        RandomBase<byte, byte>
     {
         public RandomByte() :
             base(0, byte.MaxValue)
@@ -10,7 +10,7 @@ namespace Testing.Data
 
         public override byte Get(byte min, byte max)
         {
-            return (byte) Random.Local.Value.Next(min, max);
+            return (byte) Data.Random.Value.Next(min, max);
         }
     }
 }

@@ -1,7 +1,7 @@
-namespace Testing.Data
+namespace Testing.Randoms
 {
     public class RandomInteger :
-        RandomBase<int>
+        RandomBase<int, int>
     {
         public RandomInteger() :
             base(0, int.MaxValue)
@@ -10,7 +10,7 @@ namespace Testing.Data
 
         public override int Get(int min, int max)
         {
-            return Random.Local.Value.Next(min, max);
+            return Data.Random.Value.Next(min, max);
         }
     }
 }

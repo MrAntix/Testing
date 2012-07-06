@@ -1,21 +1,19 @@
-using Testing.Data;
-
 namespace Testing.Builders
 {
-    public class EmailBuilder : Builder<TestData.Email>
+    public class EmailBuilder : Builder<DataResources.Email>
     {
-        TestData.Person _person;
+        DataResources.Person _person;
 
-        public EmailBuilder(TestData.Person person)
+        public EmailBuilder(DataResources.Person person)
         {
             _person = person;
             With(email =>
                      {
-                         email.Type = TestData.Email.Types.OneOf();
+                         email.Type = DataResources.Email.Types.OneOf();
                          email.Address = string.Format("{0}.{1}@{2}",
                                                        _person.FirstName.Trim().ToLower(),
                                                        _person.LastName.Trim().ToLower(),
-                                                       TestData.Web.Domains.OneOf());
+                                                       DataResources.Web.Domains.OneOf());
                      });
         }
     }

@@ -1,9 +1,9 @@
 using System;
 
-namespace Testing.Data
+namespace Testing.Randoms
 {
     public class RandomDateTime :
-        RandomBase<DateTime>
+        RandomBase<DateTime, DateTime>
     {
         public RandomDateTime() :
             base(DateTime.MinValue, DateTime.MaxValue)
@@ -16,7 +16,7 @@ namespace Testing.Data
             var maxTicks = max.Ticks;
 
             return new DateTime(
-                (long) (minTicks + Random.Local.Value.NextDouble()*(maxTicks - minTicks))
+                (long) (minTicks + Data.Random.Value.NextDouble()*(maxTicks - minTicks))
                 );
         }
     }
