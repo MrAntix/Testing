@@ -27,7 +27,7 @@ namespace Testing.Base
 
         public ValueBuilderBase<T, TLimits> With(TLimits min, TLimits max)
         {
-            var clone = (ValueBuilderBase<T, TLimits>)Clone();
+            var clone = (ValueBuilderBase<T, TLimits>) Clone();
             clone.Min = min;
             clone.Max = max;
 
@@ -61,7 +61,7 @@ namespace Testing.Base
 
             if (Items != null) items = Items.Concat(items);
 
-            var clone = (ValueBuilderBase<T, TLimits>)Clone();
+            var clone = (ValueBuilderBase<T, TLimits>) Clone();
             clone.Items = items;
 
             return clone;

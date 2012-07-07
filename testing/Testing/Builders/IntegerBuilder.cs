@@ -1,4 +1,4 @@
-using Testing.Base;
+﻿using Testing.Base;
 
 namespace Testing.Builders
 {
@@ -6,7 +6,7 @@ namespace Testing.Builders
         ValueBuilderBase<int, int>
     {
         public IntegerBuilder() :
-            base( 0, int.MaxValue)
+            base(0, int.MaxValue)
         {
         }
 

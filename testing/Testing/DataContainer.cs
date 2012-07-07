@@ -6,6 +6,7 @@ namespace Testing
         IDataContainer
     {
         EmailBuilder _email;
+        IntegerBuilder _integer;
         PersonBuilder _person;
         IDataResources _resources;
 
@@ -16,9 +17,8 @@ namespace Testing
             _resources = resources;
 
             Boolean = new BooleanBuilder();
-            Byte = new ByteBuilder();
-            Short = new ShortBuilder();
             Integer = new IntegerBuilder();
+            Double = new DoubleBuilder();
             DateTime = new DateTimeBuilder();
             Text = new TextBuilder(Resources.Chars);
         }
@@ -31,10 +31,8 @@ namespace Testing
         }
 
         public BooleanBuilder Boolean { get; set; }
-
-        public ByteBuilder Byte { get; set; }
-        public ShortBuilder Short { get; set; }
         public IntegerBuilder Integer { get; set; }
+        public DoubleBuilder Double { get; set; }
         public DateTimeBuilder DateTime { get; set; }
         public TextBuilder Text { get; set; }
 

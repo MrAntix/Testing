@@ -1,147 +1,20 @@
 ﻿using System;
 using System.Linq;
-using Testing.Models;
 using Xunit;
 
 namespace Testing.Tests
 {
-    public class data_get_random_data
+    public class data_get_random_text
     {
         protected IDataContainer DataContainer = new DataContainer(new DataResources());
 
-        [Fact]
-        public void get_a_random_number()
+    [Fact]
+        public void get_array_of_text()
         {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var item = DataContainer.Integer
-                .With(minValue, maxValue)
-                .BuildItem();
-
-            Console.WriteLine(item);
-
-            Assert.IsType<int>(item);
-            Assert.InRange(item, minValue, maxValue);
-        }
-
-        [Fact]
-        public void get_an_array_of_random_numbers()
-        {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var items = DataContainer.Integer
-                .With(minValue, maxValue)
-                .Build(2, 4)
-                .Build(1, 6)
-                .Items.ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<int[]>(items);
-            Assert.InRange(items.Count(), 3, 10);
-        }
-
-        [Fact]
-        public void get_an_array_of_random_people()
-        {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var items = DataContainer.Person
-                .Build(minValue, maxValue)
-                .Items.ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<TestingPersonModel[]>(items);
-            Assert.InRange(items.Count(), minValue, maxValue);
-        }
-
-        [Fact]
-        public void get_an_array_of_random_female_people_age_21_to_30()
-        {
-            var minValue = 10;
-            var maxValue = 50;
-
-            var items = DataContainer.Person
-                .WithGender(TestingGenderTypes.Female)
-                .WithAge(21, 30)
-                .Build(minValue, maxValue)
-                .Items.ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<TestingPersonModel[]>(items);
-            Assert.InRange(items.Count(), minValue, maxValue);
-            Assert.True(items.All(p => p.Gender == TestingGenderTypes.Female));
-            Assert.True(items.All(p => p.Age >= 21 && p.Age <= 30));
-        }
-
-        [Fact]
-        public void get_an_array_of_random_male_people()
-        {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var items = DataContainer.Person
-                .WithGender(TestingGenderTypes.Male)
-                .Build(minValue, maxValue)
-                .Items.ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<TestingPersonModel[]>(items);
-            Assert.InRange(items.Count(), minValue, maxValue);
-            Assert.True(items.All(p => p.Gender == TestingGenderTypes.Male));
-        }
-
-        [Fact]
-        public void get_an_array_of_random_websites()
-        {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var items = DataContainer.Website
-                .Build(minValue, maxValue)
-                .Items.ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<TestingWebsiteModel[]>(items);
-            Assert.InRange(items.Count(), minValue, maxValue);
-        }
-
-        [Fact]
-        public void get_an_array_of_random_person_first_names()
-        {
-            var minValue = 10;
-            var maxValue = 20;
-
-            var items = DataContainer.Resources.PersonFirstNamesMale
-                .ManyOf(minValue, maxValue)
-                .ToArray();
-
-            foreach (var item in items)
-                Console.WriteLine(item);
-
-            Assert.IsType<string[]>(items);
-            Assert.InRange(items.Count(), minValue, maxValue);
-        }
-
-        [Fact]
-        public void get_an_array_of_random_text()
-        {
-            var minLength = 5;
-            var maxLength = 10;
-            var minCount = 10;
-            var maxCount = 20;
+            const int minLength = 5;
+            const int maxLength = 10;
+            const int minCount = 10;
+            const int maxCount = 20;
 
             var items = DataContainer.Text
                 .With(minLength, maxLength)
@@ -156,12 +29,11 @@ namespace Testing.Tests
         }
 
         [Fact]
-        public void get_an_array_of_random_numbers_and_letters()
+        public void get_array_of_numbers_and_letters()
         {
-            var minLength = 5;
-            var maxLength = 10;
-            var minCount = 10;
-            var maxCount = 20;
+            const int minLength = 5;
+            const int maxLength = 10;
+            const int count = 10;
 
             var numbersAndLetters
                 = DataContainer.Resources.Letters
@@ -170,13 +42,13 @@ namespace Testing.Tests
 
             var items = DataContainer.Text
                 .With(minLength, maxLength, numbersAndLetters)
-                .Build(minCount, maxCount)
+                .Build(count)
                 .Items.ToArray();
 
             foreach (var item in items) Console.WriteLine(item);
 
             Assert.IsType<string[]>(items);
-            Assert.InRange(items.Count(), minCount, maxCount);
+            Assert.Equal(count, items.Count());
             Assert.True(items.SelectMany(i => i.ToCharArray()).All(numbersAndLetters.Contains));
         }
     }

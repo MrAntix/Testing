@@ -1,10 +1,8 @@
-﻿using System;
-using System.Linq;
-using Testing.Base;
+﻿using Testing.Base;
 
 namespace Testing
 {
-    public class Builder<T> 
+    public class Builder<T>
         : BuilderBase<T, Builder<T>>
     {
         protected override Builder<T> CreateClone()
@@ -12,5 +10,4 @@ namespace Testing
             return new Builder<T>();
         }
     }
-
 }

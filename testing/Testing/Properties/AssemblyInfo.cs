@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 //
 //      Major Version
 //      Minor Version 
-//      One Number
+//      One Double
 //      Revision
 //
 // You can specify all the values or you can default the One and Revision Numbers 
@@ -36,5 +36,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 
 [assembly: AssemblyVersion("2.0.0.*")]
-[assembly: AssemblyInformationalVersion("2.0.0-b05")]
+[assembly: AssemblyInformationalVersion("2.0.0-b06")]
 [assembly: AssemblyFileVersion("2.0.0.0")]

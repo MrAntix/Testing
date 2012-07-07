@@ -7,7 +7,8 @@ namespace Testing.Builders
     public class PersonBuilder : BuilderBase<TestingPersonModel, PersonBuilder>
     {
         readonly IDataContainer _dataContainer;
-        public PersonBuilder(IDataContainer dataContainer) 
+
+        public PersonBuilder(IDataContainer dataContainer)
         {
             _dataContainer = dataContainer;
             Assign = p =>

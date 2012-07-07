@@ -57,9 +57,15 @@
     <Compile Include="builder_to_create_pocos.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="data_get_random_booleans.cs" />
     <Compile Include="data_get_random_data.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="data_get_random_doubles.cs" />
+    <Compile Include="data_get_random_emails.cs" />
+    <Compile Include="data_get_random_integers.cs" />
+    <Compile Include="data_get_random_people.cs" />
+    <Compile Include="data_get_random_websites.cs" />
     <Compile Include="data_using_default_person_builder.cs">
       <SubType>Code</SubType>
     </Compile>

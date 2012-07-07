@@ -7,9 +7,8 @@ namespace Testing
         IDataResources Resources { get; }
 
         BooleanBuilder Boolean { get; }
-        ByteBuilder Byte { get; }
-        ShortBuilder Short { get; }
         IntegerBuilder Integer { get; }
+        DoubleBuilder Double { get; }
         DateTimeBuilder DateTime { get; }
         TextBuilder Text { get; }
 

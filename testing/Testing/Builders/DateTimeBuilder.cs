@@ -7,7 +7,7 @@ namespace Testing.Builders
         ValueBuilderBase<DateTime, DateTime>
     {
         public DateTimeBuilder() :
-            base( DateTime.MinValue, DateTime.MaxValue)
+            base(DateTime.MinValue, DateTime.MaxValue)
         {
         }
 

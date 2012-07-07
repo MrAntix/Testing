@@ -38,6 +38,7 @@
     <Compile Include="Builder.cs" />
     <Compile Include="Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
+    <Compile Include="Builders\IntegerBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
     <Compile Include="Builders\BooleanBuilder.cs" />
     <Compile Include="Builders\WebsiteBuilder.cs" />
@@ -49,11 +50,9 @@
     <Compile Include="IDataContainer.cs" />
     <Compile Include="IDataResources.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="Builders\ByteBuilder.cs" />
     <Compile Include="Builders\DateTimeBuilder.cs" />
-    <Compile Include="Builders\IntegerBuilder.cs" />
+    <Compile Include="Builders\DoubleBuilder.cs" />
     <Compile Include="Base\ValueBuilderBase.cs" />
-    <Compile Include="Builders\ShortBuilder.cs" />
     <Compile Include="Builders\TextBuilder.cs" />
     <Compile Include="Resources\TextResources.Designer.cs">
       <DependentUpon>TextResources.resx</DependentUpon>

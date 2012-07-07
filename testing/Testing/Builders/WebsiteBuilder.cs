@@ -7,13 +7,13 @@ namespace Testing.Builders
     {
         readonly IDataContainer _dataContainer;
 
-        public WebsiteBuilder(IDataContainer dataContainer) 
+        public WebsiteBuilder(IDataContainer dataContainer)
         {
             _dataContainer = dataContainer;
             Assign = x =>
                          {
                              var subDomain = "";
-                             switch (_dataContainer.Integer.With(0, 10).BuildItem())
+                             switch ((int) _dataContainer.Double.With(0, 10).BuildItem())
                              {
                                  case 1:
                                  case 2:
