@@ -1,7 +1,0 @@
-﻿# Release Notes
-
-## 2.0.0-b03
-Flatten Hierarchy, reduces usings 
-Optional params in builder changed to use overloads http://lostechies.com/jimmybogard/2010/05/18/caveats-of-c-4-0-optional-parameters/
-Builder fix, not passing assign in Build(int, int, Action<T, int>) overload
-Organising Random and Static data resources

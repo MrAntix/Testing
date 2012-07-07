@@ -1,95 +1,116 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Testing.Models;
 using Testing.Resources;
 
 namespace Testing
 {
-    public class DataResources
+    public class DataResources : IDataResources
     {
-        public DataResources()
+        IEnumerable<bool> _booleans = new[] {true, false};
+
+        IEnumerable<char> _chars;
+        IEnumerable<TestingGenderTypes> _dataGenders;
+        IEnumerable<string> _emailTypes;
+        IEnumerable<char> _letters;
+        IEnumerable<char> _numbers;
+
+        IEnumerable<string> _personFirstNamesFemale;
+        IEnumerable<string> _personFirstNamesMale;
+        IEnumerable<string> _personLastNames;
+
+        IEnumerable<string> _webDomains;
+
+        #region IDataResources Members
+
+        public IEnumerable<bool> Booleans
         {
-            TrueFalse = new[] {true, false};
-            Chars = Enumerable.Range(0, 255).Select(c => (char) c).ToArray();
+            get { return _booleans; }
         }
 
-        public bool[] TrueFalse { get; set; }
-        public char[] Chars { get; set; }
-
-        #region Nested type: Email
-
-        public class Email
+        public IEnumerable<char> Chars
         {
-            public static string[] Types
+            get
             {
-                get { return EmailResources.Types.Split('\n'); }
+                return _chars ?? (
+                                     _chars = TextResources.Chars.ToCharArray()
+                                 );
             }
-
-            public string Type { get; set; }
-            public string Address { get; set; }
         }
 
-        #endregion
-
-        #region Nested type: Person
-
-        public class Person
+        public IEnumerable<char> Letters
         {
-            #region GenderTypes enum
-
-            public enum GenderTypes
+            get
             {
-                Male,
-                Female
+                return _letters ?? (
+                                       _letters = TextResources.Letters.ToCharArray()
+                                   );
             }
-
-            #endregion
-
-            public static GenderTypes[] Genders
-            {
-                get { return Enum.GetValues(typeof (GenderTypes)).Cast<GenderTypes>().ToArray(); }
-            }
-
-            public static string[] FirstNamesMale
-            {
-                get { return PersonResources.FirstNamesMale.Split('\n'); }
-            }
-
-            public static string[] FirstNamesFemale
-            {
-                get { return PersonResources.FirstNamesFemale.Split('\n'); }
-            }
-
-            public static string[] LastNames
-            {
-                get { return PersonResources.LastNames.Split('\n'); }
-            }
-
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public GenderTypes Gender { get; set; }
-            public DateTime DateOfBirth { get; set; }
-
-            public string FullName
-            {
-                get { return string.Format("{0} {1}", FirstName, LastName).Trim(); }
-            }
-
-            public IEnumerable<Email> Emails { get; set; }
         }
 
-        #endregion
-
-        #region Nested type: Web
-
-        public class Web
+        public IEnumerable<char> Numbers
         {
-            public static string[] Domains
+            get
             {
-                get { return WebResources.Domains.Split('\n'); }
+                return _numbers ?? (
+                                       _numbers = TextResources.Numbers.ToCharArray()
+                                   );
             }
+        }
 
-            public string Address { get; set; }
+        public IEnumerable<string> PersonFirstNamesMale
+        {
+            get
+            {
+                return _personFirstNamesMale ??
+                       (_personFirstNamesMale = PersonResources.FirstNamesMale.Split('\n'));
+            }
+        }
+
+        public IEnumerable<string> PersonFirstNamesFemale
+        {
+            get
+            {
+                return _personFirstNamesFemale ??
+                       (_personFirstNamesFemale = PersonResources.FirstNamesFemale.Split('\n'));
+            }
+        }
+
+        public IEnumerable<TestingGenderTypes> DataGenders
+        {
+            get
+            {
+                return _dataGenders ??
+                       (_dataGenders = Enum.GetValues(typeof (TestingGenderTypes)).Cast<TestingGenderTypes>());
+            }
+        }
+
+        public IEnumerable<string> PersonLastNames
+        {
+            get
+            {
+                return _personLastNames ??
+                       (_personLastNames = PersonResources.LastNames.Split('\n'));
+            }
+        }
+
+        public IEnumerable<string> WebDomains
+        {
+            get
+            {
+                return _webDomains ??
+                       (_webDomains = WebResources.Domains.Split('\n'));
+            }
+        }
+
+        public IEnumerable<string> EmailTypes
+        {
+            get
+            {
+                return _emailTypes ??
+                       (_emailTypes = WebResources.EmailTypes.Split('\n'));
+            }
         }
 
         #endregion

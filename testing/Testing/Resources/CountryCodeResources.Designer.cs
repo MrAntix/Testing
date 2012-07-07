@@ -22,7 +22,7 @@ namespace Testing.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CountryCodeResources {
+    public class CountryCodeResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Testing.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Testing.Resources.CountryCodeResources", typeof(CountryCodeResources).Assembly);
@@ -51,7 +51,7 @@ namespace Testing.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Andorra.
         /// </summary>
-        internal static string AD {
+        public static string AD {
             get {
                 return ResourceManager.GetString("AD", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to United Arab Emirates.
         /// </summary>
-        internal static string AE {
+        public static string AE {
             get {
                 return ResourceManager.GetString("AE", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Afghanistan.
         /// </summary>
-        internal static string AF {
+        public static string AF {
             get {
                 return ResourceManager.GetString("AF", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Antigua and Barbuda.
         /// </summary>
-        internal static string AG {
+        public static string AG {
             get {
                 return ResourceManager.GetString("AG", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Anguilla.
         /// </summary>
-        internal static string AI {
+        public static string AI {
             get {
                 return ResourceManager.GetString("AI", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Albania.
         /// </summary>
-        internal static string AL {
+        public static string AL {
             get {
                 return ResourceManager.GetString("AL", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Armenia.
         /// </summary>
-        internal static string AM {
+        public static string AM {
             get {
                 return ResourceManager.GetString("AM", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Angola.
         /// </summary>
-        internal static string AO {
+        public static string AO {
             get {
                 return ResourceManager.GetString("AO", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Antarctica.
         /// </summary>
-        internal static string AQ {
+        public static string AQ {
             get {
                 return ResourceManager.GetString("AQ", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Argentina.
         /// </summary>
-        internal static string AR {
+        public static string AR {
             get {
                 return ResourceManager.GetString("AR", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to American Samoa.
         /// </summary>
-        internal static string AS {
+        public static string AS {
             get {
                 return ResourceManager.GetString("AS", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Austria.
         /// </summary>
-        internal static string AT {
+        public static string AT {
             get {
                 return ResourceManager.GetString("AT", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Australia.
         /// </summary>
-        internal static string AU {
+        public static string AU {
             get {
                 return ResourceManager.GetString("AU", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Aruba.
         /// </summary>
-        internal static string AW {
+        public static string AW {
             get {
                 return ResourceManager.GetString("AW", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Åland Islands.
         /// </summary>
-        internal static string AX {
+        public static string AX {
             get {
                 return ResourceManager.GetString("AX", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Azerbaijan.
         /// </summary>
-        internal static string AZ {
+        public static string AZ {
             get {
                 return ResourceManager.GetString("AZ", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bosnia and Herzegovina.
         /// </summary>
-        internal static string BA {
+        public static string BA {
             get {
                 return ResourceManager.GetString("BA", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Barbados.
         /// </summary>
-        internal static string BB {
+        public static string BB {
             get {
                 return ResourceManager.GetString("BB", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bangladesh.
         /// </summary>
-        internal static string BD {
+        public static string BD {
             get {
                 return ResourceManager.GetString("BD", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Belgium.
         /// </summary>
-        internal static string BE {
+        public static string BE {
             get {
                 return ResourceManager.GetString("BE", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Burkina Faso.
         /// </summary>
-        internal static string BF {
+        public static string BF {
             get {
                 return ResourceManager.GetString("BF", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bulgaria.
         /// </summary>
-        internal static string BG {
+        public static string BG {
             get {
                 return ResourceManager.GetString("BG", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bahrain.
         /// </summary>
-        internal static string BH {
+        public static string BH {
             get {
                 return ResourceManager.GetString("BH", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Burundi.
         /// </summary>
-        internal static string BI {
+        public static string BI {
             get {
                 return ResourceManager.GetString("BI", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Benin.
         /// </summary>
-        internal static string BJ {
+        public static string BJ {
             get {
                 return ResourceManager.GetString("BJ", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Barthélemy.
         /// </summary>
-        internal static string BL {
+        public static string BL {
             get {
                 return ResourceManager.GetString("BL", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bermuda.
         /// </summary>
-        internal static string BM {
+        public static string BM {
             get {
                 return ResourceManager.GetString("BM", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Brunei Darussalam.
         /// </summary>
-        internal static string BN {
+        public static string BN {
             get {
                 return ResourceManager.GetString("BN", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bolivia, Plurinational State of.
         /// </summary>
-        internal static string BO {
+        public static string BO {
             get {
                 return ResourceManager.GetString("BO", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bonaire, Sint Eustatius and Saba.
         /// </summary>
-        internal static string BQ {
+        public static string BQ {
             get {
                 return ResourceManager.GetString("BQ", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Brazil.
         /// </summary>
-        internal static string BR {
+        public static string BR {
             get {
                 return ResourceManager.GetString("BR", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bahamas.
         /// </summary>
-        internal static string BS {
+        public static string BS {
             get {
                 return ResourceManager.GetString("BS", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bhutan.
         /// </summary>
-        internal static string BT {
+        public static string BT {
             get {
                 return ResourceManager.GetString("BT", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bouvet Island.
         /// </summary>
-        internal static string BV {
+        public static string BV {
             get {
                 return ResourceManager.GetString("BV", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Botswana.
         /// </summary>
-        internal static string BW {
+        public static string BW {
             get {
                 return ResourceManager.GetString("BW", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Belarus.
         /// </summary>
-        internal static string BY {
+        public static string BY {
             get {
                 return ResourceManager.GetString("BY", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Belize.
         /// </summary>
-        internal static string BZ {
+        public static string BZ {
             get {
                 return ResourceManager.GetString("BZ", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Canada.
         /// </summary>
-        internal static string CA {
+        public static string CA {
             get {
                 return ResourceManager.GetString("CA", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cocos (Keeling) Islands.
         /// </summary>
-        internal static string CC {
+        public static string CC {
             get {
                 return ResourceManager.GetString("CC", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Congo, the Democratic Republic of the.
         /// </summary>
-        internal static string CD {
+        public static string CD {
             get {
                 return ResourceManager.GetString("CD", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Central African Republic.
         /// </summary>
-        internal static string CF {
+        public static string CF {
             get {
                 return ResourceManager.GetString("CF", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Congo.
         /// </summary>
-        internal static string CG {
+        public static string CG {
             get {
                 return ResourceManager.GetString("CG", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Switzerland.
         /// </summary>
-        internal static string CH {
+        public static string CH {
             get {
                 return ResourceManager.GetString("CH", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Côte d&apos;Ivoire.
         /// </summary>
-        internal static string CI {
+        public static string CI {
             get {
                 return ResourceManager.GetString("CI", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cook Islands.
         /// </summary>
-        internal static string CK {
+        public static string CK {
             get {
                 return ResourceManager.GetString("CK", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Chile.
         /// </summary>
-        internal static string CL {
+        public static string CL {
             get {
                 return ResourceManager.GetString("CL", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cameroon.
         /// </summary>
-        internal static string CM {
+        public static string CM {
             get {
                 return ResourceManager.GetString("CM", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to China.
         /// </summary>
-        internal static string CN {
+        public static string CN {
             get {
                 return ResourceManager.GetString("CN", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Colombia.
         /// </summary>
-        internal static string CO {
+        public static string CO {
             get {
                 return ResourceManager.GetString("CO", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Costa Rica.
         /// </summary>
-        internal static string CR {
+        public static string CR {
             get {
                 return ResourceManager.GetString("CR", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cuba.
         /// </summary>
-        internal static string CU {
+        public static string CU {
             get {
                 return ResourceManager.GetString("CU", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cape Verde.
         /// </summary>
-        internal static string CV {
+        public static string CV {
             get {
                 return ResourceManager.GetString("CV", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Curaçao.
         /// </summary>
-        internal static string CW {
+        public static string CW {
             get {
                 return ResourceManager.GetString("CW", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Christmas Island.
         /// </summary>
-        internal static string CX {
+        public static string CX {
             get {
                 return ResourceManager.GetString("CX", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cyprus.
         /// </summary>
-        internal static string CY {
+        public static string CY {
             get {
                 return ResourceManager.GetString("CY", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Czech Republic.
         /// </summary>
-        internal static string CZ {
+        public static string CZ {
             get {
                 return ResourceManager.GetString("CZ", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Germany.
         /// </summary>
-        internal static string DE {
+        public static string DE {
             get {
                 return ResourceManager.GetString("DE", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Djibouti.
         /// </summary>
-        internal static string DJ {
+        public static string DJ {
             get {
                 return ResourceManager.GetString("DJ", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Denmark.
         /// </summary>
-        internal static string DK {
+        public static string DK {
             get {
                 return ResourceManager.GetString("DK", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Dominica.
         /// </summary>
-        internal static string DM {
+        public static string DM {
             get {
                 return ResourceManager.GetString("DM", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Dominican Republic.
         /// </summary>
-        internal static string DO {
+        public static string DO {
             get {
                 return ResourceManager.GetString("DO", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Algeria.
         /// </summary>
-        internal static string DZ {
+        public static string DZ {
             get {
                 return ResourceManager.GetString("DZ", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ecuador.
         /// </summary>
-        internal static string EC {
+        public static string EC {
             get {
                 return ResourceManager.GetString("EC", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Estonia.
         /// </summary>
-        internal static string EE {
+        public static string EE {
             get {
                 return ResourceManager.GetString("EE", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Egypt.
         /// </summary>
-        internal static string EG {
+        public static string EG {
             get {
                 return ResourceManager.GetString("EG", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Western Sahara.
         /// </summary>
-        internal static string EH {
+        public static string EH {
             get {
                 return ResourceManager.GetString("EH", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Eritrea.
         /// </summary>
-        internal static string ER {
+        public static string ER {
             get {
                 return ResourceManager.GetString("ER", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Spain.
         /// </summary>
-        internal static string ES {
+        public static string ES {
             get {
                 return ResourceManager.GetString("ES", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ethiopia.
         /// </summary>
-        internal static string ET {
+        public static string ET {
             get {
                 return ResourceManager.GetString("ET", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Finland.
         /// </summary>
-        internal static string FI {
+        public static string FI {
             get {
                 return ResourceManager.GetString("FI", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Fiji.
         /// </summary>
-        internal static string FJ {
+        public static string FJ {
             get {
                 return ResourceManager.GetString("FJ", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Falkland Islands (Malvinas).
         /// </summary>
-        internal static string FK {
+        public static string FK {
             get {
                 return ResourceManager.GetString("FK", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Micronesia, Federated States of.
         /// </summary>
-        internal static string FM {
+        public static string FM {
             get {
                 return ResourceManager.GetString("FM", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Faroe Islands.
         /// </summary>
-        internal static string FO {
+        public static string FO {
             get {
                 return ResourceManager.GetString("FO", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to France.
         /// </summary>
-        internal static string FR {
+        public static string FR {
             get {
                 return ResourceManager.GetString("FR", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Gabon.
         /// </summary>
-        internal static string GA {
+        public static string GA {
             get {
                 return ResourceManager.GetString("GA", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to United Kingdom.
         /// </summary>
-        internal static string GB {
+        public static string GB {
             get {
                 return ResourceManager.GetString("GB", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Grenada.
         /// </summary>
-        internal static string GD {
+        public static string GD {
             get {
                 return ResourceManager.GetString("GD", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Georgia.
         /// </summary>
-        internal static string GE {
+        public static string GE {
             get {
                 return ResourceManager.GetString("GE", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to French Guiana.
         /// </summary>
-        internal static string GF {
+        public static string GF {
             get {
                 return ResourceManager.GetString("GF", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guernsey.
         /// </summary>
-        internal static string GG {
+        public static string GG {
             get {
                 return ResourceManager.GetString("GG", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ghana.
         /// </summary>
-        internal static string GH {
+        public static string GH {
             get {
                 return ResourceManager.GetString("GH", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Gibraltar.
         /// </summary>
-        internal static string GI {
+        public static string GI {
             get {
                 return ResourceManager.GetString("GI", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Greenland.
         /// </summary>
-        internal static string GL {
+        public static string GL {
             get {
                 return ResourceManager.GetString("GL", resourceCulture);
             }
@@ -819,7 +819,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Gambia.
         /// </summary>
-        internal static string GM {
+        public static string GM {
             get {
                 return ResourceManager.GetString("GM", resourceCulture);
             }
@@ -828,7 +828,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guinea.
         /// </summary>
-        internal static string GN {
+        public static string GN {
             get {
                 return ResourceManager.GetString("GN", resourceCulture);
             }
@@ -837,7 +837,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guadeloupe.
         /// </summary>
-        internal static string GP {
+        public static string GP {
             get {
                 return ResourceManager.GetString("GP", resourceCulture);
             }
@@ -846,7 +846,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Equatorial Guinea.
         /// </summary>
-        internal static string GQ {
+        public static string GQ {
             get {
                 return ResourceManager.GetString("GQ", resourceCulture);
             }
@@ -855,7 +855,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Greece.
         /// </summary>
-        internal static string GR {
+        public static string GR {
             get {
                 return ResourceManager.GetString("GR", resourceCulture);
             }
@@ -864,7 +864,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to South Georgia and the South Sandwich Islands.
         /// </summary>
-        internal static string GS {
+        public static string GS {
             get {
                 return ResourceManager.GetString("GS", resourceCulture);
             }
@@ -873,7 +873,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guatemala.
         /// </summary>
-        internal static string GT {
+        public static string GT {
             get {
                 return ResourceManager.GetString("GT", resourceCulture);
             }
@@ -882,7 +882,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guam.
         /// </summary>
-        internal static string GU {
+        public static string GU {
             get {
                 return ResourceManager.GetString("GU", resourceCulture);
             }
@@ -891,7 +891,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guinea-Bissau.
         /// </summary>
-        internal static string GW {
+        public static string GW {
             get {
                 return ResourceManager.GetString("GW", resourceCulture);
             }
@@ -900,7 +900,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Guyana.
         /// </summary>
-        internal static string GY {
+        public static string GY {
             get {
                 return ResourceManager.GetString("GY", resourceCulture);
             }
@@ -909,7 +909,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hong Kong.
         /// </summary>
-        internal static string HK {
+        public static string HK {
             get {
                 return ResourceManager.GetString("HK", resourceCulture);
             }
@@ -918,7 +918,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Heard Island and McDonald Islands.
         /// </summary>
-        internal static string HM {
+        public static string HM {
             get {
                 return ResourceManager.GetString("HM", resourceCulture);
             }
@@ -927,7 +927,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Honduras.
         /// </summary>
-        internal static string HN {
+        public static string HN {
             get {
                 return ResourceManager.GetString("HN", resourceCulture);
             }
@@ -936,7 +936,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Croatia.
         /// </summary>
-        internal static string HR {
+        public static string HR {
             get {
                 return ResourceManager.GetString("HR", resourceCulture);
             }
@@ -945,7 +945,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Haiti.
         /// </summary>
-        internal static string HT {
+        public static string HT {
             get {
                 return ResourceManager.GetString("HT", resourceCulture);
             }
@@ -954,7 +954,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Hungary.
         /// </summary>
-        internal static string HU {
+        public static string HU {
             get {
                 return ResourceManager.GetString("HU", resourceCulture);
             }
@@ -963,7 +963,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Indonesia.
         /// </summary>
-        internal static string ID {
+        public static string ID {
             get {
                 return ResourceManager.GetString("ID", resourceCulture);
             }
@@ -972,7 +972,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ireland.
         /// </summary>
-        internal static string IE {
+        public static string IE {
             get {
                 return ResourceManager.GetString("IE", resourceCulture);
             }
@@ -981,7 +981,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Israel.
         /// </summary>
-        internal static string IL {
+        public static string IL {
             get {
                 return ResourceManager.GetString("IL", resourceCulture);
             }
@@ -990,7 +990,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Isle of Man.
         /// </summary>
-        internal static string IM {
+        public static string IM {
             get {
                 return ResourceManager.GetString("IM", resourceCulture);
             }
@@ -999,7 +999,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to India.
         /// </summary>
-        internal static string IN {
+        public static string IN {
             get {
                 return ResourceManager.GetString("IN", resourceCulture);
             }
@@ -1008,7 +1008,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to British Indian Ocean Territory.
         /// </summary>
-        internal static string IO {
+        public static string IO {
             get {
                 return ResourceManager.GetString("IO", resourceCulture);
             }
@@ -1017,7 +1017,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Iraq.
         /// </summary>
-        internal static string IQ {
+        public static string IQ {
             get {
                 return ResourceManager.GetString("IQ", resourceCulture);
             }
@@ -1026,7 +1026,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Iran, Islamic Republic of.
         /// </summary>
-        internal static string IR {
+        public static string IR {
             get {
                 return ResourceManager.GetString("IR", resourceCulture);
             }
@@ -1035,7 +1035,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Iceland.
         /// </summary>
-        internal static string IS {
+        public static string IS {
             get {
                 return ResourceManager.GetString("IS", resourceCulture);
             }
@@ -1044,7 +1044,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Italy.
         /// </summary>
-        internal static string IT {
+        public static string IT {
             get {
                 return ResourceManager.GetString("IT", resourceCulture);
             }
@@ -1053,7 +1053,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Jersey.
         /// </summary>
-        internal static string JE {
+        public static string JE {
             get {
                 return ResourceManager.GetString("JE", resourceCulture);
             }
@@ -1062,7 +1062,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Jamaica.
         /// </summary>
-        internal static string JM {
+        public static string JM {
             get {
                 return ResourceManager.GetString("JM", resourceCulture);
             }
@@ -1071,7 +1071,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Jordan.
         /// </summary>
-        internal static string JO {
+        public static string JO {
             get {
                 return ResourceManager.GetString("JO", resourceCulture);
             }
@@ -1080,7 +1080,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Japan.
         /// </summary>
-        internal static string JP {
+        public static string JP {
             get {
                 return ResourceManager.GetString("JP", resourceCulture);
             }
@@ -1089,7 +1089,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kenya.
         /// </summary>
-        internal static string KE {
+        public static string KE {
             get {
                 return ResourceManager.GetString("KE", resourceCulture);
             }
@@ -1098,7 +1098,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kyrgyzstan.
         /// </summary>
-        internal static string KG {
+        public static string KG {
             get {
                 return ResourceManager.GetString("KG", resourceCulture);
             }
@@ -1107,7 +1107,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cambodia.
         /// </summary>
-        internal static string KH {
+        public static string KH {
             get {
                 return ResourceManager.GetString("KH", resourceCulture);
             }
@@ -1116,7 +1116,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kiribati.
         /// </summary>
-        internal static string KI {
+        public static string KI {
             get {
                 return ResourceManager.GetString("KI", resourceCulture);
             }
@@ -1125,7 +1125,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Comoros.
         /// </summary>
-        internal static string KM {
+        public static string KM {
             get {
                 return ResourceManager.GetString("KM", resourceCulture);
             }
@@ -1134,7 +1134,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Kitts and Nevis.
         /// </summary>
-        internal static string KN {
+        public static string KN {
             get {
                 return ResourceManager.GetString("KN", resourceCulture);
             }
@@ -1143,7 +1143,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Korea, Democratic People&apos;s Republic of.
         /// </summary>
-        internal static string KP {
+        public static string KP {
             get {
                 return ResourceManager.GetString("KP", resourceCulture);
             }
@@ -1152,7 +1152,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Korea, Republic of.
         /// </summary>
-        internal static string KR {
+        public static string KR {
             get {
                 return ResourceManager.GetString("KR", resourceCulture);
             }
@@ -1161,7 +1161,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kuwait.
         /// </summary>
-        internal static string KW {
+        public static string KW {
             get {
                 return ResourceManager.GetString("KW", resourceCulture);
             }
@@ -1170,7 +1170,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Cayman Islands.
         /// </summary>
-        internal static string KY {
+        public static string KY {
             get {
                 return ResourceManager.GetString("KY", resourceCulture);
             }
@@ -1179,7 +1179,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Kazakhstan.
         /// </summary>
-        internal static string KZ {
+        public static string KZ {
             get {
                 return ResourceManager.GetString("KZ", resourceCulture);
             }
@@ -1188,7 +1188,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Lao People&apos;s Democratic Republic.
         /// </summary>
-        internal static string LA {
+        public static string LA {
             get {
                 return ResourceManager.GetString("LA", resourceCulture);
             }
@@ -1197,7 +1197,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Lebanon.
         /// </summary>
-        internal static string LB {
+        public static string LB {
             get {
                 return ResourceManager.GetString("LB", resourceCulture);
             }
@@ -1206,7 +1206,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Lucia.
         /// </summary>
-        internal static string LC {
+        public static string LC {
             get {
                 return ResourceManager.GetString("LC", resourceCulture);
             }
@@ -1215,7 +1215,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Liechtenstein.
         /// </summary>
-        internal static string LI {
+        public static string LI {
             get {
                 return ResourceManager.GetString("LI", resourceCulture);
             }
@@ -1224,7 +1224,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sri Lanka.
         /// </summary>
-        internal static string LK {
+        public static string LK {
             get {
                 return ResourceManager.GetString("LK", resourceCulture);
             }
@@ -1233,7 +1233,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Liberia.
         /// </summary>
-        internal static string LR {
+        public static string LR {
             get {
                 return ResourceManager.GetString("LR", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Lesotho.
         /// </summary>
-        internal static string LS {
+        public static string LS {
             get {
                 return ResourceManager.GetString("LS", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Lithuania.
         /// </summary>
-        internal static string LT {
+        public static string LT {
             get {
                 return ResourceManager.GetString("LT", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Luxembourg.
         /// </summary>
-        internal static string LU {
+        public static string LU {
             get {
                 return ResourceManager.GetString("LU", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Latvia.
         /// </summary>
-        internal static string LV {
+        public static string LV {
             get {
                 return ResourceManager.GetString("LV", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Libya.
         /// </summary>
-        internal static string LY {
+        public static string LY {
             get {
                 return ResourceManager.GetString("LY", resourceCulture);
             }
@@ -1287,7 +1287,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Morocco.
         /// </summary>
-        internal static string MA {
+        public static string MA {
             get {
                 return ResourceManager.GetString("MA", resourceCulture);
             }
@@ -1296,7 +1296,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Monaco.
         /// </summary>
-        internal static string MC {
+        public static string MC {
             get {
                 return ResourceManager.GetString("MC", resourceCulture);
             }
@@ -1305,7 +1305,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Moldova, Republic of.
         /// </summary>
-        internal static string MD {
+        public static string MD {
             get {
                 return ResourceManager.GetString("MD", resourceCulture);
             }
@@ -1314,7 +1314,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Montenegro.
         /// </summary>
-        internal static string ME {
+        public static string ME {
             get {
                 return ResourceManager.GetString("ME", resourceCulture);
             }
@@ -1323,7 +1323,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Martin (French part).
         /// </summary>
-        internal static string MF {
+        public static string MF {
             get {
                 return ResourceManager.GetString("MF", resourceCulture);
             }
@@ -1332,7 +1332,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Madagascar.
         /// </summary>
-        internal static string MG {
+        public static string MG {
             get {
                 return ResourceManager.GetString("MG", resourceCulture);
             }
@@ -1341,7 +1341,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Marshall Islands.
         /// </summary>
-        internal static string MH {
+        public static string MH {
             get {
                 return ResourceManager.GetString("MH", resourceCulture);
             }
@@ -1350,7 +1350,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Macedonia, the former Yugoslav Republic of.
         /// </summary>
-        internal static string MK {
+        public static string MK {
             get {
                 return ResourceManager.GetString("MK", resourceCulture);
             }
@@ -1359,7 +1359,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mali.
         /// </summary>
-        internal static string ML {
+        public static string ML {
             get {
                 return ResourceManager.GetString("ML", resourceCulture);
             }
@@ -1368,7 +1368,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Myanmar.
         /// </summary>
-        internal static string MM {
+        public static string MM {
             get {
                 return ResourceManager.GetString("MM", resourceCulture);
             }
@@ -1377,7 +1377,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mongolia.
         /// </summary>
-        internal static string MN {
+        public static string MN {
             get {
                 return ResourceManager.GetString("MN", resourceCulture);
             }
@@ -1386,7 +1386,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Macao.
         /// </summary>
-        internal static string MO {
+        public static string MO {
             get {
                 return ResourceManager.GetString("MO", resourceCulture);
             }
@@ -1395,7 +1395,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Northern Mariana Islands.
         /// </summary>
-        internal static string MP {
+        public static string MP {
             get {
                 return ResourceManager.GetString("MP", resourceCulture);
             }
@@ -1404,7 +1404,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Martinique.
         /// </summary>
-        internal static string MQ {
+        public static string MQ {
             get {
                 return ResourceManager.GetString("MQ", resourceCulture);
             }
@@ -1413,7 +1413,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mauritania.
         /// </summary>
-        internal static string MR {
+        public static string MR {
             get {
                 return ResourceManager.GetString("MR", resourceCulture);
             }
@@ -1422,7 +1422,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Montserrat.
         /// </summary>
-        internal static string MS {
+        public static string MS {
             get {
                 return ResourceManager.GetString("MS", resourceCulture);
             }
@@ -1431,7 +1431,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Malta.
         /// </summary>
-        internal static string MT {
+        public static string MT {
             get {
                 return ResourceManager.GetString("MT", resourceCulture);
             }
@@ -1440,7 +1440,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mauritius.
         /// </summary>
-        internal static string MU {
+        public static string MU {
             get {
                 return ResourceManager.GetString("MU", resourceCulture);
             }
@@ -1449,7 +1449,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Maldives.
         /// </summary>
-        internal static string MV {
+        public static string MV {
             get {
                 return ResourceManager.GetString("MV", resourceCulture);
             }
@@ -1458,7 +1458,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Malawi.
         /// </summary>
-        internal static string MW {
+        public static string MW {
             get {
                 return ResourceManager.GetString("MW", resourceCulture);
             }
@@ -1467,7 +1467,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mexico.
         /// </summary>
-        internal static string MX {
+        public static string MX {
             get {
                 return ResourceManager.GetString("MX", resourceCulture);
             }
@@ -1476,7 +1476,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Malaysia.
         /// </summary>
-        internal static string MY {
+        public static string MY {
             get {
                 return ResourceManager.GetString("MY", resourceCulture);
             }
@@ -1485,7 +1485,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mozambique.
         /// </summary>
-        internal static string MZ {
+        public static string MZ {
             get {
                 return ResourceManager.GetString("MZ", resourceCulture);
             }
@@ -1494,7 +1494,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Namibia.
         /// </summary>
-        internal static string NA {
+        public static string NA {
             get {
                 return ResourceManager.GetString("NA", resourceCulture);
             }
@@ -1503,7 +1503,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to New Caledonia.
         /// </summary>
-        internal static string NC {
+        public static string NC {
             get {
                 return ResourceManager.GetString("NC", resourceCulture);
             }
@@ -1512,7 +1512,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Niger.
         /// </summary>
-        internal static string NE {
+        public static string NE {
             get {
                 return ResourceManager.GetString("NE", resourceCulture);
             }
@@ -1521,7 +1521,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Norfolk Island.
         /// </summary>
-        internal static string NF {
+        public static string NF {
             get {
                 return ResourceManager.GetString("NF", resourceCulture);
             }
@@ -1530,7 +1530,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Nigeria.
         /// </summary>
-        internal static string NG {
+        public static string NG {
             get {
                 return ResourceManager.GetString("NG", resourceCulture);
             }
@@ -1539,7 +1539,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Nicaragua.
         /// </summary>
-        internal static string NI {
+        public static string NI {
             get {
                 return ResourceManager.GetString("NI", resourceCulture);
             }
@@ -1548,7 +1548,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Netherlands.
         /// </summary>
-        internal static string NL {
+        public static string NL {
             get {
                 return ResourceManager.GetString("NL", resourceCulture);
             }
@@ -1557,7 +1557,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Norway.
         /// </summary>
-        internal static string NO {
+        public static string NO {
             get {
                 return ResourceManager.GetString("NO", resourceCulture);
             }
@@ -1566,7 +1566,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Nepal.
         /// </summary>
-        internal static string NP {
+        public static string NP {
             get {
                 return ResourceManager.GetString("NP", resourceCulture);
             }
@@ -1575,7 +1575,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Nauru.
         /// </summary>
-        internal static string NR {
+        public static string NR {
             get {
                 return ResourceManager.GetString("NR", resourceCulture);
             }
@@ -1584,7 +1584,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Niue.
         /// </summary>
-        internal static string NU {
+        public static string NU {
             get {
                 return ResourceManager.GetString("NU", resourceCulture);
             }
@@ -1593,7 +1593,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to New Zealand.
         /// </summary>
-        internal static string NZ {
+        public static string NZ {
             get {
                 return ResourceManager.GetString("NZ", resourceCulture);
             }
@@ -1602,7 +1602,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Oman.
         /// </summary>
-        internal static string OM {
+        public static string OM {
             get {
                 return ResourceManager.GetString("OM", resourceCulture);
             }
@@ -1611,7 +1611,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Panama.
         /// </summary>
-        internal static string PA {
+        public static string PA {
             get {
                 return ResourceManager.GetString("PA", resourceCulture);
             }
@@ -1620,7 +1620,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Peru.
         /// </summary>
-        internal static string PE {
+        public static string PE {
             get {
                 return ResourceManager.GetString("PE", resourceCulture);
             }
@@ -1629,7 +1629,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to French Polynesia.
         /// </summary>
-        internal static string PF {
+        public static string PF {
             get {
                 return ResourceManager.GetString("PF", resourceCulture);
             }
@@ -1638,7 +1638,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Papua New Guinea.
         /// </summary>
-        internal static string PG {
+        public static string PG {
             get {
                 return ResourceManager.GetString("PG", resourceCulture);
             }
@@ -1647,7 +1647,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Philippines.
         /// </summary>
-        internal static string PH {
+        public static string PH {
             get {
                 return ResourceManager.GetString("PH", resourceCulture);
             }
@@ -1656,7 +1656,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Pakistan.
         /// </summary>
-        internal static string PK {
+        public static string PK {
             get {
                 return ResourceManager.GetString("PK", resourceCulture);
             }
@@ -1665,7 +1665,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Poland.
         /// </summary>
-        internal static string PL {
+        public static string PL {
             get {
                 return ResourceManager.GetString("PL", resourceCulture);
             }
@@ -1674,7 +1674,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Pierre and Miquelon.
         /// </summary>
-        internal static string PM {
+        public static string PM {
             get {
                 return ResourceManager.GetString("PM", resourceCulture);
             }
@@ -1683,7 +1683,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Pitcairn.
         /// </summary>
-        internal static string PN {
+        public static string PN {
             get {
                 return ResourceManager.GetString("PN", resourceCulture);
             }
@@ -1692,7 +1692,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Puerto Rico.
         /// </summary>
-        internal static string PR {
+        public static string PR {
             get {
                 return ResourceManager.GetString("PR", resourceCulture);
             }
@@ -1701,7 +1701,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Palestinian Territory, Occupied.
         /// </summary>
-        internal static string PS {
+        public static string PS {
             get {
                 return ResourceManager.GetString("PS", resourceCulture);
             }
@@ -1710,7 +1710,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Portugal.
         /// </summary>
-        internal static string PT {
+        public static string PT {
             get {
                 return ResourceManager.GetString("PT", resourceCulture);
             }
@@ -1719,7 +1719,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Palau.
         /// </summary>
-        internal static string PW {
+        public static string PW {
             get {
                 return ResourceManager.GetString("PW", resourceCulture);
             }
@@ -1728,7 +1728,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Paraguay.
         /// </summary>
-        internal static string PY {
+        public static string PY {
             get {
                 return ResourceManager.GetString("PY", resourceCulture);
             }
@@ -1737,7 +1737,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Qatar.
         /// </summary>
-        internal static string QA {
+        public static string QA {
             get {
                 return ResourceManager.GetString("QA", resourceCulture);
             }
@@ -1746,7 +1746,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Réunion.
         /// </summary>
-        internal static string RE {
+        public static string RE {
             get {
                 return ResourceManager.GetString("RE", resourceCulture);
             }
@@ -1755,7 +1755,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Romania.
         /// </summary>
-        internal static string RO {
+        public static string RO {
             get {
                 return ResourceManager.GetString("RO", resourceCulture);
             }
@@ -1764,7 +1764,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Serbia.
         /// </summary>
-        internal static string RS {
+        public static string RS {
             get {
                 return ResourceManager.GetString("RS", resourceCulture);
             }
@@ -1773,7 +1773,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Russian Federation.
         /// </summary>
-        internal static string RU {
+        public static string RU {
             get {
                 return ResourceManager.GetString("RU", resourceCulture);
             }
@@ -1782,7 +1782,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Rwanda.
         /// </summary>
-        internal static string RW {
+        public static string RW {
             get {
                 return ResourceManager.GetString("RW", resourceCulture);
             }
@@ -1791,7 +1791,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saudi Arabia.
         /// </summary>
-        internal static string SA {
+        public static string SA {
             get {
                 return ResourceManager.GetString("SA", resourceCulture);
             }
@@ -1800,7 +1800,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Solomon Islands.
         /// </summary>
-        internal static string SB {
+        public static string SB {
             get {
                 return ResourceManager.GetString("SB", resourceCulture);
             }
@@ -1809,7 +1809,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Seychelles.
         /// </summary>
-        internal static string SC {
+        public static string SC {
             get {
                 return ResourceManager.GetString("SC", resourceCulture);
             }
@@ -1818,7 +1818,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sudan.
         /// </summary>
-        internal static string SD {
+        public static string SD {
             get {
                 return ResourceManager.GetString("SD", resourceCulture);
             }
@@ -1827,7 +1827,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sweden.
         /// </summary>
-        internal static string SE {
+        public static string SE {
             get {
                 return ResourceManager.GetString("SE", resourceCulture);
             }
@@ -1836,7 +1836,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Singapore.
         /// </summary>
-        internal static string SG {
+        public static string SG {
             get {
                 return ResourceManager.GetString("SG", resourceCulture);
             }
@@ -1845,7 +1845,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Helena, Ascension and Tristan da Cunha.
         /// </summary>
-        internal static string SH {
+        public static string SH {
             get {
                 return ResourceManager.GetString("SH", resourceCulture);
             }
@@ -1854,7 +1854,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Slovenia.
         /// </summary>
-        internal static string SI {
+        public static string SI {
             get {
                 return ResourceManager.GetString("SI", resourceCulture);
             }
@@ -1863,7 +1863,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Svalbard and Jan Mayen.
         /// </summary>
-        internal static string SJ {
+        public static string SJ {
             get {
                 return ResourceManager.GetString("SJ", resourceCulture);
             }
@@ -1872,7 +1872,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Slovakia.
         /// </summary>
-        internal static string SK {
+        public static string SK {
             get {
                 return ResourceManager.GetString("SK", resourceCulture);
             }
@@ -1881,7 +1881,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sierra Leone.
         /// </summary>
-        internal static string SL {
+        public static string SL {
             get {
                 return ResourceManager.GetString("SL", resourceCulture);
             }
@@ -1890,7 +1890,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to San Marino.
         /// </summary>
-        internal static string SM {
+        public static string SM {
             get {
                 return ResourceManager.GetString("SM", resourceCulture);
             }
@@ -1899,7 +1899,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Senegal.
         /// </summary>
-        internal static string SN {
+        public static string SN {
             get {
                 return ResourceManager.GetString("SN", resourceCulture);
             }
@@ -1908,7 +1908,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Somalia.
         /// </summary>
-        internal static string SO {
+        public static string SO {
             get {
                 return ResourceManager.GetString("SO", resourceCulture);
             }
@@ -1917,7 +1917,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Suriname.
         /// </summary>
-        internal static string SR {
+        public static string SR {
             get {
                 return ResourceManager.GetString("SR", resourceCulture);
             }
@@ -1926,7 +1926,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to South Sudan.
         /// </summary>
-        internal static string SS {
+        public static string SS {
             get {
                 return ResourceManager.GetString("SS", resourceCulture);
             }
@@ -1935,7 +1935,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sao Tome and Principe.
         /// </summary>
-        internal static string ST {
+        public static string ST {
             get {
                 return ResourceManager.GetString("ST", resourceCulture);
             }
@@ -1944,7 +1944,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to El Salvador.
         /// </summary>
-        internal static string SV {
+        public static string SV {
             get {
                 return ResourceManager.GetString("SV", resourceCulture);
             }
@@ -1953,7 +1953,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Sint Maarten (Dutch part).
         /// </summary>
-        internal static string SX {
+        public static string SX {
             get {
                 return ResourceManager.GetString("SX", resourceCulture);
             }
@@ -1962,7 +1962,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Syrian Arab Republic.
         /// </summary>
-        internal static string SY {
+        public static string SY {
             get {
                 return ResourceManager.GetString("SY", resourceCulture);
             }
@@ -1971,7 +1971,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Swaziland.
         /// </summary>
-        internal static string SZ {
+        public static string SZ {
             get {
                 return ResourceManager.GetString("SZ", resourceCulture);
             }
@@ -1980,7 +1980,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Turks and Caicos Islands.
         /// </summary>
-        internal static string TC {
+        public static string TC {
             get {
                 return ResourceManager.GetString("TC", resourceCulture);
             }
@@ -1989,7 +1989,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Chad.
         /// </summary>
-        internal static string TD {
+        public static string TD {
             get {
                 return ResourceManager.GetString("TD", resourceCulture);
             }
@@ -1998,7 +1998,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to French Southern Territories.
         /// </summary>
-        internal static string TF {
+        public static string TF {
             get {
                 return ResourceManager.GetString("TF", resourceCulture);
             }
@@ -2007,7 +2007,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Togo.
         /// </summary>
-        internal static string TG {
+        public static string TG {
             get {
                 return ResourceManager.GetString("TG", resourceCulture);
             }
@@ -2016,7 +2016,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Thailand.
         /// </summary>
-        internal static string TH {
+        public static string TH {
             get {
                 return ResourceManager.GetString("TH", resourceCulture);
             }
@@ -2025,7 +2025,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tajikistan.
         /// </summary>
-        internal static string TJ {
+        public static string TJ {
             get {
                 return ResourceManager.GetString("TJ", resourceCulture);
             }
@@ -2034,7 +2034,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tokelau.
         /// </summary>
-        internal static string TK {
+        public static string TK {
             get {
                 return ResourceManager.GetString("TK", resourceCulture);
             }
@@ -2043,7 +2043,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Timor-Leste.
         /// </summary>
-        internal static string TL {
+        public static string TL {
             get {
                 return ResourceManager.GetString("TL", resourceCulture);
             }
@@ -2052,7 +2052,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Turkmenistan.
         /// </summary>
-        internal static string TM {
+        public static string TM {
             get {
                 return ResourceManager.GetString("TM", resourceCulture);
             }
@@ -2061,7 +2061,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tunisia.
         /// </summary>
-        internal static string TN {
+        public static string TN {
             get {
                 return ResourceManager.GetString("TN", resourceCulture);
             }
@@ -2070,7 +2070,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tonga.
         /// </summary>
-        internal static string TO {
+        public static string TO {
             get {
                 return ResourceManager.GetString("TO", resourceCulture);
             }
@@ -2079,7 +2079,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Turkey.
         /// </summary>
-        internal static string TR {
+        public static string TR {
             get {
                 return ResourceManager.GetString("TR", resourceCulture);
             }
@@ -2088,7 +2088,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Trinidad and Tobago.
         /// </summary>
-        internal static string TT {
+        public static string TT {
             get {
                 return ResourceManager.GetString("TT", resourceCulture);
             }
@@ -2097,7 +2097,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tuvalu.
         /// </summary>
-        internal static string TV {
+        public static string TV {
             get {
                 return ResourceManager.GetString("TV", resourceCulture);
             }
@@ -2106,7 +2106,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Taiwan, Province of China.
         /// </summary>
-        internal static string TW {
+        public static string TW {
             get {
                 return ResourceManager.GetString("TW", resourceCulture);
             }
@@ -2115,7 +2115,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Tanzania, United Republic of.
         /// </summary>
-        internal static string TZ {
+        public static string TZ {
             get {
                 return ResourceManager.GetString("TZ", resourceCulture);
             }
@@ -2124,7 +2124,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Ukraine.
         /// </summary>
-        internal static string UA {
+        public static string UA {
             get {
                 return ResourceManager.GetString("UA", resourceCulture);
             }
@@ -2133,7 +2133,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Uganda.
         /// </summary>
-        internal static string UG {
+        public static string UG {
             get {
                 return ResourceManager.GetString("UG", resourceCulture);
             }
@@ -2142,7 +2142,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to United States Minor Outlying Islands.
         /// </summary>
-        internal static string UM {
+        public static string UM {
             get {
                 return ResourceManager.GetString("UM", resourceCulture);
             }
@@ -2151,7 +2151,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to United States.
         /// </summary>
-        internal static string US {
+        public static string US {
             get {
                 return ResourceManager.GetString("US", resourceCulture);
             }
@@ -2160,7 +2160,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Uruguay.
         /// </summary>
-        internal static string UY {
+        public static string UY {
             get {
                 return ResourceManager.GetString("UY", resourceCulture);
             }
@@ -2169,7 +2169,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Uzbekistan.
         /// </summary>
-        internal static string UZ {
+        public static string UZ {
             get {
                 return ResourceManager.GetString("UZ", resourceCulture);
             }
@@ -2178,7 +2178,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Holy See (Vatican City State).
         /// </summary>
-        internal static string VA {
+        public static string VA {
             get {
                 return ResourceManager.GetString("VA", resourceCulture);
             }
@@ -2187,7 +2187,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Saint Vincent and the Grenadines.
         /// </summary>
-        internal static string VC {
+        public static string VC {
             get {
                 return ResourceManager.GetString("VC", resourceCulture);
             }
@@ -2196,7 +2196,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Venezuela, Bolivarian Republic of.
         /// </summary>
-        internal static string VE {
+        public static string VE {
             get {
                 return ResourceManager.GetString("VE", resourceCulture);
             }
@@ -2205,7 +2205,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Virgin Islands, British.
         /// </summary>
-        internal static string VG {
+        public static string VG {
             get {
                 return ResourceManager.GetString("VG", resourceCulture);
             }
@@ -2214,7 +2214,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Virgin Islands, U.S..
         /// </summary>
-        internal static string VI {
+        public static string VI {
             get {
                 return ResourceManager.GetString("VI", resourceCulture);
             }
@@ -2223,7 +2223,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Viet Nam.
         /// </summary>
-        internal static string VN {
+        public static string VN {
             get {
                 return ResourceManager.GetString("VN", resourceCulture);
             }
@@ -2232,7 +2232,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Vanuatu.
         /// </summary>
-        internal static string VU {
+        public static string VU {
             get {
                 return ResourceManager.GetString("VU", resourceCulture);
             }
@@ -2241,7 +2241,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Wallis and Futuna.
         /// </summary>
-        internal static string WF {
+        public static string WF {
             get {
                 return ResourceManager.GetString("WF", resourceCulture);
             }
@@ -2250,7 +2250,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Samoa.
         /// </summary>
-        internal static string WS {
+        public static string WS {
             get {
                 return ResourceManager.GetString("WS", resourceCulture);
             }
@@ -2259,7 +2259,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Yemen.
         /// </summary>
-        internal static string YE {
+        public static string YE {
             get {
                 return ResourceManager.GetString("YE", resourceCulture);
             }
@@ -2268,7 +2268,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Mayotte.
         /// </summary>
-        internal static string YT {
+        public static string YT {
             get {
                 return ResourceManager.GetString("YT", resourceCulture);
             }
@@ -2277,7 +2277,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to South Africa.
         /// </summary>
-        internal static string ZA {
+        public static string ZA {
             get {
                 return ResourceManager.GetString("ZA", resourceCulture);
             }
@@ -2286,7 +2286,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zambia.
         /// </summary>
-        internal static string ZM {
+        public static string ZM {
             get {
                 return ResourceManager.GetString("ZM", resourceCulture);
             }
@@ -2295,7 +2295,7 @@ namespace Testing.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Zimbabwe.
         /// </summary>
-        internal static string ZW {
+        public static string ZW {
             get {
                 return ResourceManager.GetString("ZW", resourceCulture);
             }

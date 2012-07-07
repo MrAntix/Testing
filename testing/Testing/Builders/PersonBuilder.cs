@@ -1,25 +1,49 @@
 ﻿using System;
+using Testing.Base;
+using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class PersonBuilder : Builder<DataResources.Person>
+    public class PersonBuilder : BuilderBase<TestingPersonModel, PersonBuilder>
     {
-        public PersonBuilder()
+        readonly IDataContainer _dataContainer;
+        public PersonBuilder(IDataContainer dataContainer) 
         {
-            With(p =>
-                     {
-                         p.Gender = DataResources.Person.Genders.OneOf();
-                         p.FirstName = p.Gender == DataResources.Person.GenderTypes.Female
-                                           ? DataResources.Person.FirstNamesFemale.OneOf()
-                                           : DataResources.Person.FirstNamesMale.OneOf();
-                         p.LastName = DataResources.Person.LastNames.OneOf();
+            _dataContainer = dataContainer;
+            Assign = p =>
+                         {
+                             p.Gender = _dataContainer.Resources.DataGenders.OneOf();
+                             p.FirstName = p.Gender == TestingGenderTypes.Female
+                                               ? _dataContainer.Resources.PersonFirstNamesFemale.OneOf()
+                                               : _dataContainer.Resources.PersonFirstNamesMale.OneOf();
+                             p.LastName = _dataContainer.Resources.PersonLastNames.OneOf();
 
-                         p.DateOfBirth = Data.RandomDateTime.Get(
-                             DateTime.Now.AddYears(-130),
-                             DateTime.Now);
+                             p.DateOfBirth = dataContainer.DateTime
+                                 .With(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
+                                 .BuildItem();
+                         };
+        }
 
-                         p.Emails = new EmailBuilder(p).Build(0, 3).Items;
-                     });
+        public PersonBuilder WithAge(int min, int max)
+        {
+            return With(
+                p =>
+                    {
+                        p.DateOfBirth = _dataContainer.DateTime
+                            .With(DateTime.UtcNow.AddYears(-max), DateTime.UtcNow.AddYears(-min))
+                            .BuildItem();
+                    });
+        }
+
+        public PersonBuilder WithGender(TestingGenderTypes gender)
+        {
+            return With(
+                p => { p.Gender = gender; });
+        }
+
+        protected override PersonBuilder CreateClone()
+        {
+            return new PersonBuilder(_dataContainer);
         }
     }
 }

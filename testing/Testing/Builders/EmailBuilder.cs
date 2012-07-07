@@ -1,20 +1,36 @@
+using Testing.Base;
+using Testing.Models;
+
 namespace Testing.Builders
 {
-    public class EmailBuilder : Builder<DataResources.Email>
+    public class EmailBuilder : BuilderBase<TestingEmailModel, EmailBuilder>
     {
-        DataResources.Person _person;
+        readonly IDataContainer _dataContainer;
+        TestingPersonModel _person;
 
-        public EmailBuilder(DataResources.Person person)
+        public EmailBuilder(IDataContainer dataContainer)
+        {
+            _dataContainer = dataContainer;
+            Assign = email =>
+                         {
+                             email.Type = _dataContainer.Resources.EmailTypes.OneOf();
+                             email.Address = string.Format("{0}.{1}@{2}",
+                                                           _person.FirstName.Trim().ToLower(),
+                                                           _person.LastName.Trim().ToLower(),
+                                                           _dataContainer.Resources.WebDomains.OneOf());
+                         };
+        }
+
+        public EmailBuilder With(TestingPersonModel person)
         {
             _person = person;
-            With(email =>
-                     {
-                         email.Type = DataResources.Email.Types.OneOf();
-                         email.Address = string.Format("{0}.{1}@{2}",
-                                                       _person.FirstName.Trim().ToLower(),
-                                                       _person.LastName.Trim().ToLower(),
-                                                       DataResources.Web.Domains.OneOf());
-                     });
+
+            return this;
+        }
+
+        protected override EmailBuilder CreateClone()
+        {
+            return new EmailBuilder(_dataContainer);
         }
     }
 }

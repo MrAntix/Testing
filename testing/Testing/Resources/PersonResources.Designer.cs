@@ -22,7 +22,7 @@ namespace Testing.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class PersonResources {
+    public class PersonResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Testing.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Testing.Resources.PersonResources", typeof(PersonResources).Assembly);
@@ -51,7 +51,7 @@ namespace Testing.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -119,7 +119,7 @@ namespace Testing.Resources {
         ///Adaeze 
         ///Adalia  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string FirstNamesFemale {
+        public static string FirstNamesFemale {
             get {
                 return ResourceManager.GetString("FirstNamesFemale", resourceCulture);
             }
@@ -183,7 +183,7 @@ namespace Testing.Resources {
         ///Abdillahi 
         ///Abdimalik  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string FirstNamesMale {
+        public static string FirstNamesMale {
             get {
                 return ResourceManager.GetString("FirstNamesMale", resourceCulture);
             }
@@ -255,7 +255,7 @@ namespace Testing.Resources {
         ///Benson
         ///Be [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string LastNames {
+        public static string LastNames {
             get {
                 return ResourceManager.GetString("LastNames", resourceCulture);
             }

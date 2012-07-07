@@ -1,0 +1,23 @@
+﻿# Release Notes
+
+## 2.0.0-b03
+Flatten Hierarchy, reduces usings 
+Optional params in builder changed to use overloads http://lostechies.com/jimmybogard/2010/05/18/caveats-of-c-4-0-optional-parameters/
+Builder fix, not passing assign in Build(int, int, Action<T, int>) overload
+Organising Random and Static data resources
+
+## 2.0.0-b04
+Added fallback singleton DataContainer in Data.Container
+Reorganised resources to property of DataContainer
+Moved models from DataContainer to Models dir and renamed to avoid amibutity
+
+## 2.0.0-b05
+Random..Builder => ..Builder randomness implied
+StringBuilder => TextBuilder not going to clash
+Allow TextBuilder.Create to accept chars to build with
+DataResource properties from array to IEnumerable - easier to work with less .ToArray()
+ValueBuilder Create=>With value types not having complex ctx
+Builder.With returns a new cloned builder, matching behaviour of the ValueBuilder
+BuildOne => BuildItem() better match with Build(1,10).Items
+BuildItem() no longer takes assignment - use With(assignmen)
+Derived Builders now pass their own type to the generic base

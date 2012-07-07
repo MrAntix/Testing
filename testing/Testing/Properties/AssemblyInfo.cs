@@ -28,13 +28,13 @@ using System.Runtime.InteropServices;
 //
 //      Major Version
 //      Minor Version 
-//      Build Number
+//      One Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers 
+// You can specify all the values or you can default the One and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
 [assembly: AssemblyVersion("2.0.0.*")]
-[assembly: AssemblyInformationalVersion("2.0.0-b03")]
+[assembly: AssemblyInformationalVersion("2.0.0-b04")]
 [assembly: AssemblyFileVersion("2.0.0.0")]

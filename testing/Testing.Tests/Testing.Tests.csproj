@@ -42,17 +42,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="builder_to_create_and_assign_using_moq.cs" />
-    <Compile Include="builder_to_create_more_than_one.cs" />
-    <Compile Include="data_using_default_person_builder.cs" />
-    <Compile Include="extensions_get_random_data.cs" />
+    <Compile Include="builder_to_create.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="builder_to_create_and_assign_using_moq.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="builder_to_create_more_than_one.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="builder_to_create_pocis_using_moq.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="builder_to_create_pocos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_get_random_data.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_using_default_person_builder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="extensions_get_random_data.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Pocis\IThingy.cs" />
     <Compile Include="Pocos\MyPerson.cs" />
     <Compile Include="Pocos\Thingy.cs" />
-    <Compile Include="builder_to_create.cs" />
-    <Compile Include="builder_to_create_pocos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="builder_to_create_pocis_using_moq.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

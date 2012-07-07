@@ -18,8 +18,8 @@ namespace Testing.Tests
         [Fact]
         public void creates_two_with_two_calls_to_build()
         {
-            var firstOne = _builder.Build();
-            var secondOne = _builder.Build();
+            var firstOne = _builder.BuildItem();
+            var secondOne = _builder.BuildItem();
 
             Assert.NotNull(firstOne);
             Assert.NotNull(secondOne);
