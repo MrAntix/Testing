@@ -6,7 +6,7 @@ namespace Testing
     {
         IDataResources Resources { get; }
 
-        BooleanBuilder Boolean { get; }
+        IBooleanBuilder Boolean { get; }
         IntegerBuilder Integer { get; }
         DoubleBuilder Double { get; }
         DateTimeBuilder DateTime { get; }

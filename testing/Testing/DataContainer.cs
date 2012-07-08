@@ -6,7 +6,6 @@ namespace Testing
         IDataContainer
     {
         EmailBuilder _email;
-        IntegerBuilder _integer;
         PersonBuilder _person;
         IDataResources _resources;
 
@@ -30,7 +29,7 @@ namespace Testing
             get { return _resources; }
         }
 
-        public BooleanBuilder Boolean { get; set; }
+        public IBooleanBuilder Boolean { get; set; }
         public IntegerBuilder Integer { get; set; }
         public DoubleBuilder Double { get; set; }
         public DateTimeBuilder DateTime { get; set; }

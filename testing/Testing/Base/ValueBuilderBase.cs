@@ -1,13 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Testing.Base
 {
-    public abstract class ValueBuilderBase<T, TLimits> :
-        BuilderBase<T>
+    public abstract class ValueBuilderBase<TBuilder, T, TLimits> :
+        ICloneable, IValueBuilder<TBuilder, T, TLimits>
+        where TBuilder : class, IValueBuilder<TBuilder, T, TLimits>
     {
-        protected TLimits Max;
-        protected TLimits Min;
-
         protected ValueBuilderBase()
         {
         }
@@ -20,40 +21,35 @@ namespace Testing.Base
             Max = max;
         }
 
-        public ValueBuilderBase<T, TLimits> With(TLimits max)
+        public IEnumerable<T> Items { get; set; }
+
+        public TLimits Max { get; set; }
+        public TLimits Min { get; set; }
+
+        public TBuilder With(TLimits max)
         {
             return With(Min, max);
         }
 
-        public ValueBuilderBase<T, TLimits> With(TLimits min, TLimits max)
+        public TBuilder With(TLimits min, TLimits max)
         {
-            var clone = (ValueBuilderBase<T, TLimits>) Clone();
+            var clone = CloneInternal();
             clone.Min = min;
             clone.Max = max;
 
-            return clone;
+            return clone as TBuilder;
         }
 
-        protected abstract ValueBuilderBase<T, TLimits> CreateClone();
+        public abstract T BuildItem();
 
-        public override object Clone()
-        {
-            var instance = CreateClone();
-            instance.Items = Items;
-            instance.Min = Min;
-            instance.Max = Max;
-
-            return instance;
-        }
-
-        public ValueBuilderBase<T, TLimits> Build(int min, int max)
+        public TBuilder Build(int min, int max)
         {
             return Build(
                 Data.Random.Value.Next(min, max)
                 );
         }
 
-        public ValueBuilderBase<T, TLimits> Build(int exactCount)
+        public TBuilder Build(int exactCount)
         {
             var items =
                 Enumerable.Range(0, exactCount)
@@ -61,10 +57,35 @@ namespace Testing.Base
 
             if (Items != null) items = Items.Concat(items);
 
-            var clone = (ValueBuilderBase<T, TLimits>) Clone();
+            var clone = CloneInternal();
             clone.Items = items;
+
+            return clone as TBuilder;
+        }
+
+        public TBuilder Clone()
+        {
+            return CloneInternal() as TBuilder;
+        }
+
+        ValueBuilderBase<TBuilder, T, TLimits> CloneInternal()
+        {
+            var clone = CreateClone()
+                        as ValueBuilderBase<TBuilder, T, TLimits>;
+            Debug.Assert(clone != null, "clone != null");
+
+            clone.Items = Items;
+            clone.Min = Min;
+            clone.Max = Max;
 
             return clone;
         }
+
+        object ICloneable.Clone()
+        {
+            return Clone();
+        }
+
+        protected abstract TBuilder CreateClone();
     }
 }

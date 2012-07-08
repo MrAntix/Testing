@@ -3,7 +3,7 @@
 namespace Testing.Builders
 {
     public class IntegerBuilder :
-        ValueBuilderBase<int, int>
+        ValueBuilderBase<IntegerBuilder, int, int>
     {
         public IntegerBuilder() :
             base(0, int.MaxValue)
@@ -15,7 +15,7 @@ namespace Testing.Builders
             return Data.Random.Value.Next(Min, Max);
         }
 
-        protected override ValueBuilderBase<int, int> CreateClone()
+        protected override IntegerBuilder CreateClone()
         {
             return new IntegerBuilder();
         }

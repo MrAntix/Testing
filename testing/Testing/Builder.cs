@@ -3,7 +3,7 @@
 namespace Testing
 {
     public class Builder<T>
-        : BuilderBase<T, Builder<T>>
+        : BuilderBase<Builder<T>, T>
     {
         protected override Builder<T> CreateClone()
         {

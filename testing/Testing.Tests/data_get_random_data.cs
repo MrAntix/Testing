@@ -8,7 +8,7 @@ namespace Testing.Tests
     {
         protected IDataContainer DataContainer = new DataContainer(new DataResources());
 
-    [Fact]
+        [Fact]
         public void get_array_of_text()
         {
             const int minLength = 5;

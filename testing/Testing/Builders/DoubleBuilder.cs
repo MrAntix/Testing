@@ -3,7 +3,7 @@ using Testing.Base;
 namespace Testing.Builders
 {
     public class DoubleBuilder :
-        ValueBuilderBase<double, double>
+        ValueBuilderBase<DoubleBuilder, double, double>
     {
         public DoubleBuilder() :
             base(0, double.MaxValue)
@@ -15,7 +15,7 @@ namespace Testing.Builders
             return ((Data.Random.Value.NextDouble()*(Max - Min)) + Min);
         }
 
-        protected override ValueBuilderBase<double, double> CreateClone()
+        protected override DoubleBuilder CreateClone()
         {
             return new DoubleBuilder();
         }

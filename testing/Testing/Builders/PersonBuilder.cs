@@ -1,10 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using Testing.Base;
 using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class PersonBuilder : BuilderBase<TestingPersonModel, PersonBuilder>
+    public interface IPersonBuilderResources
+    {
+        IEnumerable<string> PersonFirstNamesMale { get; }
+        IEnumerable<string> PersonFirstNamesFemale { get; }
+        IEnumerable<TestingGenderTypes> DataGenders { get; }
+        IEnumerable<string> PersonLastNames { get; }
+
+        IDateTimeBuilder DateTime { get; }
+    }
+
+    public class PersonBuilder : BuilderBase<PersonBuilder, TestingPersonModel>
     {
         readonly IDataContainer _dataContainer;
 

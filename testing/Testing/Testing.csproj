@@ -35,9 +35,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IValueBuilder.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
+    <Compile Include="Builders\IBooleanBuilder.cs" />
     <Compile Include="Builders\IntegerBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
     <Compile Include="Builders\BooleanBuilder.cs" />

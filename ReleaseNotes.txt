@@ -25,3 +25,7 @@ Derived Builders now pass their own type to the generic base
 ## 2.0.0-b06
 removed byte, short builders in favor of DoubleBuilder
 Split random builder tests
+
+## 2.0.0-b07
+abstracting builders with interfaces for easy substution
+added recursive generics for builders, allows common code in builder base classes

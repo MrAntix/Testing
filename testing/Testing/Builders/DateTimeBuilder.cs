@@ -3,8 +3,13 @@ using Testing.Base;
 
 namespace Testing.Builders
 {
+    public interface IDateTimeBuilder
+    {
+    }
+
     public class DateTimeBuilder :
-        ValueBuilderBase<DateTime, DateTime>
+        ValueBuilderBase<DateTimeBuilder, DateTime, DateTime>,
+        IDateTimeBuilder
     {
         public DateTimeBuilder() :
             base(DateTime.MinValue, DateTime.MaxValue)
@@ -21,7 +26,7 @@ namespace Testing.Builders
                 );
         }
 
-        protected override ValueBuilderBase<DateTime, DateTime> CreateClone()
+        protected override DateTimeBuilder CreateClone()
         {
             return new DateTimeBuilder();
         }

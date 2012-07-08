@@ -3,7 +3,7 @@ using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class WebsiteBuilder : BuilderBase<TestingWebsiteModel, WebsiteBuilder>
+    public class WebsiteBuilder : BuilderBase<WebsiteBuilder, TestingWebsiteModel>
     {
         readonly IDataContainer _dataContainer;
 

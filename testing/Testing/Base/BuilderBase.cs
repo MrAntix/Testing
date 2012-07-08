@@ -4,29 +4,25 @@ using System.Linq;
 
 namespace Testing.Base
 {
-    public abstract class BuilderBase<T> :
+    public abstract class BuilderBase<TBuilder, T> :
         ICloneable
-    {
-        public IEnumerable<T> Items;
-
-        #region ICloneable Members
-
-        public abstract object Clone();
-
-        #endregion
-
-        public abstract T BuildItem();
-    }
-
-    public abstract class BuilderBase<T, TB> :
-        BuilderBase<T>
-        where TB : BuilderBase<T, TB>
+        where TBuilder : BuilderBase<TBuilder, T>
     {
         protected Action<T> Assign;
         protected int Index;
+        public IEnumerable<T> Items;
         Func<T> _create = Activator.CreateInstance<T>;
 
-        public override object Clone()
+        #region ICloneable Members
+
+        object ICloneable.Clone()
+        {
+            return Clone();
+        }
+
+        #endregion
+
+        public TBuilder Clone()
         {
             var clone = CreateClone();
             clone.Assign = Assign;
@@ -37,22 +33,23 @@ namespace Testing.Base
             return clone;
         }
 
-        protected abstract TB CreateClone();
+        protected abstract TBuilder CreateClone();
 
-        public TB Create(
+
+        public TBuilder Create(
             Func<T> create = null)
         {
             _create = create;
 
-            return this as TB;
+            return this as TBuilder;
         }
 
-        public TB With(
+        public TBuilder With(
             Action<T> assign)
         {
             if (assign == null) throw new ArgumentNullException("assign");
 
-            var clone = (TB) Clone();
+            var clone = Clone();
             clone.Assign = Assign == null
                                ? assign
                                : x =>
@@ -64,7 +61,7 @@ namespace Testing.Base
             return clone;
         }
 
-        public override T BuildItem()
+        public T BuildItem()
         {
             var item = _create();
             if (Assign != null) Assign(item);
@@ -72,19 +69,19 @@ namespace Testing.Base
             return item;
         }
 
-        public TB Build(
+        public TBuilder Build(
             int minCount, int maxCount)
         {
             return Build(Data.Random.Value.Next(minCount, maxCount));
         }
 
-        public TB Build(
+        public TBuilder Build(
             int exactCount)
         {
             return Build(exactCount, null);
         }
 
-        public TB Build(
+        public TBuilder Build(
             int exactCount,
             Action<T, int> assign)
         {
@@ -100,7 +97,7 @@ namespace Testing.Base
 
             if (Items != null) items = Items.Concat(items);
 
-            var clone = (TB) Clone();
+            var clone = Clone();
             clone.Index = exactCount;
             clone.Items = items;
 

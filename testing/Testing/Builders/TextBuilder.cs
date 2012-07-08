@@ -5,7 +5,7 @@ using Testing.Base;
 namespace Testing.Builders
 {
     public class TextBuilder :
-        ValueBuilderBase<string, int>
+        ValueBuilderBase<TextBuilder, string, int>
     {
         IEnumerable<char> _chars;
 
@@ -17,7 +17,7 @@ namespace Testing.Builders
 
         public TextBuilder With(int minLength, int maxLength, IEnumerable<char> chars)
         {
-            var clone = (TextBuilder) Clone();
+            var clone = Clone();
             clone.Min = minLength;
             clone.Max = maxLength;
             clone._chars = chars;
@@ -31,7 +31,7 @@ namespace Testing.Builders
                 _chars.ManyOf(Min, Max).ToArray());
         }
 
-        protected override ValueBuilderBase<string, int> CreateClone()
+        protected override TextBuilder CreateClone()
         {
             return new TextBuilder(_chars);
         }

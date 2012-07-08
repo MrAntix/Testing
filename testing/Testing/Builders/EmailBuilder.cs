@@ -4,7 +4,7 @@ using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class EmailBuilder : BuilderBase<TestingEmailModel, EmailBuilder>
+    public class EmailBuilder : BuilderBase<EmailBuilder, TestingEmailModel>
     {
         readonly IDataContainer _dataContainer;
         TestingPersonModel _person;
@@ -14,7 +14,9 @@ namespace Testing.Builders
             _dataContainer = dataContainer;
             Assign = email =>
                          {
-                             if (_person==null) throw new InvalidOperationException("Person must be set to generate e-mails, use builder.With(person)");
+                             if (_person == null)
+                                 throw new InvalidOperationException(
+                                     "Person must be set to generate e-mails, use builder.With(person)");
 
                              email.Type = _dataContainer.Resources.EmailTypes.OneOf();
                              email.Address = string.Format("{0}.{1}@{2}",
