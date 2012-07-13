@@ -33,5 +33,6 @@ added recursive generics for builders, allows common code in builder base classe
 ## 2.0.0-b08
 finished abstraction of builders
 moved abstracts to separate namespace makes it easier to see things
+changed with methods on builders to more explicit name e.g. builder.WithPerson(p), easier to read and no chance of a name clash
 named the models back removing Testing prefix - was too confusing
 added top 500 domains
