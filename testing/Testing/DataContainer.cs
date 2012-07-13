@@ -1,4 +1,6 @@
-﻿using Testing.Builders;
+﻿using Testing.Abstraction;
+using Testing.Abstraction.Builders;
+using Testing.Builders;
 
 namespace Testing
 {
@@ -30,12 +32,12 @@ namespace Testing
         }
 
         public IBooleanBuilder Boolean { get; set; }
-        public IntegerBuilder Integer { get; set; }
-        public DoubleBuilder Double { get; set; }
-        public DateTimeBuilder DateTime { get; set; }
-        public TextBuilder Text { get; set; }
+        public IIntegerBuilder Integer { get; set; }
+        public IDoubleBuilder Double { get; set; }
+        public IDateTimeBuilder DateTime { get; set; }
+        public ITextBuilder Text { get; set; }
 
-        public PersonBuilder Person
+        public IPersonBuilder Person
         {
             get
             {
@@ -44,7 +46,7 @@ namespace Testing
             }
         }
 
-        public EmailBuilder Email
+        public IEmailBuilder Email
         {
             get
             {
@@ -53,7 +55,7 @@ namespace Testing
             }
         }
 
-        public WebsiteBuilder Website
+        public IWebsiteBuilder Website
         {
             get
             {

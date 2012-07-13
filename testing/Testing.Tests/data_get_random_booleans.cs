@@ -1,4 +1,5 @@
 using System.Linq;
+using Testing.Abstraction;
 using Xunit;
 
 namespace Testing.Tests

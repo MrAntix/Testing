@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Testing.Base;
+using Testing.Abstraction;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 using Testing.Models;
 
 namespace Testing.Builders
@@ -9,13 +11,16 @@ namespace Testing.Builders
     {
         IEnumerable<string> PersonFirstNamesMale { get; }
         IEnumerable<string> PersonFirstNamesFemale { get; }
-        IEnumerable<TestingGenderTypes> DataGenders { get; }
+        IEnumerable<GenderTypes> DataGenders { get; }
         IEnumerable<string> PersonLastNames { get; }
 
         IDateTimeBuilder DateTime { get; }
     }
 
-    public class PersonBuilder : BuilderBase<PersonBuilder, TestingPersonModel>
+    public class PersonBuilder :
+        BuilderBase<IPersonBuilder, PersonModel>,
+        IPersonBuilder
+
     {
         readonly IDataContainer _dataContainer;
 
@@ -25,35 +30,35 @@ namespace Testing.Builders
             Assign = p =>
                          {
                              p.Gender = _dataContainer.Resources.DataGenders.OneOf();
-                             p.FirstName = p.Gender == TestingGenderTypes.Female
+                             p.FirstName = p.Gender == GenderTypes.Female
                                                ? _dataContainer.Resources.PersonFirstNamesFemale.OneOf()
                                                : _dataContainer.Resources.PersonFirstNamesMale.OneOf();
                              p.LastName = _dataContainer.Resources.PersonLastNames.OneOf();
 
                              p.DateOfBirth = dataContainer.DateTime
-                                 .With(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
+                                 .WithRange(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
                                  .BuildItem();
                          };
         }
 
-        public PersonBuilder WithAge(int min, int max)
+        public IPersonBuilder WithAge(int min, int max)
         {
             return With(
                 p =>
                     {
                         p.DateOfBirth = _dataContainer.DateTime
-                            .With(DateTime.UtcNow.AddYears(-max), DateTime.UtcNow.AddYears(-min))
+                            .WithRange(DateTime.UtcNow.AddYears(-max), DateTime.UtcNow.AddYears(-min))
                             .BuildItem();
                     });
         }
 
-        public PersonBuilder WithGender(TestingGenderTypes gender)
+        public IPersonBuilder WithGender(GenderTypes gender)
         {
             return With(
                 p => { p.Gender = gender; });
         }
 
-        protected override PersonBuilder CreateClone()
+        protected override IPersonBuilder CreateClone()
         {
             return new PersonBuilder(_dataContainer);
         }

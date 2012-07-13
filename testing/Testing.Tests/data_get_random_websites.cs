@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Testing.Abstraction;
 using Testing.Models;
 using Xunit;
 
@@ -22,7 +23,7 @@ namespace Testing.Tests
             foreach (var item in items)
                 Console.WriteLine(item);
 
-            Assert.IsType<TestingWebsiteModel[]>(items);
+            Assert.IsType<WebsiteModel[]>(items);
             Assert.InRange(items.Count(), minValue, maxValue);
         }
     }

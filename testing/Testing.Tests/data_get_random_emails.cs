@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Testing.Abstraction;
 using Testing.Models;
 using Xunit;
 
@@ -23,21 +24,21 @@ namespace Testing.Tests
             const int minValue = 10;
             const int maxValue = 20;
 
-            var person = new TestingPersonModel
+            var person = new PersonModel
                              {
                                  FirstName = "Bob",
                                  LastName = "McNob"
                              };
 
             var items = DataContainer.Email
-                .With(person)
+                .WithPerson(person)
                 .Build(minValue, maxValue)
                 .Items.ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
 
-            Assert.IsType<TestingEmailModel[]>(items);
+            Assert.IsType<EmailModel[]>(items);
             Assert.InRange(items.Count(), minValue, maxValue);
         }
     }

@@ -35,26 +35,34 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IValueBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IDateTimeBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IDoubleBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IEmailBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IIntegerBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IPersonBuilder.cs" />
+    <Compile Include="Abstraction\Builders\ITextBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IWebsiteBuilder.cs" />
+    <Compile Include="Abstraction\IBuilder.cs" />
+    <Compile Include="Abstraction\IValueBuilder.cs" />
     <Compile Include="Builder.cs" />
-    <Compile Include="Base\BuilderBase.cs" />
+    <Compile Include="Abstraction\Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
-    <Compile Include="Builders\IBooleanBuilder.cs" />
+    <Compile Include="Abstraction\Builders\IBooleanBuilder.cs" />
     <Compile Include="Builders\IntegerBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
     <Compile Include="Builders\BooleanBuilder.cs" />
     <Compile Include="Builders\WebsiteBuilder.cs" />
-    <Compile Include="Models\TestingEmailModel.cs" />
-    <Compile Include="Models\TestingPersonModel.cs" />
+    <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\PersonModel.cs" />
     <Compile Include="DataResources.cs" />
-    <Compile Include="Models\TestingWebsiteModel.cs" />
-    <Compile Include="Models\TestingGenderTypes.cs" />
-    <Compile Include="IDataContainer.cs" />
-    <Compile Include="IDataResources.cs" />
+    <Compile Include="Models\WebsiteModel.cs" />
+    <Compile Include="Models\GenderTypes.cs" />
+    <Compile Include="Abstraction\IDataContainer.cs" />
+    <Compile Include="Abstraction\IDataResources.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Builders\DateTimeBuilder.cs" />
     <Compile Include="Builders\DoubleBuilder.cs" />
-    <Compile Include="Base\ValueBuilderBase.cs" />
+    <Compile Include="Abstraction\Base\ValueBuilderBase.cs" />
     <Compile Include="Builders\TextBuilder.cs" />
     <Compile Include="Resources\TextResources.Designer.cs">
       <DependentUpon>TextResources.resx</DependentUpon>

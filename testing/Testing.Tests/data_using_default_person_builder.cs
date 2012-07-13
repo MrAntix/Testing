@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Testing.Abstraction;
 using Testing.Builders;
 using Testing.Tests.Pocos;
 using Xunit;
@@ -23,7 +24,7 @@ namespace Testing.Tests
                 .With(x =>
                           {
                               var person = _personBuilder.BuildItem();
-                              var emails = _emailBuilder.With(person).Build(1, 3).Items;
+                              var emails = _emailBuilder.WithPerson(person).Build(1, 3).Items;
 
                               x.Name = person.FullName;
                               x.Emails = emails.Select(e => e.Address);

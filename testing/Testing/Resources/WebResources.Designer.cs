@@ -61,21 +61,47 @@ namespace Testing.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to hotmail.co.uk
-        ///hotmail.com
-        ///gmail.com
-        ///antix.co.uk
+        ///   Looks up a localized string similar to google.com
+        ///twitter.com
+        ///youtube.com
+        ///adobe.com
+        ///wordpress.org
+        ///blogspot.com
+        ///wikipedia.org
+        ///godaddy.com
         ///yahoo.com
-        ///yahoo.co.uk
-        ///google.com
-        ///microsoft.com
-        ///plusnet.net
-        ///mobank.co.uk
-        ///googlemail.com
+        ///wordpress.com
+        ///w3.org
+        ///linkedin.com
+        ///amazon.com
+        ///flickr.com
+        ///myspace.com
         ///apple.com
+        ///miibeian.gov.cn
+        ///digg.com
+        ///microsoft.com
+        ///addthis.com
+        ///stumbleupon.com
+        ///tumblr.com
+        ///vimeo.com
+        ///macromedia.com
+        ///statcounter.com
+        ///feedburner.com
+        ///qq.com
+        ///msn.com
+        ///baidu.com
+        ///reddit.com
+        ///bit.ly
+        ///nytimes.com
         ///bbc.co.uk
-        ///google.co.uk
-        ///mail.com.
+        ///blogger.com
+        ///youtu.be
+        ///gov.uk
+        ///technorati.com
+        ///cnn.com
+        ///sourceforge.net
+        ///typepad.com
+        ///livejour [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Domains {
             get {

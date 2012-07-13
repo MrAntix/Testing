@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace Testing.Base
+namespace Testing.Abstraction.Base
 {
     public abstract class ValueBuilderBase<TBuilder, T, TLimits> :
-        ICloneable, IValueBuilder<TBuilder, T, TLimits>
+        IValueBuilder<TBuilder, T, TLimits>
         where TBuilder : class, IValueBuilder<TBuilder, T, TLimits>
     {
         protected ValueBuilderBase()
@@ -26,14 +26,17 @@ namespace Testing.Base
         public TLimits Max { get; set; }
         public TLimits Min { get; set; }
 
-        public TBuilder With(TLimits max)
+        public TBuilder WithMax(TLimits max)
         {
-            return With(Min, max);
+            var clone = ClonePrivate();
+            clone.Max = max;
+
+            return clone as TBuilder;
         }
 
-        public TBuilder With(TLimits min, TLimits max)
+        public TBuilder WithRange(TLimits min, TLimits max)
         {
-            var clone = CloneInternal();
+            var clone = ClonePrivate();
             clone.Min = min;
             clone.Max = max;
 
@@ -42,10 +45,10 @@ namespace Testing.Base
 
         public abstract T BuildItem();
 
-        public TBuilder Build(int min, int max)
+        public TBuilder Build(int minCount, int maxCount)
         {
             return Build(
-                Data.Random.Value.Next(min, max)
+                Data.Random.Value.Next(minCount, maxCount)
                 );
         }
 
@@ -57,7 +60,7 @@ namespace Testing.Base
 
             if (Items != null) items = Items.Concat(items);
 
-            var clone = CloneInternal();
+            var clone = ClonePrivate();
             clone.Items = items;
 
             return clone as TBuilder;
@@ -65,10 +68,10 @@ namespace Testing.Base
 
         public TBuilder Clone()
         {
-            return CloneInternal() as TBuilder;
+            return ClonePrivate() as TBuilder;
         }
 
-        ValueBuilderBase<TBuilder, T, TLimits> CloneInternal()
+        ValueBuilderBase<TBuilder, T, TLimits> ClonePrivate()
         {
             var clone = CreateClone()
                         as ValueBuilderBase<TBuilder, T, TLimits>;

@@ -1,3 +1,4 @@
+using Testing.Abstraction;
 using Xunit;
 
 namespace Testing.Tests

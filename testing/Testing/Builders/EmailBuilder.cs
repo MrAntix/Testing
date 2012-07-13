@@ -1,13 +1,17 @@
 using System;
-using Testing.Base;
+using Testing.Abstraction;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class EmailBuilder : BuilderBase<EmailBuilder, TestingEmailModel>
+    public class EmailBuilder :
+        BuilderBase<IEmailBuilder, EmailModel>,
+        IEmailBuilder
     {
         readonly IDataContainer _dataContainer;
-        TestingPersonModel _person;
+        PersonModel _person;
 
         public EmailBuilder(IDataContainer dataContainer)
         {
@@ -16,7 +20,7 @@ namespace Testing.Builders
                          {
                              if (_person == null)
                                  throw new InvalidOperationException(
-                                     "Person must be set to generate e-mails, use builder.With(person)");
+                                     "Person must be set to generate e-mails, use builder.WithPerson(person)");
 
                              email.Type = _dataContainer.Resources.EmailTypes.OneOf();
                              email.Address = string.Format("{0}.{1}@{2}",
@@ -26,14 +30,14 @@ namespace Testing.Builders
                          };
         }
 
-        public EmailBuilder With(TestingPersonModel person)
+        public IEmailBuilder WithPerson(PersonModel person)
         {
             _person = person;
 
             return this;
         }
 
-        protected override EmailBuilder CreateClone()
+        protected override IEmailBuilder CreateClone()
         {
             return new EmailBuilder(_dataContainer);
         }

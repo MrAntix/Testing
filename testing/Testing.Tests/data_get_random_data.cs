@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Testing.Abstraction;
 using Xunit;
 
 namespace Testing.Tests
@@ -17,7 +18,7 @@ namespace Testing.Tests
             const int maxCount = 20;
 
             var items = DataContainer.Text
-                .With(minLength, maxLength)
+                .WithRange(minLength, maxLength)
                 .Build(minCount, maxCount)
                 .Items.ToArray();
 
@@ -41,7 +42,8 @@ namespace Testing.Tests
                     .ToArray();
 
             var items = DataContainer.Text
-                .With(minLength, maxLength, numbersAndLetters)
+                .WithRange(minLength, maxLength)
+                .WithCharacters(numbersAndLetters)
                 .Build(count)
                 .Items.ToArray();
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Testing.Abstraction;
 using Testing.Models;
 using Testing.Resources;
 
@@ -11,7 +12,7 @@ namespace Testing
         IEnumerable<bool> _booleans = new[] {true, false};
 
         IEnumerable<char> _chars;
-        IEnumerable<TestingGenderTypes> _dataGenders;
+        IEnumerable<GenderTypes> _dataGenders;
         IEnumerable<string> _emailTypes;
         IEnumerable<char> _letters;
         IEnumerable<char> _numbers;
@@ -77,12 +78,12 @@ namespace Testing
             }
         }
 
-        public IEnumerable<TestingGenderTypes> DataGenders
+        public IEnumerable<GenderTypes> DataGenders
         {
             get
             {
                 return _dataGenders ??
-                       (_dataGenders = Enum.GetValues(typeof (TestingGenderTypes)).Cast<TestingGenderTypes>());
+                       (_dataGenders = Enum.GetValues(typeof (GenderTypes)).Cast<GenderTypes>());
             }
         }
 

@@ -1,11 +1,14 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using Testing.Base;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 
 namespace Testing.Builders
 {
     public class TextBuilder :
-        ValueBuilderBase<TextBuilder, string, int>
+        ValueBuilderBase<ITextBuilder, string, int>,
+        ITextBuilder
     {
         IEnumerable<char> _chars;
 
@@ -15,11 +18,11 @@ namespace Testing.Builders
             _chars = chars;
         }
 
-        public TextBuilder With(int minLength, int maxLength, IEnumerable<char> chars)
+        public ITextBuilder WithCharacters(IEnumerable<char> chars)
         {
-            var clone = Clone();
-            clone.Min = minLength;
-            clone.Max = maxLength;
+            var clone = Clone() as TextBuilder;
+            Debug.Assert(clone != null, "clone != null");
+
             clone._chars = chars;
 
             return clone;
@@ -31,7 +34,7 @@ namespace Testing.Builders
                 _chars.ManyOf(Min, Max).ToArray());
         }
 
-        protected override TextBuilder CreateClone()
+        protected override ITextBuilder CreateClone()
         {
             return new TextBuilder(_chars);
         }

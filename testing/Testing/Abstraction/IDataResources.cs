@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Testing.Models;
 
-namespace Testing
+namespace Testing.Abstraction
 {
     public interface IDataResources
     {
@@ -9,7 +9,7 @@ namespace Testing
 
         IEnumerable<string> PersonFirstNamesMale { get; }
         IEnumerable<string> PersonFirstNamesFemale { get; }
-        IEnumerable<TestingGenderTypes> DataGenders { get; }
+        IEnumerable<GenderTypes> DataGenders { get; }
         IEnumerable<string> PersonLastNames { get; }
 
         IEnumerable<string> WebDomains { get; }

@@ -2,11 +2,11 @@ using System;
 
 namespace Testing.Models
 {
-    public class TestingPersonModel
+    public class PersonModel
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public TestingGenderTypes Gender { get; set; }
+        public GenderTypes Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
 
         public int Age
@@ -27,7 +27,7 @@ namespace Testing.Models
 
         public override string ToString()
         {
-            return string.Format("TestingPersonModel: {0} {1}, {2}, age: {3}", FirstName, LastName, Gender, Age).Trim();
+            return string.Format("PersonModel: {0} {1}, {2}, age: {3}", FirstName, LastName, Gender, Age).Trim();
         }
     }
 }

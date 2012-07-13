@@ -29,3 +29,9 @@ Split random builder tests
 ## 2.0.0-b07
 abstracting builders with interfaces for easy substution
 added recursive generics for builders, allows common code in builder base classes
+
+## 2.0.0-b08
+finished abstraction of builders
+moved abstracts to separate namespace makes it easier to see things
+named the models back removing Testing prefix - was too confusing
+added top 500 domains

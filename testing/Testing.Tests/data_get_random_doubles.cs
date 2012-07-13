@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Testing.Abstraction;
 using Xunit;
 
 namespace Testing.Tests
@@ -15,7 +16,7 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var item = DataContainer.Double
-                .With(minValue, maxValue)
+                .WithRange(minValue, maxValue)
                 .BuildItem();
 
             Console.WriteLine(item);
@@ -30,7 +31,7 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Double
-                .With(minValue, maxValue)
+                .WithRange(minValue, maxValue)
                 .Build(2, 40)
                 .Build(1, 60)
                 .Items.ToArray();

@@ -1,12 +1,12 @@
 namespace Testing.Models
 {
-    public class TestingWebsiteModel
+    public class WebsiteModel
     {
         public string Address { get; set; }
 
         public override string ToString()
         {
-            return string.Format("TestingWebsiteModel: {0}", Address).Trim();
+            return string.Format("WebsiteModel: {0}", Address).Trim();
         }
     }
 }

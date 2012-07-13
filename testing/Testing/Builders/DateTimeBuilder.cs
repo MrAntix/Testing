@@ -1,14 +1,11 @@
 using System;
-using Testing.Base;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 
 namespace Testing.Builders
 {
-    public interface IDateTimeBuilder
-    {
-    }
-
     public class DateTimeBuilder :
-        ValueBuilderBase<DateTimeBuilder, DateTime, DateTime>,
+        ValueBuilderBase<IDateTimeBuilder, DateTime, DateTime>,
         IDateTimeBuilder
     {
         public DateTimeBuilder() :
@@ -26,7 +23,7 @@ namespace Testing.Builders
                 );
         }
 
-        protected override DateTimeBuilder CreateClone()
+        protected override IDateTimeBuilder CreateClone()
         {
             return new DateTimeBuilder();
         }

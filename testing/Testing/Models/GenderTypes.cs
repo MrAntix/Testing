@@ -1,6 +1,6 @@
 namespace Testing.Models
 {
-    public enum TestingGenderTypes
+    public enum GenderTypes
     {
         Male,
         Female

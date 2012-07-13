@@ -1,17 +1,19 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
-namespace Testing.Base
+namespace Testing.Abstraction.Base
 {
     public abstract class BuilderBase<TBuilder, T> :
-        ICloneable
-        where TBuilder : BuilderBase<TBuilder, T>
+        IBuilder<TBuilder, T>
+        where TBuilder : class, IBuilder<TBuilder, T>
     {
         protected Action<T> Assign;
         protected int Index;
-        public IEnumerable<T> Items;
         Func<T> _create = Activator.CreateInstance<T>;
+
+        public IEnumerable<T> Items { get; set; }
 
         #region ICloneable Members
 
@@ -24,7 +26,15 @@ namespace Testing.Base
 
         public TBuilder Clone()
         {
-            var clone = CreateClone();
+            return ClonePrivate() as TBuilder;
+        }
+
+        BuilderBase<TBuilder, T> ClonePrivate()
+        {
+            var clone = CreateClone()
+                        as BuilderBase<TBuilder, T>;
+            Debug.Assert(clone != null, "clone != null");
+
             clone.Assign = Assign;
             clone._create = _create;
             clone.Index = Index;
@@ -49,7 +59,7 @@ namespace Testing.Base
         {
             if (assign == null) throw new ArgumentNullException("assign");
 
-            var clone = Clone();
+            var clone = ClonePrivate();
             clone.Assign = Assign == null
                                ? assign
                                : x =>
@@ -58,7 +68,7 @@ namespace Testing.Base
                                          assign(x);
                                      };
 
-            return clone;
+            return clone as TBuilder;
         }
 
         public T BuildItem()
@@ -72,7 +82,14 @@ namespace Testing.Base
         public TBuilder Build(
             int minCount, int maxCount)
         {
-            return Build(Data.Random.Value.Next(minCount, maxCount));
+            return Build(minCount, maxCount, null);
+        }
+
+        public TBuilder Build(
+            int minCount, int maxCount,
+            Action<T, int> assign)
+        {
+            return Build(Data.Random.Value.Next(minCount, maxCount), assign);
         }
 
         public TBuilder Build(
@@ -97,11 +114,11 @@ namespace Testing.Base
 
             if (Items != null) items = Items.Concat(items);
 
-            var clone = Clone();
+            var clone = ClonePrivate();
             clone.Index = exactCount;
             clone.Items = items;
 
-            return clone;
+            return clone as TBuilder;
         }
     }
 }

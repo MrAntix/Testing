@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Testing.Abstraction;
 using Testing.Models;
 using Xunit;
 
@@ -23,7 +24,7 @@ namespace Testing.Tests
             foreach (var item in items)
                 Console.WriteLine(item);
 
-            Assert.IsType<TestingPersonModel[]>(items);
+            Assert.IsType<PersonModel[]>(items);
             Assert.InRange(items.Count(), minValue, maxValue);
         }
 
@@ -36,7 +37,7 @@ namespace Testing.Tests
             const int maxAge = 40;
 
             var items = DataContainer.Person
-                .WithGender(TestingGenderTypes.Female)
+                .WithGender(GenderTypes.Female)
                 .WithAge(minAge, maxAge)
                 .Build(minValue, maxValue)
                 .Items.ToArray();
@@ -44,9 +45,9 @@ namespace Testing.Tests
             foreach (var item in items)
                 Console.WriteLine(item);
 
-            Assert.IsType<TestingPersonModel[]>(items);
+            Assert.IsType<PersonModel[]>(items);
             Assert.InRange(items.Count(), minValue, maxValue);
-            Assert.True(items.All(p => p.Gender == TestingGenderTypes.Female));
+            Assert.True(items.All(p => p.Gender == GenderTypes.Female));
             Assert.True(items.All(p => p.Age >= minAge && p.Age <= maxAge));
         }
 
@@ -57,16 +58,16 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Person
-                .WithGender(TestingGenderTypes.Male)
+                .WithGender(GenderTypes.Male)
                 .Build(minValue, maxValue)
                 .Items.ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
 
-            Assert.IsType<TestingPersonModel[]>(items);
+            Assert.IsType<PersonModel[]>(items);
             Assert.InRange(items.Count(), minValue, maxValue);
-            Assert.True(items.All(p => p.Gender == TestingGenderTypes.Male));
+            Assert.True(items.All(p => p.Gender == GenderTypes.Male));
         }
 
         [Fact]

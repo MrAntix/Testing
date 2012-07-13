@@ -1,9 +1,11 @@
-using Testing.Base;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 
 namespace Testing.Builders
 {
     public class DoubleBuilder :
-        ValueBuilderBase<DoubleBuilder, double, double>
+        ValueBuilderBase<IDoubleBuilder, double, double>,
+        IDoubleBuilder
     {
         public DoubleBuilder() :
             base(0, double.MaxValue)
@@ -15,7 +17,7 @@ namespace Testing.Builders
             return ((Data.Random.Value.NextDouble()*(Max - Min)) + Min);
         }
 
-        protected override DoubleBuilder CreateClone()
+        protected override IDoubleBuilder CreateClone()
         {
             return new DoubleBuilder();
         }

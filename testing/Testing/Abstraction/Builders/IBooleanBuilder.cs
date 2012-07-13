@@ -1,6 +1,4 @@
-using Testing.Base;
-
-namespace Testing.Builders
+namespace Testing.Abstraction.Builders
 {
     public interface IBooleanBuilder :
         IValueBuilder<IBooleanBuilder, bool, bool>

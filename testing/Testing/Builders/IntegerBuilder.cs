@@ -1,9 +1,11 @@
-﻿using Testing.Base;
+﻿using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 
 namespace Testing.Builders
 {
     public class IntegerBuilder :
-        ValueBuilderBase<IntegerBuilder, int, int>
+        ValueBuilderBase<IIntegerBuilder, int, int>,
+        IIntegerBuilder
     {
         public IntegerBuilder() :
             base(0, int.MaxValue)
@@ -15,7 +17,7 @@ namespace Testing.Builders
             return Data.Random.Value.Next(Min, Max);
         }
 
-        protected override IntegerBuilder CreateClone()
+        protected override IIntegerBuilder CreateClone()
         {
             return new IntegerBuilder();
         }

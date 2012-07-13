@@ -1,9 +1,13 @@
-using Testing.Base;
+using Testing.Abstraction;
+using Testing.Abstraction.Base;
+using Testing.Abstraction.Builders;
 using Testing.Models;
 
 namespace Testing.Builders
 {
-    public class WebsiteBuilder : BuilderBase<WebsiteBuilder, TestingWebsiteModel>
+    public class WebsiteBuilder :
+        BuilderBase<IWebsiteBuilder, WebsiteModel>,
+        IWebsiteBuilder
     {
         readonly IDataContainer _dataContainer;
 
@@ -13,7 +17,9 @@ namespace Testing.Builders
             Assign = x =>
                          {
                              var subDomain = "";
-                             switch ((int) _dataContainer.Double.With(0, 10).BuildItem())
+                             switch ((int) _dataContainer.Double
+                                 .WithRange(0, 10)
+                                 .BuildItem())
                              {
                                  case 1:
                                  case 2:
@@ -24,8 +30,11 @@ namespace Testing.Builders
                                      break;
                                  case 6:
                                      subDomain =
-                                         _dataContainer.Text.With(1, 10, _dataContainer.Resources.Letters).BuildItem() +
-                                         ".";
+                                         _dataContainer.Text
+                                             .WithRange(1, 10)
+                                             .WithCharacters(_dataContainer.Resources.Letters)
+                                             .BuildItem()
+                                         + ".";
                                      break;
                              }
 
@@ -37,7 +46,7 @@ namespace Testing.Builders
                          };
         }
 
-        protected override WebsiteBuilder CreateClone()
+        protected override IWebsiteBuilder CreateClone()
         {
             return new WebsiteBuilder(_dataContainer);
         }
