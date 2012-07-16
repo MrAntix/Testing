@@ -13,6 +13,13 @@ namespace Testing.Abstraction.Base
         protected int Index;
         Func<T> _create = Activator.CreateInstance<T>;
 
+        protected BuilderBase(){}
+
+        protected BuilderBase(Func<T> create)
+        {
+            _create = create;
+        }
+
         public IEnumerable<T> Items { get; set; }
 
         #region ICloneable Members
@@ -35,8 +42,8 @@ namespace Testing.Abstraction.Base
                         as BuilderBase<TBuilder, T>;
             Debug.Assert(clone != null, "clone != null");
 
-            clone.Assign = Assign;
             clone._create = _create;
+            clone.Assign = Assign;
             clone.Index = Index;
             clone.Items = Items;
 
@@ -44,15 +51,6 @@ namespace Testing.Abstraction.Base
         }
 
         protected abstract TBuilder CreateClone();
-
-
-        public TBuilder Create(
-            Func<T> create = null)
-        {
-            _create = create;
-
-            return this as TBuilder;
-        }
 
         public TBuilder With(
             Action<T> assign)

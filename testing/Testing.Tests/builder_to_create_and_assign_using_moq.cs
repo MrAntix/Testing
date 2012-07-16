@@ -14,8 +14,7 @@ namespace Testing.Tests
         public builder_to_create_and_assign_using_moq()
         {
             _expectedName = _names.First();
-            _builder = new Builder<IThingy>()
-                .Create(Mock.Of<IThingy>)
+            _builder = new Builder<IThingy>(Mock.Of<IThingy>)
                 .With(x => x.Name = _expectedName);
         }
 

@@ -11,8 +11,7 @@ namespace Testing.Tests
 
         public builder_to_create_more_than_one()
         {
-            _builder = new Builder<IThingy>()
-                .Create(Mock.Of<IThingy>);
+            _builder = new Builder<IThingy>(Mock.Of<IThingy>);
         }
 
         [Fact]

@@ -7,7 +7,7 @@ namespace Testing.Tests
         builder_to_create<IThingy>
     {
         public builder_to_create_pocis_using_moq() :
-            base(new Builder<IThingy>().Create(Mock.Of<IThingy>))
+            base(new Builder<IThingy>(Mock.Of<IThingy>))
         {
         }
     }

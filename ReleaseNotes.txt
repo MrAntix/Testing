@@ -19,7 +19,7 @@ DataResource properties from array to IEnumerable - easier to work with less .To
 ValueBuilder Create=>With value types not having complex ctx
 Builder.With returns a new cloned builder, matching behaviour of the ValueBuilder
 BuildOne => BuildItem() better match with Build(1,10).Items
-BuildItem() no longer takes assignment - use With(assignmen)
+BuildItem() no longer takes assignment - use With(assignment)
 Derived Builders now pass their own type to the generic base
 
 ## 2.0.0-b06
@@ -36,3 +36,6 @@ moved abstracts to separate namespace makes it easier to see things
 changed with methods on builders to more explicit name e.g. builder.WithPerson(p), easier to read and no chance of a name clash
 named the models back removing Testing prefix - was too confusing
 added top 500 domains
+
+## 2.0.0-b09
+moved create func to constructor to make it more obvious

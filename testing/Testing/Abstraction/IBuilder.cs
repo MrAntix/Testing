@@ -9,8 +9,6 @@ namespace Testing.Abstraction
     {
         IEnumerable<T> Items { get; }
 
-        TBuilder Create(Func<T> create = null);
-
         TBuilder With(Action<T> assign);
         T BuildItem();
         TBuilder Build(int minCount, int maxCount);
