@@ -11,7 +11,7 @@ namespace Testing.Builders
 
         public override bool BuildItem()
         {
-            return Data.Random.Value.Next(2) == 1;
+            return TestData.Random.Value.Next(2) == 1;
         }
 
         #endregion

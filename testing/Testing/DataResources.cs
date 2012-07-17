@@ -25,12 +25,12 @@ namespace Testing
 
         #region IDataResources Members
 
-        public IEnumerable<bool> Booleans
+        public virtual IEnumerable<bool> Booleans
         {
             get { return _booleans; }
         }
 
-        public IEnumerable<char> Chars
+        public virtual IEnumerable<char> Chars
         {
             get
             {
@@ -40,7 +40,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<char> Letters
+        public virtual IEnumerable<char> Letters
         {
             get
             {
@@ -50,7 +50,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<char> Numbers
+        public virtual IEnumerable<char> Numbers
         {
             get
             {
@@ -60,7 +60,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<string> PersonFirstNamesMale
+        public virtual IEnumerable<string> PersonFirstNamesMale
         {
             get
             {
@@ -69,7 +69,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<string> PersonFirstNamesFemale
+        public virtual IEnumerable<string> PersonFirstNamesFemale
         {
             get
             {
@@ -78,7 +78,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<GenderTypes> DataGenders
+        public virtual IEnumerable<GenderTypes> DataGenders
         {
             get
             {
@@ -87,7 +87,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<string> PersonLastNames
+        public virtual IEnumerable<string> PersonLastNames
         {
             get
             {
@@ -96,7 +96,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<string> WebDomains
+        public virtual IEnumerable<string> WebDomains
         {
             get
             {
@@ -105,7 +105,7 @@ namespace Testing
             }
         }
 
-        public IEnumerable<string> EmailTypes
+        public virtual IEnumerable<string> EmailTypes
         {
             get
             {

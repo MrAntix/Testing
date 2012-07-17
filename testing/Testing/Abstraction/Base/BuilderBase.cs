@@ -13,7 +13,9 @@ namespace Testing.Abstraction.Base
         protected int Index;
         Func<T> _create = Activator.CreateInstance<T>;
 
-        protected BuilderBase(){}
+        protected BuilderBase()
+        {
+        }
 
         protected BuilderBase(Func<T> create)
         {
@@ -50,7 +52,20 @@ namespace Testing.Abstraction.Base
             return clone;
         }
 
-        protected abstract TBuilder CreateClone();
+        protected virtual TBuilder CreateClone()
+        {
+            try
+            {
+                return Activator.CreateInstance<TBuilder>();
+            }
+            catch (MissingMethodException mmex)
+            {
+                throw new MissingMethodException(
+                    string.Format("Override the CreateClone method on '{0}', no default contructor found",
+                                  typeof (TBuilder).FullName),
+                    mmex);
+            }
+        }
 
         public TBuilder With(
             Action<T> assign)
@@ -87,7 +102,7 @@ namespace Testing.Abstraction.Base
             int minCount, int maxCount,
             Action<T, int> assign)
         {
-            return Build(Data.Random.Value.Next(minCount, maxCount), assign);
+            return Build(TestData.Random.Value.Next(minCount, maxCount), assign);
         }
 
         public TBuilder Build(

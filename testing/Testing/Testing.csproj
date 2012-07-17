@@ -59,7 +59,7 @@
     <Compile Include="Models\GenderTypes.cs" />
     <Compile Include="Abstraction\IDataContainer.cs" />
     <Compile Include="Abstraction\IDataResources.cs" />
-    <Compile Include="Data.cs" />
+    <Compile Include="TestData.cs" />
     <Compile Include="Builders\DateTimeBuilder.cs" />
     <Compile Include="Builders\DoubleBuilder.cs" />
     <Compile Include="Abstraction\Base\ValueBuilderBase.cs" />

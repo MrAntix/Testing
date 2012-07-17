@@ -18,8 +18,8 @@ namespace Testing.Builders
                          {
                              var subDomain = "";
                              switch ((int) _dataContainer.Double
-                                 .WithRange(0, 10)
-                                 .BuildItem())
+                                               .WithRange(0, 10)
+                                               .BuildItem())
                              {
                                  case 1:
                                  case 2:

@@ -39,3 +39,10 @@ added top 500 domains
 
 ## 2.0.0-b09
 moved create func to constructor to make it more obvious
+
+## 2.0.0-b10
+Data class for static data changed to TestData, makes more sense, less generic so won't clash as much
+TestData.Container property flattened
+Added WithLetters - common usage
+DataContainer and DataResources members now virtual to allow overriding
+*BuilderBase.CreateClone virtual, saves override where not needed

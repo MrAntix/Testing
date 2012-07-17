@@ -38,7 +38,7 @@ namespace Testing.Tests
 
             var numbersAndLetters
                 = DataContainer.Resources.Letters
-                    .Union(Data.Container.Resources.Numbers)
+                    .Union(TestData.Resources.Numbers)
                     .ToArray();
 
             var items = DataContainer.Text

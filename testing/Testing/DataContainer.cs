@@ -7,21 +7,20 @@ namespace Testing
     public class DataContainer :
         IDataContainer
     {
-        EmailBuilder _email;
-        PersonBuilder _person;
         IDataResources _resources;
 
+        EmailBuilder _email;
+        PersonBuilder _person;
         WebsiteBuilder _website;
+        IBooleanBuilder _boolean;
+        IDoubleBuilder _double;
+        IIntegerBuilder _integer;
+        IDateTimeBuilder _dateTime;
+        ITextBuilder _text;
 
         public DataContainer(IDataResources resources)
         {
             _resources = resources;
-
-            Boolean = new BooleanBuilder();
-            Integer = new IntegerBuilder();
-            Double = new DoubleBuilder();
-            DateTime = new DateTimeBuilder();
-            Text = new TextBuilder(Resources.Chars);
         }
 
         #region IDataContainer Members
@@ -31,13 +30,52 @@ namespace Testing
             get { return _resources; }
         }
 
-        public IBooleanBuilder Boolean { get; set; }
-        public IIntegerBuilder Integer { get; set; }
-        public IDoubleBuilder Double { get; set; }
-        public IDateTimeBuilder DateTime { get; set; }
-        public ITextBuilder Text { get; set; }
+        public virtual IBooleanBuilder Boolean
+        {
+            get
+            {
+                return _boolean
+                       ?? (_boolean = new BooleanBuilder());
+            }
+        }
 
-        public IPersonBuilder Person
+        public virtual IIntegerBuilder Integer
+        {
+            get
+            {
+                return _integer
+                       ?? (_integer = new IntegerBuilder());
+            }
+        }
+
+        public virtual IDoubleBuilder Double
+        {
+            get
+            {
+                return _double
+                       ?? (_double = new DoubleBuilder());
+            }
+        }
+
+        public virtual IDateTimeBuilder DateTime
+        {
+            get
+            {
+                return _dateTime
+                       ?? (_dateTime = new DateTimeBuilder());
+            }
+        }
+
+        public virtual ITextBuilder Text
+        {
+            get
+            {
+                return _text
+                       ?? (_text = new TextBuilder(_resources));
+            }
+        }
+
+        public virtual IPersonBuilder Person
         {
             get
             {
@@ -46,7 +84,7 @@ namespace Testing
             }
         }
 
-        public IEmailBuilder Email
+        public virtual IEmailBuilder Email
         {
             get
             {
@@ -55,7 +93,7 @@ namespace Testing
             }
         }
 
-        public IWebsiteBuilder Website
+        public virtual IWebsiteBuilder Website
         {
             get
             {

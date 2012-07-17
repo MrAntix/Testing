@@ -14,7 +14,7 @@ namespace Testing.Builders
 
         public override double BuildItem()
         {
-            return ((Data.Random.Value.NextDouble()*(Max - Min)) + Min);
+            return ((TestData.Random.Value.NextDouble()*(Max - Min)) + Min);
         }
 
         protected override IDoubleBuilder CreateClone()

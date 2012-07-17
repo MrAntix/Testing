@@ -48,7 +48,7 @@ namespace Testing.Abstraction.Base
         public TBuilder Build(int minCount, int maxCount)
         {
             return Build(
-                Data.Random.Value.Next(minCount, maxCount)
+                TestData.Random.Value.Next(minCount, maxCount)
                 );
         }
 
@@ -64,6 +64,21 @@ namespace Testing.Abstraction.Base
             clone.Items = items;
 
             return clone as TBuilder;
+        }
+
+        protected virtual TBuilder CreateClone()
+        {
+            try
+            {
+                return Activator.CreateInstance<TBuilder>();
+            }
+            catch (MissingMethodException mmex)
+            {
+                throw new MissingMethodException(
+                    string.Format("Override the CreateClone method on '{0}', no default contructor found",
+                                  typeof (TBuilder).FullName),
+                    mmex);
+            }
         }
 
         public TBuilder Clone()
@@ -88,7 +103,5 @@ namespace Testing.Abstraction.Base
         {
             return Clone();
         }
-
-        protected abstract TBuilder CreateClone();
     }
 }

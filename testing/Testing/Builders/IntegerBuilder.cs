@@ -14,7 +14,7 @@ namespace Testing.Builders
 
         public override int BuildItem()
         {
-            return Data.Random.Value.Next(Min, Max);
+            return TestData.Random.Value.Next(Min, Max);
         }
 
         protected override IIntegerBuilder CreateClone()

@@ -57,6 +57,7 @@
     <Compile Include="builder_to_create_pocos.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="builder_with_no_default_constructor.cs" />
     <Compile Include="data_get_random_booleans.cs" />
     <Compile Include="data_get_random_data.cs">
       <SubType>Code</SubType>
@@ -69,6 +70,7 @@
     <Compile Include="data_using_default_person_builder.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="data_using_the_static_test_data.cs" />
     <Compile Include="extensions_get_random_data.cs">
       <SubType>Code</SubType>
     </Compile>

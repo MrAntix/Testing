@@ -15,7 +15,7 @@ namespace Testing
 
         static T OneOfNoCheck<T>(T[] itemsArray)
         {
-            return itemsArray[Data.Random.Value.Next(0, itemsArray.Length)];
+            return itemsArray[TestData.Random.Value.Next(0, itemsArray.Length)];
         }
 
         public static IEnumerable<T> ManyOf<T>(
@@ -35,7 +35,7 @@ namespace Testing
             var itemsArray = items.ToArray();
 
             return Enumerable
-                .Range(0, Data.Random.Value.Next(minCount, maxCount))
+                .Range(0, TestData.Random.Value.Next(minCount, maxCount))
                 .Select(i => OneOfNoCheck(itemsArray));
         }
     }

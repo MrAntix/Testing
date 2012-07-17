@@ -19,7 +19,7 @@ namespace Testing.Builders
             var maxTicks = Max.Ticks;
 
             return new DateTime(
-                (long) (minTicks + Data.Random.Value.NextDouble()*(maxTicks - minTicks))
+                (long) (minTicks + TestData.Random.Value.NextDouble()*(maxTicks - minTicks))
                 );
         }
 
