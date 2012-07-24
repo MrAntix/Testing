@@ -24,7 +24,7 @@ namespace Testing.Tests
                 .With(x =>
                           {
                               var person = _personBuilder.BuildItem();
-                              var emails = _emailBuilder.WithPerson(person).Build(1, 3).Items;
+                              var emails = _emailBuilder.WithPerson(person).Build(1, 3).ToArray();
 
                               x.Name = person.FullName;
                               x.Emails = emails.Select(e => e.Address);
@@ -44,7 +44,7 @@ namespace Testing.Tests
         [Fact]
         public void can_create_people()
         {
-            foreach (var person in _builder.Build(1000).Items)
+            foreach (var person in _builder.Build(1000))
             {
                 Console.WriteLine(person);
 

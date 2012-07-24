@@ -10,7 +10,6 @@ namespace Testing.Tests
 
         public extensions_find_embedded_resource_image()
         {
-
             using (var stream = GetType().Assembly.GetManifestResourceStream("Testing.Tests.Resources.Image.png"))
             {
                 Debug.Assert(stream != null, "stream != null");
@@ -21,7 +20,10 @@ namespace Testing.Tests
         [Fact]
         void get_an_image()
         {
-            Assert.Equal(_imageSize, GetType().FindResourceImage("Image.png").Size);
+            using (var image = GetType().FindResourceImage("Image.png"))
+            {
+                Assert.Equal(_imageSize, image.Size);
+            }
         }
     }
 }

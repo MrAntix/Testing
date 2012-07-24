@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Testing.Abstraction.Base
             _create = create;
         }
 
-        public IEnumerable<T> Items { get; set; }
+        protected IEnumerable<T> Items { get; set; }
 
         #region ICloneable Members
 
@@ -132,6 +133,16 @@ namespace Testing.Abstraction.Base
             clone.Items = items;
 
             return clone as TBuilder;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return Items.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

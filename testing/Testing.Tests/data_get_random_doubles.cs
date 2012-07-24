@@ -34,7 +34,7 @@ namespace Testing.Tests
                 .WithRange(minValue, maxValue)
                 .Build(2, 40)
                 .Build(1, 60)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

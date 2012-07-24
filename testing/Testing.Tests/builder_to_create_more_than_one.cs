@@ -32,7 +32,7 @@ namespace Testing.Tests
             const int expectedCount = 10;
             var items = _builder
                 .Build(expectedCount)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(items);
             Assert.Equal(expectedCount, items.Count());
@@ -44,7 +44,7 @@ namespace Testing.Tests
             const int expectedCount = 10;
             var items = _builder
                 .Build(expectedCount, (x, i) => x.Count = i)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(items);
             Assert.Equal(expectedCount, items.Count());
@@ -60,7 +60,7 @@ namespace Testing.Tests
             var items = _builder
                 .Build(expectedCount, (x, i) => x.Count = i)
                 .Build(expectedCount, (x, i) => x.Count = i)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(items);
             Assert.Equal(expectedCount*2, items.Count());
@@ -77,12 +77,22 @@ namespace Testing.Tests
             var items = _builder
                 .Build(expectedCount)
                 .Build(expectedCount, (x, i) => x.Name = secondCallName)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(items);
             Assert.Equal(expectedCount*2, items.Count());
 
             Assert.Equal(expectedCount, items.Count(x => x.Name == secondCallName));
+        }
+
+        [Fact]
+        public void creates_new_groups_each_call()
+        {
+            const int expectedCount = 10;
+            var builder = _builder
+                .Build(expectedCount, (x, i) => x.Count = i);
+
+            Assert.NotEqual(builder.ToArray(), builder.ToArray());
         }
     }
 }

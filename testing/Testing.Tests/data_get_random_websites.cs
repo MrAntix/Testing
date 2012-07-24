@@ -18,7 +18,7 @@ namespace Testing.Tests
 
             var items = DataContainer.Website
                 .Build(minValue, maxValue)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

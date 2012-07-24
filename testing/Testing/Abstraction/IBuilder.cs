@@ -4,11 +4,9 @@ using System.Collections.Generic;
 namespace Testing.Abstraction
 {
     public interface IBuilder<TBuilder, T> :
-        ICloneable
+        IEnumerable<T>, ICloneable
         where TBuilder : class, IBuilder<TBuilder, T>
     {
-        IEnumerable<T> Items { get; }
-
         TBuilder With(Action<T> assign);
         T BuildItem();
         TBuilder Build(int minCount, int maxCount);

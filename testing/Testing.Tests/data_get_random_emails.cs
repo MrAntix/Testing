@@ -33,7 +33,7 @@ namespace Testing.Tests
             var items = DataContainer.Email
                 .WithPerson(person)
                 .Build(minValue, maxValue)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

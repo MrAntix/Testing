@@ -13,7 +13,7 @@ namespace Testing.Tests
                 .WithLetters()
                 .WithRange(1, 15)
                 .Build(10)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(words);
 
@@ -33,7 +33,7 @@ namespace Testing.Tests
                 .WithNumbers()
                 .WithRange(1, 15)
                 .Build(10)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(words);
 
@@ -53,7 +53,7 @@ namespace Testing.Tests
                 .WithNumbersAndLetters()
                 .WithRange(1, 15)
                 .Build(10)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.NotNull(words);
 

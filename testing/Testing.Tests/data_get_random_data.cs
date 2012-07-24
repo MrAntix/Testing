@@ -20,7 +20,7 @@ namespace Testing.Tests
             var items = DataContainer.Text
                 .WithRange(minLength, maxLength)
                 .Build(minCount, maxCount)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -45,7 +45,7 @@ namespace Testing.Tests
                 .WithRange(minLength, maxLength)
                 .WithCharacters(numbersAndLetters)
                 .Build(count)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items) Console.WriteLine(item);
 

@@ -19,7 +19,7 @@ namespace Testing.Tests
 
             var items = DataContainer.Person
                 .Build(minValue, maxValue)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -40,7 +40,7 @@ namespace Testing.Tests
                 .WithGender(GenderTypes.Female)
                 .WithAge(minAge, maxAge)
                 .Build(minValue, maxValue)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -60,7 +60,7 @@ namespace Testing.Tests
             var items = DataContainer.Person
                 .WithGender(GenderTypes.Male)
                 .Build(minValue, maxValue)
-                .Items.ToArray();
+                .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

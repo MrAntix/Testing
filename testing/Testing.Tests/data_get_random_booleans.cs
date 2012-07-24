@@ -15,7 +15,7 @@ namespace Testing.Tests
 
             var items = DataContainer.Boolean
                 .Build(count)
-                .Items.ToArray();
+                .ToArray();
 
             Assert.Equal(count, items.Count());
             Assert.IsType<bool[]>(items);

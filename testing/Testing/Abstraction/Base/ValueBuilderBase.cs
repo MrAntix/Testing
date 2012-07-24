@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Testing.Abstraction.Base
             Max = max;
         }
 
-        public IEnumerable<T> Items { get; set; }
+        protected IEnumerable<T> Items { get; set; }
 
         public TLimits Max { get; set; }
         public TLimits Min { get; set; }
@@ -102,6 +103,16 @@ namespace Testing.Abstraction.Base
         object ICloneable.Clone()
         {
             return Clone();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return Items.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

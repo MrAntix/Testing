@@ -49,3 +49,8 @@ DataContainer and DataResources members now virtual to allow overriding
 
 ## 2.0.0-b11
 FindResource extensions added for Type, use to get embedded resources
+
+## 2.0.0-b12
+IValueBuilder<T> and IBuilder<T> implement IEnumerable<T>, this removes the need for .Items, which was ambiguous and just extra code
+Image test now disposes of the image created
+Tidy up

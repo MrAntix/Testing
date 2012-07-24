@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Net.Mime;
 using System.Reflection;
 
 namespace Testing
@@ -57,7 +56,7 @@ namespace Testing
                     select type.Assembly.GetManifestResourceStream(r)).FirstOrDefault();
         }
 
-        public static T FindResource<T>(this Type type, string name, Func<Stream,T> transformer)
+        public static T FindResource<T>(this Type type, string name, Func<Stream, T> transformer)
         {
             return transformer(
                 FindResourceStream(type, name));
