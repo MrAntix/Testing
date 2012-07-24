@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Moq;
 using Testing.Tests.Pocis;
@@ -17,8 +18,8 @@ namespace Testing.Tests
         [Fact]
         public void creates_two_with_two_calls_to_build()
         {
-            var firstOne = _builder.BuildItem();
-            var secondOne = _builder.BuildItem();
+            var firstOne = _builder.Build();
+            var secondOne = _builder.Build();
 
             Assert.NotNull(firstOne);
             Assert.NotNull(secondOne);
@@ -90,9 +91,23 @@ namespace Testing.Tests
         {
             const int expectedCount = 10;
             var builder = _builder
-                .Build(expectedCount, (x, i) => x.Count = i);
+                .Build(expectedCount, (x, i) =>
+                                          {
+                                              x.Name = TestData.Text.WithLetters().WithRange(2, 10).Build();
+                                              x.Count = i;
+                                          });
 
-            Assert.NotEqual(builder.ToArray(), builder.ToArray());
+            var group1 = builder.ToArray();
+            var group2 = builder.ToArray();
+            for (var i = 0; i < group1.Length; i++)
+                Console.WriteLine(
+                    "{0} - {1}", group1.ElementAt(i).Name, group2.ElementAt(i).Name);
+
+            Assert.NotEqual(
+                expectedCount,
+                group1
+                    .Where((x, i) => x.Name == group2.ElementAt(i).Name)
+                    .Count());
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Testing.Builders
             return clone;
         }
 
-        public override string BuildItem()
+        public override string Build()
         {
             return new string(
                 _chars.ManyOf(Min, Max).ToArray());

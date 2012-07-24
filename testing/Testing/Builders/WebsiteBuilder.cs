@@ -19,7 +19,7 @@ namespace Testing.Builders
                              var subDomain = "";
                              switch ((int) _dataContainer.Double
                                                .WithRange(0, 10)
-                                               .BuildItem())
+                                               .Build())
                              {
                                  case 1:
                                  case 2:
@@ -33,7 +33,7 @@ namespace Testing.Builders
                                          _dataContainer.Text
                                              .WithRange(1, 10)
                                              .WithCharacters(_dataContainer.Resources.Letters)
-                                             .BuildItem()
+                                             .Build()
                                          + ".";
                                      break;
                              }

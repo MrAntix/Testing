@@ -54,3 +54,8 @@ FindResource extensions added for Type, use to get embedded resources
 IValueBuilder<T> and IBuilder<T> implement IEnumerable<T>, this removes the need for .Items, which was ambiguous and just extra code
 Image test now disposes of the image created
 Tidy up
+
+## 2.0.0-b13
+BuildItem() -> Build(), not sure why it wasn't in the first place
+reinstated Build(Action<T> assign), a good short-cut and matches Build(int..) method signature
+Updated readme.md with new functionality

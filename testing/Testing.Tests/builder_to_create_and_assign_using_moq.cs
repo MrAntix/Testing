@@ -21,7 +21,7 @@ namespace Testing.Tests
         [Fact]
         public void can_assign_values()
         {
-            var item = _builder.BuildItem();
+            var item = _builder.Build();
             Assert.Equal(_expectedName, item.Name);
         }
 
@@ -31,8 +31,7 @@ namespace Testing.Tests
             var overridenName = _names.ElementAt(1);
 
             var item = _builder
-                .With(x => x.Name = overridenName)
-                .BuildItem();
+                .Build(x => x.Name = overridenName);
 
             Assert.Equal(overridenName, item.Name);
         }

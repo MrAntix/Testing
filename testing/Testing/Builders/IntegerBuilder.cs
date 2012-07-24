@@ -12,7 +12,7 @@ namespace Testing.Builders
         {
         }
 
-        public override int BuildItem()
+        public override int Build()
         {
             return TestData.Random.Value.Next(Min, Max);
         }

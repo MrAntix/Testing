@@ -42,7 +42,7 @@ namespace Testing.Tests
             {
             }
 
-            public override object BuildItem()
+            public override object Build()
             {
                 return null;
             }

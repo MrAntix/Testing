@@ -44,7 +44,7 @@ namespace Testing.Abstraction.Base
             return clone as TBuilder;
         }
 
-        public abstract T BuildItem();
+        public abstract T Build();
 
         public TBuilder Build(int minCount, int maxCount)
         {
@@ -57,7 +57,7 @@ namespace Testing.Abstraction.Base
         {
             var items =
                 Enumerable.Range(0, exactCount)
-                    .Select(index => BuildItem());
+                    .Select(index => Build());
 
             if (Items != null) items = Items.Concat(items);
 

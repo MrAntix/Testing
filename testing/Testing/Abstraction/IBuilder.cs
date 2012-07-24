@@ -8,7 +8,8 @@ namespace Testing.Abstraction
         where TBuilder : class, IBuilder<TBuilder, T>
     {
         TBuilder With(Action<T> assign);
-        T BuildItem();
+        T Build();
+        T Build(Action<T> assign);
         TBuilder Build(int minCount, int maxCount);
         TBuilder Build(int minCount, int maxCount, Action<T, int> assign);
         TBuilder Build(int exactCount);

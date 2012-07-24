@@ -17,7 +17,7 @@ namespace Testing.Tests
         [Fact]
         public void creates_instance()
         {
-            var item = _builder.BuildItem();
+            var item = _builder.Build();
 
             Assert.NotNull(item);
         }

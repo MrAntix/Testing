@@ -9,7 +9,7 @@ namespace Testing.Builders
     {
         #region IBooleanBuilder Members
 
-        public override bool BuildItem()
+        public override bool Build()
         {
             return TestData.Random.Value.Next(2) == 1;
         }

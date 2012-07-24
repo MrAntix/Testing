@@ -6,14 +6,14 @@ namespace Testing.Abstraction
     {
         IDataResources Resources { get; }
 
-        IBooleanBuilder Boolean { get; }
-        IIntegerBuilder Integer { get; }
-        IDoubleBuilder Double { get; }
-        IDateTimeBuilder DateTime { get; }
-        ITextBuilder Text { get; }
+    IBooleanBuilder Boolean { get; }
+    IIntegerBuilder Integer { get; }
+    IDoubleBuilder Double { get; }
+    IDateTimeBuilder DateTime { get; }
+    ITextBuilder Text { get; }
 
-        IPersonBuilder Person { get; }
-        IEmailBuilder Email { get; }
-        IWebsiteBuilder Website { get; }
+    IPersonBuilder Person { get; }
+    IEmailBuilder Email { get; }
+    IWebsiteBuilder Website { get; }
     }
 }

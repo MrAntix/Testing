@@ -13,7 +13,7 @@ namespace Testing.Builders
         {
         }
 
-        public override DateTime BuildItem()
+        public override DateTime Build()
         {
             var minTicks = Min.Ticks;
             var maxTicks = Max.Ticks;

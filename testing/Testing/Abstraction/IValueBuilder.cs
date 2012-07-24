@@ -12,7 +12,7 @@ namespace Testing.Abstraction
 
         TBuilder WithMax(TLimits max);
         TBuilder WithRange(TLimits min, TLimits max);
-        T BuildItem();
+        T Build();
         TBuilder Build(int minCount, int maxCount);
         TBuilder Build(int exactCount);
     }

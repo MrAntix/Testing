@@ -6,7 +6,8 @@ namespace Testing.Tests
 {
     public class data_get_random_integers
     {
-        protected IDataContainer DataContainer = new DataContainer(new DataResources());
+        protected IDataContainer DataContainer
+            = new DataContainer(new DataResources());
 
         [Fact]
         public void get_array()

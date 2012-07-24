@@ -17,7 +17,7 @@ namespace Testing.Tests
 
             var item = DataContainer.Double
                 .WithRange(minValue, maxValue)
-                .BuildItem();
+                .Build();
 
             Console.WriteLine(item);
 

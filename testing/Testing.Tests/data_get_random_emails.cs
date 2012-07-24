@@ -15,7 +15,7 @@ namespace Testing.Tests
         {
             Assert.Throws<InvalidOperationException>(
                 () => DataContainer.Email
-                          .BuildItem());
+                          .Build());
         }
 
         [Fact]

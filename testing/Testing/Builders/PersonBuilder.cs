@@ -37,7 +37,7 @@ namespace Testing.Builders
 
                              p.DateOfBirth = dataContainer.DateTime
                                  .WithRange(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
-                                 .BuildItem();
+                                 .Build();
                          };
         }
 
@@ -48,7 +48,7 @@ namespace Testing.Builders
                     {
                         p.DateOfBirth = _dataContainer.DateTime
                             .WithRange(DateTime.UtcNow.AddYears(-max), DateTime.UtcNow.AddYears(-min))
-                            .BuildItem();
+                            .Build();
                     });
         }
 

@@ -23,7 +23,7 @@ namespace Testing.Tests
             _builder = new Builder<MyPerson>()
                 .With(x =>
                           {
-                              var person = _personBuilder.BuildItem();
+                              var person = _personBuilder.Build();
                               var emails = _emailBuilder.WithPerson(person).Build(1, 3).ToArray();
 
                               x.Name = person.FullName;
@@ -34,7 +34,7 @@ namespace Testing.Tests
         [Fact]
         public void can_create_person()
         {
-            var person = _builder.BuildItem();
+            var person = _builder.Build();
 
             Assert.NotNull(person);
             Assert.NotNull(person.Name);

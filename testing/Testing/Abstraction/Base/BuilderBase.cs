@@ -85,10 +85,16 @@ namespace Testing.Abstraction.Base
             return clone as TBuilder;
         }
 
-        public T BuildItem()
+        public T Build()
+        {
+            return Build(null);
+        }
+
+        public T Build(Action<T> assign)
         {
             var item = _create();
             if (Assign != null) Assign(item);
+            if (assign != null) assign(item);
 
             return item;
         }
@@ -120,7 +126,7 @@ namespace Testing.Abstraction.Base
                 Enumerable.Range(0, exactCount)
                     .Select(index =>
                                 {
-                                    var item = BuildItem();
+                                    var item = Build();
                                     if (assign != null) assign(item, Index + index);
 
                                     return item;
