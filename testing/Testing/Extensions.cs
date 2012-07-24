@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
+using System.Reflection;
 
 namespace Testing
 {
@@ -37,6 +41,41 @@ namespace Testing
             return Enumerable
                 .Range(0, TestData.Random.Value.Next(minCount, maxCount))
                 .Select(i => OneOfNoCheck(itemsArray));
+        }
+
+        public static ManifestResourceInfo FindResourceInfo(this Type type, string name)
+        {
+            return (from r in type.Assembly.GetManifestResourceNames()
+                    where r.EndsWith("." + name)
+                    select type.Assembly.GetManifestResourceInfo(r)).FirstOrDefault();
+        }
+
+        public static Stream FindResourceStream(this Type type, string name)
+        {
+            return (from r in type.Assembly.GetManifestResourceNames()
+                    where r.EndsWith("." + name)
+                    select type.Assembly.GetManifestResourceStream(r)).FirstOrDefault();
+        }
+
+        public static T FindResource<T>(this Type type, string name, Func<Stream,T> transformer)
+        {
+            return transformer(
+                FindResourceStream(type, name));
+        }
+
+        public static string FindResourceString(this Type type, string name)
+        {
+            return FindResource(type, name,
+                                s =>
+                                    {
+                                        using (var reader = new StreamReader(s))
+                                            return reader.ReadToEnd();
+                                    });
+        }
+
+        public static Image FindResourceImage(this Type type, string name)
+        {
+            return FindResource(type, name, Image.FromStream);
         }
     }
 }
