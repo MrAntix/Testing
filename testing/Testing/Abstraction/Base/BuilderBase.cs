@@ -102,7 +102,14 @@ namespace Testing.Abstraction.Base
         public TBuilder Build(
             int minCount, int maxCount)
         {
-            return Build(minCount, maxCount, null);
+            return Build(minCount, maxCount, default(Action<T>));
+        }
+
+        public TBuilder Build(
+            int minCount, int maxCount,
+            Action<T> assign)
+        {
+            return Build(TestData.Random.Value.Next(minCount, maxCount), assign);
         }
 
         public TBuilder Build(
@@ -115,7 +122,18 @@ namespace Testing.Abstraction.Base
         public TBuilder Build(
             int exactCount)
         {
-            return Build(exactCount, null);
+            return Build(exactCount, default(Action<T, int>));
+        }
+
+        public TBuilder Build(
+            int exactCount,
+            Action<T> assign)
+        {
+
+            return Build(exactCount,
+                         assign == null
+                             ? default(Action<T, int>)
+                             : (x, i) => assign(x));
         }
 
         public TBuilder Build(
@@ -125,12 +143,12 @@ namespace Testing.Abstraction.Base
             var items =
                 Enumerable.Range(0, exactCount)
                     .Select(index =>
-                                {
-                                    var item = Build();
-                                    if (assign != null) assign(item, Index + index);
+                    {
+                        var item = Build();
+                        if (assign != null) assign(item, Index + index);
 
-                                    return item;
-                                });
+                        return item;
+                    });
 
             if (Items != null) items = Items.Concat(items);
 

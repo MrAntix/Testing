@@ -28,9 +28,59 @@ namespace Testing.Tests
         }
 
         [Fact]
-        public void creates_a_group_with_call_to_build_with_a_count()
+        public void creates_a_group_with_call_to_build_with_a_range()
+        {
+            const int minCount = 5;
+            const int maxCount = 10;
+            
+            var items = _builder
+                .Build(minCount, maxCount)
+                .ToArray();
+
+            Assert.NotNull(items);
+            Assert.InRange(items.Count(), minCount, maxCount);
+        }
+
+        [Fact]
+        public void creates_a_group_with_call_to_build_with_a_range_and_assign()
+        {
+            const int minCount = 5;
+            const int maxCount = 10;
+            const string expectedName = "name";
+
+            var items = _builder
+                .Build(minCount, maxCount, x => x.Name = expectedName)
+                .ToArray();
+
+            Assert.NotNull(items);
+            Assert.InRange(items.Count(), minCount, maxCount);
+
+            Assert.True(items.All(x => x.Name == expectedName));
+        }
+
+        [Fact]
+        public void creates_a_group_with_call_to_build_with_a_range_and_assign_with_index()
+        {
+            const int minCount = 5;
+            const int maxCount = 10;
+            const string expectedName = "name";
+
+            var items = _builder
+                .Build(minCount, maxCount, (x, i) => x.Count = i)
+                .ToArray();
+
+            Assert.NotNull(items);
+            Assert.InRange(items.Count(), minCount, maxCount);
+
+            for (var i = 0; i < items.Count(); i++)
+                Assert.Equal(i, items.ElementAt(i).Count);
+        }
+
+        [Fact]
+        public void creates_a_group_with_call_to_build_with_an_exact_count()
         {
             const int expectedCount = 10;
+            
             var items = _builder
                 .Build(expectedCount)
                 .ToArray();
@@ -40,7 +90,23 @@ namespace Testing.Tests
         }
 
         [Fact]
-        public void creates_a_group_with_call_to_build_with_a_count_uses_index()
+        public void creates_a_group_with_call_to_build_with_an_exact_count_and_assign()
+        {
+            const int expectedCount = 10;
+            const string expectedName = "name";
+
+            var items = _builder
+                .Build(expectedCount, x => x.Name = expectedName)
+                .ToArray();
+
+            Assert.NotNull(items);
+            Assert.Equal(expectedCount, items.Count());
+
+            Assert.True(items.All(x => x.Name == expectedName));
+        }
+
+        [Fact]
+        public void creates_a_group_with_call_to_build_with_an_exact_count_uses_index()
         {
             const int expectedCount = 10;
             var items = _builder

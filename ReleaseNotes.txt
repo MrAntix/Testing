@@ -59,3 +59,7 @@ Tidy up
 BuildItem() -> Build(), not sure why it wasn't in the first place
 reinstated Build(Action<T> assign), a good short-cut and matches Build(int..) method signature
 Updated readme.md with new functionality
+
+## 2.0.0
+Added overloads for IBuilder.Build with assign but no index
+Release
