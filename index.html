@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Testing by MrAntix</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Testing</h1>
+        <p>Stuff for testing</p>
+
+        <p class="view"><a href="https://github.com/MrAntix/Testing">View the Project on GitHub <small>MrAntix/Testing</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/MrAntix/Testing/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/MrAntix/Testing/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/MrAntix/Testing">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Some code I use to help me do TDD</p>
+
+<h1>Generic Builder</h1>
+
+<p><a href="https://github.com/MrAntix/Testing/blob/master/testing/Testing/Builder.cs">Builder.cs</a></p>
+
+<p>This is a generic builder class which separates off the business of creation into a reusable component</p>
+
+<p><a href="https://nuget.org/packages/antix-testing">On NuGet</a></p>
+
+<h3>Generic Builder Examples</h3>
+
+<pre><code>// create a builder for a mocked interface (using Moq)
+var builder = new Builder&lt;IThingy&gt;(Mock.Of&lt;IThingy&gt;)
+                .With(x =&gt; 
+                            {
+                                x.Name = "Some Name";
+                                x.SetValue("Some Value");
+                            });
+
+// create an instance
+var instance = builder.Build();
+
+// create an other instance, override the name
+var otherInstance = builder
+                    .Build(x =&gt; x.Name = "Other Name");
+
+// create 100 instances, then 10 overriding the name, the index is supplied too
+var instances = builder
+                    .Build(100)
+                    .Build(10, (x, i) =&gt; x.Name = "Other Name")
+                    .ToList();
+</code></pre>
+
+<h3>Notes on Usage</h3>
+
+<p>The builder implements IEnumerable and is has a lazy iterator, which means everytime 
+you enumerate it you will get a new set of objects</p>
+
+<p>Call .ToArray() or .ToList() to fix a set to a variable (see above)</p>
+
+<h1>Standard Builders</h1>
+
+<p>These are some builders to get hold of the usual type of data you may need</p>
+
+<pre><code>IBooleanBuilder Boolean { get; }
+IIntegerBuilder Integer { get; }
+IDoubleBuilder Double { get; }
+IDateTimeBuilder DateTime { get; }
+ITextBuilder Text { get; }
+
+IPersonBuilder Person { get; }
+IEmailBuilder Email { get; }
+IWebsiteBuilder Website { get; }
+</code></pre>
+
+<h1>Extensions</h1>
+
+<p>There a are some simple extensions to IEnumerable to allow you to random elements</p>
+
+<pre><code>// Gets a single random element from an IEnumerable&lt;T&gt;
+T OneOf&lt;T&gt;(this IEnumerable&lt;T&gt; items)
+
+// Gets an exact number of random elements from an IEnumerable&lt;T&gt;
+IEnumerable&lt;T&gt; ManyOf&lt;T&gt;(
+        this IEnumerable&lt;T&gt; items, int exactCount)
+
+// Gets a random number of random elements from an IEnumerable&lt;T&gt; given a range
+IEnumerable&lt;T&gt; ManyOf&lt;T&gt;(
+        this IEnumerable&lt;T&gt; items, int minCount, int maxCount)
+</code></pre>
+
+<p>Also some extensions to find embedded resources</p>
+
+<pre><code>// Find an embedded resource as a stream in the passed type assembly by name
+Stream FindResourceStream(this Type type, string name)
+
+// Find an embedded resource and transform from stream to another type
+T FindResource&lt;T&gt;(this Type type, string name, Func&lt;Stream, T&gt; transformer)
+
+// Find an embedded resource and transform to a string
+string FindResourceString(this Type type, string name)
+
+// Find an embedded resource and transform to an image
+Image FindResourceImage(this Type type, string name)
+</code></pre>
+
+<h1>Test Data</h1>
+
+<p>There is also some test data</p>
+
+<pre><code>IEnumerable&lt;bool&gt; Booleans { get; }
+
+IEnumerable&lt;string&gt; PersonFirstNamesMale { get; }
+IEnumerable&lt;string&gt; PersonFirstNamesFemale { get; }
+IEnumerable&lt;GenderTypes&gt; DataGenders { get; }
+IEnumerable&lt;string&gt; PersonLastNames { get; }
+
+IEnumerable&lt;string&gt; WebDomains { get; }
+IEnumerable&lt;string&gt; EmailTypes { get; }
+
+IEnumerable&lt;char&gt; Chars { get; }
+IEnumerable&lt;char&gt; Letters { get; }
+IEnumerable&lt;char&gt; Numbers { get; }
+</code></pre>
+
+<p>for example</p>
+
+<pre><code>// get a random number of male first names, between 10 and 20
+var firstNames = TestData.PersonFirstNamesMale
+                    .ManyOf(10,20);
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/MrAntix">MrAntix</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
