@@ -45,6 +45,7 @@
     <Compile Include="Abstraction\Builders\IWebsiteBuilder.cs" />
     <Compile Include="Abstraction\IBuilder.cs" />
     <Compile Include="Abstraction\IValueBuilder.cs" />
+    <Compile Include="Benchmark.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="Abstraction\Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Builders\PersonBuilder.cs" />
     <Compile Include="Builders\BooleanBuilder.cs" />
     <Compile Include="Builders\WebsiteBuilder.cs" />
+    <Compile Include="IBenchmark.cs" />
     <Compile Include="Models\EmailModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="DataResources.cs" />

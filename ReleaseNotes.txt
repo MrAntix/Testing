@@ -63,3 +63,6 @@ Updated readme.md with new functionality
 ## 2.0.0
 Added overloads for IBuilder.Build with assign but no index
 Release
+
+##2.0.1
+Added Benchmark class
