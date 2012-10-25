@@ -73,3 +73,6 @@ Allow multiple runs to be called
 Results classes added 'BenchmarkResult' and 'BenchmarkResultList'
 Solution and Namespaces moved to Antix.Testing to be in-line with other stuff
 Pointing icon at permanent link
+
+##3.0.0-b02
+Added time-to-stop on benchmarks, will run as many as it can before time is up

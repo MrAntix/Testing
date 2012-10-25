@@ -28,6 +28,8 @@ namespace Antix.Testing
         public BenchmarkResult Run(
             int iterations)
         {
+            if (iterations <= 0) throw new ArgumentOutOfRangeException("iterations");
+
             ClearDown();
 
             _action();
@@ -36,6 +38,28 @@ namespace Antix.Testing
             for (var i = 0; i < iterations; i++)
             {
                 _action();
+            }
+            watch.Stop();
+
+            return new BenchmarkResult(watch.Elapsed, iterations);
+        }
+
+        public BenchmarkResult Run(
+            TimeSpan stopAfter)
+        {
+            if (stopAfter.Ticks <= 0) throw new ArgumentOutOfRangeException("stopAfter");
+
+            ClearDown();
+
+            var iterations = 0;
+
+            _action();
+
+            var watch = Stopwatch.StartNew();
+            while (stopAfter > watch.Elapsed)
+            {
+                _action();
+                iterations++;
             }
             watch.Stop();
 
@@ -63,6 +87,14 @@ namespace Antix.Testing
             var benchmark = new Benchmark(action);
 
             return benchmark.Run(iterations);
+        }
+
+        public static BenchmarkResult Run(
+            Action action, TimeSpan stopAfter)
+        {
+            var benchmark = new Benchmark(action);
+
+            return benchmark.Run(stopAfter);
         }
     }
 }

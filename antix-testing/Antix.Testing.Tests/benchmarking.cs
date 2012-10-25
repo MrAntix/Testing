@@ -44,7 +44,7 @@ namespace Antix.Testing.Tests
         {
             Assert.Throws<ArgumentNullException>(
                 () => Benchmark
-                          .Run(() => { }, null)
+                          .Run(() => { }, default(int[]))
                 );
         }
 
@@ -57,6 +57,41 @@ namespace Antix.Testing.Tests
             Assert.Equal(0, result.Average.Ticks);
             Assert.Equal(0, result.TotalTime.Ticks);
             Assert.Equal(0, result.TotalIterations);
+        }
+
+        [Fact]
+        void zero_or_negative_stop_iterations_gives_error()
+        {
+            const int iterations = -1;
+
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => Benchmark
+                          .Run(() => Thread.Sleep(1), iterations)
+                );
+        }
+
+        [Fact]
+        void time_not_less_than_stop()
+        {
+            var stopAfter = TimeSpan.FromMilliseconds(50);
+            var result = Benchmark
+                .Run(() => Thread.Sleep(1), stopAfter);
+
+            Console.Write(result);
+
+            Assert.True(result.Time >= stopAfter,
+                        string.Format("{0}", result.Time));
+        }
+
+        [Fact]
+        void zero_or_negative_stop_time_gives_error()
+        {
+            var stopAfter = TimeSpan.FromMilliseconds(-100);
+
+            Assert.Throws<ArgumentOutOfRangeException>(
+                () => Benchmark
+                          .Run(() => Thread.Sleep(1), stopAfter)
+                );
         }
     }
 }
