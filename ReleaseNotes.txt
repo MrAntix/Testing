@@ -72,3 +72,4 @@ Breaking v2.0.1 reorganising parameters to allow for multiple instances paramarr
 Allow multiple runs to be called
 Results classes added 'BenchmarkResult' and 'BenchmarkResultList'
 Solution and Namespaces moved to Antix.Testing to be in-line with other stuff
+Pointing icon at permanent link
