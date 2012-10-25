@@ -6,7 +6,7 @@ namespace Testing.Tests
 {
     public class extensions_find_embedded_resource_image
     {
-        Size _imageSize;
+        readonly Size _imageSize;
 
         public extensions_find_embedded_resource_image()
         {

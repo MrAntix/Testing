@@ -9,7 +9,7 @@ namespace Testing
 {
     public class DataResources : IDataResources
     {
-        IEnumerable<bool> _booleans = new[] {true, false};
+        readonly IEnumerable<bool> _booleans = new[] {true, false};
 
         IEnumerable<char> _chars;
         IEnumerable<GenderTypes> _dataGenders;

@@ -32,7 +32,7 @@ namespace Testing.Tests
         {
             const int minCount = 5;
             const int maxCount = 10;
-            
+
             var items = _builder
                 .Build(minCount, maxCount)
                 .ToArray();
@@ -63,7 +63,6 @@ namespace Testing.Tests
         {
             const int minCount = 5;
             const int maxCount = 10;
-            const string expectedName = "name";
 
             var items = _builder
                 .Build(minCount, maxCount, (x, i) => x.Count = i)
@@ -80,7 +79,7 @@ namespace Testing.Tests
         public void creates_a_group_with_call_to_build_with_an_exact_count()
         {
             const int expectedCount = 10;
-            
+
             var items = _builder
                 .Build(expectedCount)
                 .ToArray();

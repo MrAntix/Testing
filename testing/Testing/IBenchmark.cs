@@ -1,9 +1,11 @@
-using System;
-
 namespace Testing
 {
     public interface IBenchmark
     {
-        TimeSpan Run(int iterations);
+        BenchmarkResultList Run(
+            params int[] moreIterations);
+
+        BenchmarkResult Run(
+            int iterations);
     }
 }

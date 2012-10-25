@@ -129,7 +129,6 @@ namespace Testing.Abstraction.Base
             int exactCount,
             Action<T> assign)
         {
-
             return Build(exactCount,
                          assign == null
                              ? default(Action<T, int>)
@@ -142,13 +141,13 @@ namespace Testing.Abstraction.Base
         {
             var items =
                 Enumerable.Range(0, exactCount)
-                    .Select(index =>
-                    {
-                        var item = Build();
-                        if (assign != null) assign(item, Index + index);
+                          .Select(index =>
+                                      {
+                                          var item = Build();
+                                          if (assign != null) assign(item, Index + index);
 
-                        return item;
-                    });
+                                          return item;
+                                      });
 
             if (Items != null) items = Items.Concat(items);
 

@@ -57,7 +57,7 @@ namespace Testing.Abstraction.Base
         {
             var items =
                 Enumerable.Range(0, exactCount)
-                    .Select(index => Build());
+                          .Select(index => Build());
 
             if (Items != null) items = Items.Concat(items);
 

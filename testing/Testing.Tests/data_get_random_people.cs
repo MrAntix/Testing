@@ -18,8 +18,8 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Person
-                .Build(minValue, maxValue)
-                .ToArray();
+                                     .Build(minValue, maxValue)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -37,10 +37,10 @@ namespace Testing.Tests
             const int maxAge = 40;
 
             var items = DataContainer.Person
-                .WithGender(GenderTypes.Female)
-                .WithAge(minAge, maxAge)
-                .Build(minValue, maxValue)
-                .ToArray();
+                                     .WithGender(GenderTypes.Female)
+                                     .WithAge(minAge, maxAge)
+                                     .Build(minValue, maxValue)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -58,9 +58,9 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Person
-                .WithGender(GenderTypes.Male)
-                .Build(minValue, maxValue)
-                .ToArray();
+                                     .WithGender(GenderTypes.Male)
+                                     .Build(minValue, maxValue)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -77,8 +77,8 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Resources.PersonFirstNamesMale
-                .ManyOf(minValue, maxValue)
-                .ToArray();
+                                     .ManyOf(minValue, maxValue)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

@@ -7,7 +7,7 @@ namespace Testing
     public class DataContainer :
         IDataContainer
     {
-        IDataResources _resources;
+        readonly IDataResources _resources;
 
         EmailBuilder _email;
         PersonBuilder _person;

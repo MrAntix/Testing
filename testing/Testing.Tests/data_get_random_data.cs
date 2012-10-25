@@ -18,9 +18,9 @@ namespace Testing.Tests
             const int maxCount = 20;
 
             var items = DataContainer.Text
-                .WithRange(minLength, maxLength)
-                .Build(minCount, maxCount)
-                .ToArray();
+                                     .WithRange(minLength, maxLength)
+                                     .Build(minCount, maxCount)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
@@ -38,14 +38,14 @@ namespace Testing.Tests
 
             var numbersAndLetters
                 = DataContainer.Resources.Letters
-                    .Union(TestData.Resources.Numbers)
-                    .ToArray();
+                               .Union(TestData.Resources.Numbers)
+                               .ToArray();
 
             var items = DataContainer.Text
-                .WithRange(minLength, maxLength)
-                .WithCharacters(numbersAndLetters)
-                .Build(count)
-                .ToArray();
+                                     .WithRange(minLength, maxLength)
+                                     .WithCharacters(numbersAndLetters)
+                                     .Build(count)
+                                     .ToArray();
 
             foreach (var item in items) Console.WriteLine(item);
 

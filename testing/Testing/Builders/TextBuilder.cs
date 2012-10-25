@@ -11,7 +11,7 @@ namespace Testing.Builders
         ValueBuilderBase<ITextBuilder, string, int>,
         ITextBuilder
     {
-        IDataResources _resources;
+        readonly IDataResources _resources;
         IEnumerable<char> _chars;
 
         public TextBuilder(IDataResources resources) :
@@ -35,7 +35,7 @@ namespace Testing.Builders
         {
             return WithCharacters(
                 _resources.Numbers
-                    .Concat(_resources.Letters)
+                          .Concat(_resources.Letters)
                 );
         }
 

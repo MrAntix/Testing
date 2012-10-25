@@ -10,10 +10,10 @@ namespace Testing.Tests
         public void static_data_text_gets_random_letters()
         {
             var words = TestData.Text
-                .WithLetters()
-                .WithRange(1, 15)
-                .Build(10)
-                .ToArray();
+                                .WithLetters()
+                                .WithRange(1, 15)
+                                .Build(10)
+                                .ToArray();
 
             Assert.NotNull(words);
 
@@ -30,10 +30,10 @@ namespace Testing.Tests
         public void static_data_text_gets_random_numbers()
         {
             var words = TestData.Text
-                .WithNumbers()
-                .WithRange(1, 15)
-                .Build(10)
-                .ToArray();
+                                .WithNumbers()
+                                .WithRange(1, 15)
+                                .Build(10)
+                                .ToArray();
 
             Assert.NotNull(words);
 
@@ -50,10 +50,10 @@ namespace Testing.Tests
         public void static_data_text_gets_random_numbers_and_letters()
         {
             var words = TestData.Text
-                .WithNumbersAndLetters()
-                .WithRange(1, 15)
-                .Build(10)
-                .ToArray();
+                                .WithNumbersAndLetters()
+                                .WithRange(1, 15)
+                                .Build(10)
+                                .ToArray();
 
             Assert.NotNull(words);
 
@@ -61,8 +61,8 @@ namespace Testing.Tests
             {
                 Assert.True(word.All(
                     TestData.Resources.Letters
-                        .Concat(TestData.Resources.Numbers)
-                        .Contains));
+                            .Concat(TestData.Resources.Numbers)
+                            .Contains));
                 Console.WriteLine(word);
             }
 

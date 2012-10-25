@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Testing
 {
@@ -9,10 +10,23 @@ namespace Testing
 
         public Benchmark(Action action)
         {
+            if (action == null) throw new ArgumentNullException("action");
+
             _action = action;
         }
 
-        public TimeSpan Run(int iterations)
+        public BenchmarkResultList Run(
+            params int[] moreIterations)
+        {
+            if (moreIterations == null)
+                throw new ArgumentNullException("moreIterations");
+
+            return new BenchmarkResultList(
+                moreIterations.Select(Run));
+        }
+
+        public BenchmarkResult Run(
+            int iterations)
         {
             ClearDown();
 
@@ -25,7 +39,7 @@ namespace Testing
             }
             watch.Stop();
 
-            return watch.Elapsed;
+            return new BenchmarkResult(watch.Elapsed, iterations);
         }
 
         static void ClearDown()
@@ -35,7 +49,16 @@ namespace Testing
             GC.Collect();
         }
 
-        public static TimeSpan Run(int iterations, Action action)
+        public static BenchmarkResultList Run(
+            Action action, params int[] iterationsList)
+        {
+            var benchmark = new Benchmark(action);
+
+            return benchmark.Run(iterationsList);
+        }
+
+        public static BenchmarkResult Run(
+            Action action, int iterations)
         {
             var benchmark = new Benchmark(action);
 

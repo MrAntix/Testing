@@ -46,6 +46,8 @@
     <Compile Include="Abstraction\IBuilder.cs" />
     <Compile Include="Abstraction\IValueBuilder.cs" />
     <Compile Include="Benchmark.cs" />
+    <Compile Include="BenchmarkResult.cs" />
+    <Compile Include="BenchmarkResultList.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="Abstraction\Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />
@@ -62,6 +64,11 @@
     <Compile Include="Models\GenderTypes.cs" />
     <Compile Include="Abstraction\IDataContainer.cs" />
     <Compile Include="Abstraction\IDataResources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="TestData.cs" />
     <Compile Include="Builders\DateTimeBuilder.cs" />
     <Compile Include="Builders\DoubleBuilder.cs" />
@@ -117,6 +124,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>PersonResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

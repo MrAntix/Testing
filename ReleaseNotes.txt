@@ -66,3 +66,8 @@ Release
 
 ##2.0.1
 Added Benchmark class
+
+##3.0.0-b01
+Breaking v2.0.1 reorganising parameters to allow for multiple instances paramarray
+Allow multiple runs to be called
+Results classes added 'BenchmarkResult' and 'BenchmarkResultList'

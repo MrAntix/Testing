@@ -104,3 +104,40 @@ for example
     // get a random number of male first names, between 10 and 20
 	var firstNames = TestData.PersonFirstNamesMale
                         .ManyOf(10,20);
+
+# Benchmarking
+
+This is used to time how long a piece of code takes to run.
+
+Wrap your code in a delegate and call the Benchmark.Run with a number 
+of iterations or even a list of iteration to get figures for performance
+over an increasing number of iterations
+
+    var result = Benchmark
+        .Run(() => [Your Action], [Number of iterations]);
+
+for example, run Thread.Sleep 10 times
+
+    var result = Benchmark
+        .Run(() => Thread.Sleep(10), 10);
+
+for example, run Thread.Sleep 10 times, 100 times and 1000 times
+
+    var result = Benchmark
+        .Run(() => Thread.Sleep(10), 10, 100, 1000);
+
+The result ToString() gives a summary of the timings including the average
+and you can format this using config (see app.config in the Testing project)
+
+    <Testing.Properties.Settings>
+        <setting name="BenchmarkResult_toString" serializeAs="String">
+            <value>{0}, av {1}, {2}x</value>
+        </setting>
+        <setting name="BenchmarkResultList_toString" serializeAs="String">
+            <value>{0}, av {1}, {2}x</value>
+        </setting>
+    </Testing.Properties.Settings>
+
+{0} time
+{1} average
+{2} iterations

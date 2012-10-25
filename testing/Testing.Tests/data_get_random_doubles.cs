@@ -16,8 +16,8 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var item = DataContainer.Double
-                .WithRange(minValue, maxValue)
-                .Build();
+                                    .WithRange(minValue, maxValue)
+                                    .Build();
 
             Console.WriteLine(item);
 
@@ -31,10 +31,10 @@ namespace Testing.Tests
             const int maxValue = 20;
 
             var items = DataContainer.Double
-                .WithRange(minValue, maxValue)
-                .Build(2, 40)
-                .Build(1, 60)
-                .ToArray();
+                                     .WithRange(minValue, maxValue)
+                                     .Build(2, 40)
+                                     .Build(1, 60)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);

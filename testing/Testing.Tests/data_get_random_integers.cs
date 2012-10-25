@@ -15,8 +15,8 @@ namespace Testing.Tests
             const int count = 100;
 
             var items = DataContainer.Integer
-                .Build(count)
-                .ToArray();
+                                     .Build(count)
+                                     .ToArray();
 
             Assert.Equal(count, items.Count());
             Assert.IsType<int[]>(items);

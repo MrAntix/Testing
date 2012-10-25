@@ -6,7 +6,7 @@ namespace Testing.Tests
 {
     public class extensions_find_embedded_resource_web_page
     {
-        string _webPage;
+        readonly string _webPage;
 
         public extensions_find_embedded_resource_web_page()
         {

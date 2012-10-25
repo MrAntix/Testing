@@ -36,8 +36,8 @@ namespace Testing.Builders
                              p.LastName = _dataContainer.Resources.PersonLastNames.OneOf();
 
                              p.DateOfBirth = dataContainer.DateTime
-                                 .WithRange(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
-                                 .Build();
+                                                          .WithRange(DateTime.UtcNow.AddYears(-130), DateTime.UtcNow)
+                                                          .Build();
                          };
         }
 
@@ -47,8 +47,9 @@ namespace Testing.Builders
                 p =>
                     {
                         p.DateOfBirth = _dataContainer.DateTime
-                            .WithRange(DateTime.UtcNow.AddYears(-max), DateTime.UtcNow.AddYears(-min))
-                            .Build();
+                                                      .WithRange(DateTime.UtcNow.AddYears(-max),
+                                                                 DateTime.UtcNow.AddYears(-min))
+                                                      .Build();
                     });
         }
 

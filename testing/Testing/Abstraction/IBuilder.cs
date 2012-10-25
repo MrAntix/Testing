@@ -8,7 +8,7 @@ namespace Testing.Abstraction
         where TBuilder : class, IBuilder<TBuilder, T>
     {
         TBuilder With(Action<T> assign);
-        
+
         T Build();
         T Build(Action<T> assign);
 

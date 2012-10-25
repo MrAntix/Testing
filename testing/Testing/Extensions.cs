@@ -28,7 +28,7 @@ namespace Testing
             var itemsArray = items.ToArray();
 
             return Enumerable.Range(0, exactCount)
-                .Select(i => OneOfNoCheck(itemsArray));
+                             .Select(i => OneOfNoCheck(itemsArray));
         }
 
         public static IEnumerable<T> ManyOf<T>(

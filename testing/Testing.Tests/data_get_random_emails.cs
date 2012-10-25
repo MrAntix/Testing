@@ -15,7 +15,7 @@ namespace Testing.Tests
         {
             Assert.Throws<InvalidOperationException>(
                 () => DataContainer.Email
-                          .Build());
+                                   .Build());
         }
 
         [Fact]
@@ -31,9 +31,9 @@ namespace Testing.Tests
                              };
 
             var items = DataContainer.Email
-                .WithPerson(person)
-                .Build(minValue, maxValue)
-                .ToArray();
+                                     .WithPerson(person)
+                                     .Build(minValue, maxValue)
+                                     .ToArray();
 
             foreach (var item in items)
                 Console.WriteLine(item);
