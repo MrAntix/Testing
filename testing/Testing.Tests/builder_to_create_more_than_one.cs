@@ -63,7 +63,6 @@ namespace Testing.Tests
         {
             const int minCount = 5;
             const int maxCount = 10;
-            const string expectedName = "name";
 
             var items = _builder
                 .Build(minCount, maxCount, (x, i) => x.Count = i)

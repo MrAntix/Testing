@@ -43,7 +43,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="benchmarking.cs" />
     <Compile Include="builder_to_create.cs">
       <SubType>Code</SubType>
     </Compile>

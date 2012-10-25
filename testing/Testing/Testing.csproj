@@ -45,7 +45,6 @@
     <Compile Include="Abstraction\Builders\IWebsiteBuilder.cs" />
     <Compile Include="Abstraction\IBuilder.cs" />
     <Compile Include="Abstraction\IValueBuilder.cs" />
-    <Compile Include="Benchmark.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="Abstraction\Base\BuilderBase.cs" />
     <Compile Include="Builders\EmailBuilder.cs" />

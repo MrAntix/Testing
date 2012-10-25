@@ -66,3 +66,7 @@ Release
 
 ##2.0.1
 Added Benchmark class
+
+##2.0.2
+Removed Benchmarking, moved feature to v3
+Graphic pointing at v2 branch
