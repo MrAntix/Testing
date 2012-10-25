@@ -2,7 +2,7 @@ Some code I use to help me do TDD
 
 # Generic Builder
 
-[Builder.cs](https://github.com/MrAntix/Testing/blob/master/testing/Testing/Builder.cs)
+[Builder.cs](https://github.com/MrAntix/Testing/blob/master/antix-testing/Antix.Testing/Builder.cs)
 
 This is a generic builder class which separates off the business of creation into a reusable component
 
