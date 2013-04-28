@@ -64,15 +64,18 @@ Updated readme.md with new functionality
 Added overloads for IBuilder.Build with assign but no index
 Release
 
-##2.0.1
+## 2.0.1
 Added Benchmark class
 
-##3.0.0-b01
+## 3.0.0-b01
 Breaking v2.0.1 reorganising parameters to allow for multiple instances paramarray
 Allow multiple runs to be called
 Results classes added 'BenchmarkResult' and 'BenchmarkResultList'
 Solution and Namespaces moved to Antix.Testing to be in-line with other stuff
 Pointing icon at permanent link
 
-##3.0.0-b02
+## 3.0.0-b02
 Added time-to-stop on benchmarks, will run as many as it can before time is up
+
+## 3.0.0
+Release

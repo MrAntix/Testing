@@ -54,7 +54,7 @@ These are some builders to get hold of the usual type of data you may need
 
 # Extensions
 
-There a are some simple extensions to IEnumerable<T> to allow you to random elements
+There are some simple extensions to IEnumerable<T> to allow you to random elements
 
     // Gets a single random element from an IEnumerable<T>
     T OneOf<T>(this IEnumerable<T> items)
