@@ -32,7 +32,7 @@
 
 <h1>Generic Builder</h1>
 
-<p><a href="https://github.com/MrAntix/Testing/blob/master/testing/Testing/Builder.cs">Builder.cs</a></p>
+<p><a href="https://github.com/MrAntix/Testing/blob/master/antix-testing/Antix.Testing/Builder.cs">Builder.cs</a></p>
 
 <p>This is a generic builder class which separates off the business of creation into a reusable component</p>
 
@@ -86,7 +86,7 @@ IWebsiteBuilder Website { get; }
 
 <h1>Extensions</h1>
 
-<p>There a are some simple extensions to IEnumerable to allow you to random elements</p>
+<p>There are some simple extensions to IEnumerable to allow you to random elements</p>
 
 <pre><code>// Gets a single random element from an IEnumerable&lt;T&gt;
 T OneOf&lt;T&gt;(this IEnumerable&lt;T&gt; items)
@@ -140,6 +140,47 @@ IEnumerable&lt;char&gt; Numbers { get; }
 var firstNames = TestData.PersonFirstNamesMale
                     .ManyOf(10,20);
 </code></pre>
+
+<h1>Benchmarking</h1>
+
+<p>This is used to time how long a piece of code takes to run.</p>
+
+<p>Wrap your code in a delegate and call the Benchmark.Run with a number 
+of iterations or even a list of iteration to get figures for performance
+over an increasing number of iterations</p>
+
+<pre><code>var result = Benchmark
+    .Run(() =&gt; [Your Action], [Number of iterations]);
+</code></pre>
+
+<p>for example, run Thread.Sleep 10 times</p>
+
+<pre><code>var result = Benchmark
+    .Run(() =&gt; Thread.Sleep(10), 10);
+</code></pre>
+
+<p>for example, run Thread.Sleep 10 times, 100 times and 1000 times</p>
+
+<pre><code>var result = Benchmark
+    .Run(() =&gt; Thread.Sleep(10), 10, 100, 1000);
+</code></pre>
+
+<p>The result ToString() gives a summary of the timings including the average
+and you can format this using config (see app.config in the Testing project)</p>
+
+<pre><code>&lt;Testing.Properties.Settings&gt;
+    &lt;setting name="BenchmarkResult_toString" serializeAs="String"&gt;
+        &lt;value&gt;{0}, av {1}, {2}x&lt;/value&gt;
+    &lt;/setting&gt;
+    &lt;setting name="BenchmarkResultList_toString" serializeAs="String"&gt;
+        &lt;value&gt;{0}, av {1}, {2}x&lt;/value&gt;
+    &lt;/setting&gt;
+&lt;/Testing.Properties.Settings&gt;
+</code></pre>
+
+<p>{0} time
+{1} average
+{2} iterations</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/MrAntix">MrAntix</a></p>
@@ -147,6 +188,16 @@ var firstNames = TestData.PersonFirstNamesMale
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-2936095-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
