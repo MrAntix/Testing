@@ -79,3 +79,6 @@ Added time-to-stop on benchmarks, will run as many as it can before time is up
 
 ## 3.0.0
 Release
+
+## 3.0.1-b01
+ResetIndex method added, which resets the index to 0

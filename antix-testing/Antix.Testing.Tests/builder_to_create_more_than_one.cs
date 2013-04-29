@@ -129,10 +129,30 @@ namespace Antix.Testing.Tests
                 .ToArray();
 
             Assert.NotNull(items);
-            Assert.Equal(expectedCount*2, items.Count());
+            Assert.Equal(expectedCount * 2, items.Count());
 
-            for (var i = 0; i < expectedCount*2; i++)
+            for (var i = 0; i < expectedCount * 2; i++)
                 Assert.Equal(i, items.ElementAt(i).Count);
+        }
+
+        [Fact]
+        public void creates_a_group_with_two_calls_to_build_index_reset()
+        {
+            const int expectedCount = 10;
+            var items = _builder
+                .Build(expectedCount, (x, i) => x.Count = i)
+                .ResetIndex()
+                .Build(expectedCount, (x, i) => x.Count = i)
+                .ToArray();
+
+            Assert.NotNull(items);
+            Assert.Equal(expectedCount * 2, items.Count());
+
+            for (var i = 0; i < expectedCount; i++)
+                Assert.Equal(i, items.ElementAt(i).Count);
+
+            for (var i = 0; i < expectedCount; i++)
+                Assert.Equal(i, items.ElementAt(i + expectedCount).Count);
         }
 
         [Fact]

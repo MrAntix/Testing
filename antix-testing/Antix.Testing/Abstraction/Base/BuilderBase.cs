@@ -11,7 +11,6 @@ namespace Antix.Testing.Abstraction.Base
         where TBuilder : class, IBuilder<TBuilder, T>
     {
         protected Action<T> Assign;
-        protected int Index;
         Func<T> _create = Activator.CreateInstance<T>;
 
         protected BuilderBase()
@@ -24,6 +23,14 @@ namespace Antix.Testing.Abstraction.Base
         }
 
         protected IEnumerable<T> Items { get; set; }
+
+        public int Index { get; protected set; }
+
+        public IBuilder<TBuilder, T> ResetIndex()
+        {
+            Index = 0;
+            return this;
+        }
 
         #region ICloneable Members
 

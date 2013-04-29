@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Antix.Testing.Abstraction
 {
-    public interface IBuilder<TBuilder, T> :
+    public interface IBuilder<out TBuilder, out T> :
         IEnumerable<T>, ICloneable
         where TBuilder : class, IBuilder<TBuilder, T>
     {
@@ -19,5 +19,8 @@ namespace Antix.Testing.Abstraction
         TBuilder Build(int exactCount);
         TBuilder Build(int exactCount, Action<T> assign);
         TBuilder Build(int exactCount, Action<T, int> assign);
+
+        int Index { get; }
+        IBuilder<TBuilder, T> ResetIndex();
     }
 }
