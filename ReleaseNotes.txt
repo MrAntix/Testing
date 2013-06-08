@@ -82,3 +82,6 @@ Release
 
 ## 3.0.1-b01
 ResetIndex method added, which resets the index to 0
+
+## 3.0.1
+Release
